@@ -18,7 +18,7 @@ let package = Package(
 		.binaryTarget(
 			name: "SecuredCallsVoiceSDK",
 			url: "https://es-sc-ios-branding-sdk.s3.ap-southeast-2.amazonaws.com/SecuredCallsVoiceSDK/SecuredCallsVoiceSDK.xcframework.zip",
-			checksum: "5edb5c6b21c771edf07592f349b363560779aab4ebd0396264786f68f8c71e2b"
+			checksum: "6fb88500b9cf873f52a04b15d32e132d8ecb5b175b5f542b37c5e299110f58a6"
 		),
 	]
 )
