@@ -14,6 +14,12 @@ let package = Package(
 			targets: ["SecuredCallsVoiceSDK"]
 		),
 	],
+	dependencies: [
+		.package(url: "https://github.com/apple/swift-log.git", from: "1.5.4"),
+		.package(url: "https://github.com/Swinject/Swinject.git", from: "2.9.1"),
+		.package(url: "https://github.com/Swinject/SwinjectAutoregistration.git", from: "2.8.4"),
+		.package(url: "https://github.com/Vonage/vonage-client-sdk-ios", from: "1.6.0"),
+	],
 	targets: [
 		.binaryTarget(
 			name: "SecuredCallsVoiceSDK",
