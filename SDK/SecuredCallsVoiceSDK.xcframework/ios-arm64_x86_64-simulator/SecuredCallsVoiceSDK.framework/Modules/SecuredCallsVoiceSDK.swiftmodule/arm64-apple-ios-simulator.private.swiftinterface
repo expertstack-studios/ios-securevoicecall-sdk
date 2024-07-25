@@ -1,0 +1,293 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios17.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name SecuredCallsVoiceSDK
+import AVFoundation
+import CallKit
+import Combine
+import Contacts
+import CoreData
+import DeveloperToolsSupport
+import Foundation
+import OSLog
+import Photos
+import PushKit
+@_exported import SecuredCallsVoiceSDK
+import Security
+import Swift
+import SwiftUI
+import Swinject
+import SwinjectAutoregistration
+import UIKit
+import UserNotifications
+import VonageClientSDK
+import VonageClientSDKVoice
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+@_inheritsConvenienceInitializers @objc(ContactsEntity) public class ContactsEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+public struct CallInfoModel {
+  public var callId: Swift.String
+  public var intent: Swift.String
+  public var note: Swift.String?
+  public var contactNumber: Swift.String
+  public var businessName: Swift.String
+  public var brandImage: Foundation.Data
+  public var acceptIncomingCalls: Swift.Bool
+  public var callType: SecuredCallsVoiceSDK.CallType
+  public var callTime: Foundation.Date
+}
+public struct MarqueeText : SwiftUI.View {
+  public var text: Swift.String
+  public var font: UIKit.UIFont
+  public var leftFade: CoreFoundation.CGFloat
+  public var rightFade: CoreFoundation.CGFloat
+  public var startDelay: Swift.Double
+  public var alignment: SwiftUI.Alignment
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public init(text: Swift.String, font: UIKit.UIFont, leftFade: CoreFoundation.CGFloat, rightFade: CoreFoundation.CGFloat, startDelay: Swift.Double, alignment: SwiftUI.Alignment? = nil)
+  public typealias Body = @_opaqueReturnTypeOf("$s20SecuredCallsVoiceSDK11MarqueeTextV4bodyQrvp", 0) __
+}
+extension SecuredCallsVoiceSDK.MarqueeText {
+  public func makeCompact(_ compact: Swift.Bool = true) -> SecuredCallsVoiceSDK.MarqueeText
+}
+extension Foundation.Data {
+  public var prettyJson: Swift.String {
+    get
+  }
+}
+
+
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SheetViewController : UIKit.UIViewController, UIKit.UISheetPresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) public func showSheet(isContactPermissionAvailable: Swift.Bool, isNotificationPermissionAvailable: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func dismissSheet()
+  @_Concurrency.MainActor(unsafe) @objc public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerWillBeginDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidEndDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidChangeDetent(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidAttemptToDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum PermissionBottomSheetViewPresenter {
+  public static func showSheet(isContactPermissionAvailable: Swift.Bool, isNotificationPermissionAvailable: Swift.Bool)
+  public static func dismissSheet()
+}
+
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class VoiceCallScreenViewController : UIKit.UIViewController, UIKit.UISheetPresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) public static let shared: SecuredCallsVoiceSDK.VoiceCallScreenViewController
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) public func showSheet()
+  @_Concurrency.MainActor(unsafe) public func dismissSheet()
+  @_Concurrency.MainActor(unsafe) @objc public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerWillBeginDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidEndDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidChangeDetent(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidAttemptToDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @objc deinit
+}
+public enum VoiceCallScreenPresenter {
+  public static func showCallView()
+  public static func hideCallView()
+}
+extension Foundation.Bundle {
+  public static var app: Foundation.Bundle {
+    get
+  }
+  public var isExtension: Swift.Bool {
+    get
+  }
+  public var appDisplayName: Swift.String {
+    get
+  }
+  public var verionInfo: Swift.String {
+    get
+  }
+}
+public struct ScVoiceCallButton : SwiftUI.View {
+  public init(buttonText: Swift.String = "Call", numberToCall: Swift.String? = nil, action: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s20SecuredCallsVoiceSDK02ScC10CallButtonV4bodyQrvp", 0) __
+}
+
+
+public protocol ICallStatusDelegate : AnyObject {
+  func callStarted()
+  func callEnded()
+}
+public protocol SecuredCallsVoiceDelegate : AnyObject {
+  func didUpdateCallHistory()
+}
+@_hasMissingDesignatedInitializers public class SecuredCallsVoice : Foundation.ObservableObject {
+  public static func initialize(_ clientSecret: Swift.String, configFileName: Swift.String = "Config") throws
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func loginAsync(name: Swift.String, identifier: Swift.String) async -> Swift.Bool
+  #endif
+  public static func reportNewInComingCall(payload: PushKit.PKPushPayload)
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func registerVoipTokenAsync(token: Foundation.Data) async
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func deRegisterVoipTokenAsync() async
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func startCallAsync(number: Swift.String? = nil) async
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func processNotificationAsync(request: UserNotifications.UNNotificationRequest, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void) async
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @discardableResult
+  public static func registerDeviceAsync(customerId: Swift.String, token: Swift.String, isProduction: Swift.Bool = true) async -> Swift.Result<Swift.Bool, any Swift.Error>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @discardableResult
+  public static func deRegisterDeviceAsync(customerId: Swift.String) async -> Swift.Result<Swift.Bool, any Swift.Error>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func getCallHistoryAsync() async -> Swift.Result<[SecuredCallsVoiceSDK.CallInfoModel], any Swift.Error>
+  #endif
+  public static func setHistoryDelegate(_ delegate: (any SecuredCallsVoiceSDK.SecuredCallsVoiceDelegate)?)
+  public static func setCallStatusDelegate(_ delegate: (any SecuredCallsVoiceSDK.ICallStatusDelegate)?)
+  public static func callEnded()
+  public static func callStarted()
+  public static func processNotification()
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func requestNotificationPermissionAsync() async
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func requestContactAccessAsync() async
+  #endif
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public protocol ILoggerService {
+  func logInformation(message: Swift.String)
+  func logWarning(message: Swift.String)
+  func logError(message: Swift.String)
+  func logDebug(message: Swift.String)
+}
+@_inheritsConvenienceInitializers @objc(UserEntity) public class UserEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+
+extension SecuredCallsVoiceSDK.UserEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.UserEntity>
+  @objc @NSManaged dynamic public var businessName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Foundation.UUID? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var image: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var intent: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var mobileNo: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var notes: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+public struct ScreenDimensions : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_Concurrency.MainActor public class DeviceInfoHeader : Swift.Codable {
+  @_Concurrency.MainActor public init()
+  @_Concurrency.MainActor required public init(from decoder: any Swift.Decoder) throws
+  @_Concurrency.MainActor public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
+extension SecuredCallsVoiceSDK.ContactsEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.ContactsEntity>
+  @objc @NSManaged dynamic public var contactIdentifier: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+extension Foundation.NSNotification {
+  public static let didRegisterForRemoteNotificationNotification: Foundation.NSNotification.Name
+  public static let didFailToRegisterForRemoteNotification: Foundation.NSNotification.Name
+}
+@_inheritsConvenienceInitializers @objc(CallHistoryEntity) public class CallHistoryEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+
+public enum CallType : Swift.Int16, Swift.Codable {
+  case inApp
+  case pstn
+  public init?(rawValue: Swift.Int16)
+  public typealias RawValue = Swift.Int16
+  public var rawValue: Swift.Int16 {
+    get
+  }
+}
+extension SecuredCallsVoiceSDK.CallHistoryEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.CallHistoryEntity>
+  @objc @NSManaged dynamic public var callId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var intent: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var note: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var contactNumber: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var brandName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var brandImage: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var acceptIncomingCalls: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var callType: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var callTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+}
+extension SecuredCallsVoiceSDK.DeviceInfoHeader : Swift.Sendable {}
+extension SecuredCallsVoiceSDK.CallType : Swift.Equatable {}
+extension SecuredCallsVoiceSDK.CallType : Swift.Hashable {}
+extension SecuredCallsVoiceSDK.CallType : Swift.RawRepresentable {}

@@ -23,7 +23,7 @@ let package = Package(
 	targets: [
 		.binaryTarget(
 			name: "SecuredCallsVoiceSDKBinary",
-			path: "./SDK/SecuredCallsVoiceSDK.xcframework.zip"
+			path: "SDK/SecuredCallsVoiceSDK.xcframework"
 		),
 		.target(
 			name: "SecuredCallsVoiceSDKWrapper",
@@ -33,6 +33,7 @@ let package = Package(
 				.product(name: "Swinject", package: "Swinject"),
 				.product(name: "SwinjectAutoregistration", package: "SwinjectAutoregistration"),
 				.product(name: "VonageClientSDK", package: "vonage-client-sdk-ios")
+				.product(name: "VonageClientSDKVoice", package: "vonage-client-sdk-ios")
 			],
 			path: "./Sources/SecuredCallsVoiceSDKWrapper"
 		)
