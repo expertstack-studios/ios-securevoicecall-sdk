@@ -481,16 +481,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "CallInfoModel",
         "printedName": "CallInfoModel",
@@ -3189,40 +3179,6 @@
       },
       {
         "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "VonageClientSDKVoice",
-        "printedName": "VonageClientSDKVoice",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -3420,6 +3376,40 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "VonageClientSDKVoice",
+        "printedName": "VonageClientSDKVoice",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
       },
       {
         "kind": "Import",
@@ -3646,7 +3636,7 @@
           {
             "kind": "Function",
             "name": "loginAsync",
-            "printedName": "loginAsync(name:identifier:)",
+            "printedName": "loginAsync(identifier:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3659,17 +3649,11 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "s:20SecuredCallsVoiceSDK0abC0C10loginAsync4name10identifierSbSS_SStYaFZ",
-            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C10loginAsync4name10identifierSbSS_SStYaFZ",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C10loginAsync10identifierSbSS_tYaFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C10loginAsync10identifierSbSS_tYaFZ",
             "moduleName": "SecuredCallsVoiceSDK",
             "static": true,
             "declAttributes": [
@@ -3793,6 +3777,29 @@
               "Final",
               "AccessControl",
               "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "instance",
+            "printedName": "instance()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecuredCallsVoice",
+                "printedName": "SecuredCallsVoiceSDK.SecuredCallsVoice",
+                "usr": "s:20SecuredCallsVoiceSDK0abC0C"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C8instanceACyFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C8instanceACyFZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -5469,6 +5476,40 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -5886,23 +5927,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK"
       },
       {
         "kind": "Import",
@@ -8508,16 +8532,16 @@
       "value": "\"SecuredCallsVoiceSDK.VoiceCallService\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/UserInterface\/View\/PermissionBottomSheetView.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/UserInterface\/View\/PermissionBottomSheetView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4068,
+      "offset": 4863,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/UserInterface\/View\/PermissionBottomSheetView.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/UserInterface\/View\/PermissionBottomSheetView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4109,
+      "offset": 4904,
       "length": 5,
       "value": "false"
     },
@@ -8755,14 +8779,14 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 2861,
+      "offset": 2943,
       "length": 8,
       "value": "\"Config\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 12153,
+      "offset": 13632,
       "length": 4,
       "value": "true"
     },
@@ -8998,98 +9022,98 @@
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "IntegerLiteral",
       "offset": 234,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "IntegerLiteral",
       "offset": 252,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "IntegerLiteral",
       "offset": 268,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "IntegerLiteral",
       "offset": 290,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "IntegerLiteral",
       "offset": 234,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "IntegerLiteral",
       "offset": 252,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "IntegerLiteral",
       "offset": 268,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "IntegerLiteral",
       "offset": 290,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "IntegerLiteral",
       "offset": 234,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "IntegerLiteral",
       "offset": 252,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "IntegerLiteral",
       "offset": 268,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "IntegerLiteral",
       "offset": 290,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "Array",
       "offset": 736,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/LoggerService.swift",
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "StringLiteral",
       "offset": 775,
       "length": 7,
@@ -9266,7 +9290,7 @@
     {
       "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/SecuredCalls-anlzziygwdllrqbgwjdriwhlnoro\/Build\/Intermediates.noindex\/ArchiveIntermediates\/SecuredCallsVoiceSDK\/IntermediateBuildFilesPath\/SecuredCallsVoiceSDK.build\/Release-iphoneos\/SecuredCallsVoiceSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 822,
+      "offset": 729,
       "length": 10,
       "value": "\"IconMask\""
     }
