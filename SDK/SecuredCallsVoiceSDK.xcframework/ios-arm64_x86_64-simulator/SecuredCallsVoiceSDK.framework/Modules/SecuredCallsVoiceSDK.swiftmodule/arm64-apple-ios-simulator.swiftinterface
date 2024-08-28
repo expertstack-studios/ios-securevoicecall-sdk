@@ -135,6 +135,10 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   #endif
   #if compiler(>=5.3) && $AsyncAwait
   @discardableResult
+  public static func registerConsumerAsync(customerId: Swift.String) async -> Swift.Result<Swift.Bool, any Swift.Error>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @discardableResult
   public static func registerDeviceAsync(customerId: Swift.String, token: Swift.String, isProduction: Swift.Bool = true) async -> Swift.Result<Swift.Bool, any Swift.Error>
   #endif
   #if compiler(>=5.3) && $AsyncAwait

@@ -3852,6 +3852,51 @@
           },
           {
             "kind": "Function",
+            "name": "registerConsumerAsync",
+            "printedName": "registerConsumerAsync(customerId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Result",
+                "printedName": "Swift.Result<Swift.Bool, any Swift.Error>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:s6ResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C21registerConsumerAsync10customerIds6ResultOySbs5Error_pGSS_tYaFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C21registerConsumerAsync10customerIds6ResultOySbs5Error_pGSS_tYaFZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "registerDeviceAsync",
             "printedName": "registerDeviceAsync(customerId:token:isProduction:)",
             "children": [
@@ -8436,14 +8481,14 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Networking\/SCNetworkManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 859,
+      "offset": 842,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Networking\/SCNetworkManager.swift",
       "kind": "FloatLiteral",
-      "offset": 891,
+      "offset": 874,
       "length": 3,
       "value": "0.5"
     },
@@ -8777,6 +8822,13 @@
       "value": "\"#2B2B2B\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Configuration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 305,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
       "offset": 2943,
@@ -8786,7 +8838,7 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 13632,
+      "offset": 15078,
       "length": 4,
       "value": "true"
     },
@@ -9127,34 +9179,6 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Enums\/DeviceOS.swift",
-      "kind": "StringLiteral",
-      "offset": 142,
-      "length": 5,
-      "value": "\"iOS\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Enums\/DeviceOS.swift",
-      "kind": "StringLiteral",
-      "offset": 167,
-      "length": 9,
-      "value": "\"Android\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Enums\/DeviceOS.swift",
-      "kind": "StringLiteral",
-      "offset": 142,
-      "length": 5,
-      "value": "\"iOS\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Enums\/DeviceOS.swift",
-      "kind": "StringLiteral",
-      "offset": 167,
-      "length": 9,
-      "value": "\"Android\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/PushService.swift",
       "kind": "StringLiteral",
       "offset": 1911,
@@ -9192,7 +9216,7 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/UserInterface\/View\/ScreenSnaphot.swift",
       "kind": "StringLiteral",
-      "offset": 861,
+      "offset": 1026,
       "length": 7,
       "value": "\"Hello\""
     },
