@@ -183,7 +183,92 @@ func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload
     }
     completion()
 }
-``` 
+```
+
+### Appdelegate
+
+```swift
+class AppDelegate: NSObject, UIApplicationDelegate {
+	let userIdentifier = "919930848454"
+
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+		do {
+			registerForVoIPPushes()
+			try SecuredCallsVoice.initialize("xxxxSecretxxxxx")
+			Task {
+				await SecuredCallsVoice.requestNotificationPermissionAsync()
+				await SecuredCallsVoice.requestContactAccessAsync()
+				let securedCallsVoiceHasLoggedIn = await SecuredCallsVoice.loginAsync(identifier: userIdentifier)
+			}
+		} catch {
+			print("\(error.localizedDescription)")
+		}
+		return true
+	}
+
+	private func registerForVoIPPushes() {
+		let voipRegistry = PKPushRegistry(queue: nil)
+		voipRegistry.delegate = self
+		voipRegistry.desiredPushTypes = [.voIP]
+	}
+}
+```
+
+
+### UNNotificationServiceExtension
+
+```swift
+import UserNotifications
+import SecuredCallsVoiceSDK
+
+class NotificationService: UNNotificationServiceExtension {
+	
+	override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
+		Task{
+			await SecuredCallsVoice.processNotificationAsync(request: request, withContentHandler: contentHandler)
+		}
+	}
+	
+	override func serviceExtensionTimeWillExpire() {
+	}
+	
+}
+```
+
+### Appdelegate extension PKPushRegistryDelegate
+
+```swift
+extension AppDelegate: PKPushRegistryDelegate {
+	func pushRegistry(
+		_ registry: PKPushRegistry,
+		didUpdate pushCredentials: PKPushCredentials,
+		for type: PKPushType
+	) {
+		if type == PKPushType.voIP {
+			Task {
+				await SecuredCallsVoice.registerVoipTokenAsync(
+					token: pushCredentials.token
+				)
+			}
+		}
+	}
+
+	func pushRegistry(
+		_ registry: PKPushRegistry,
+		didReceiveIncomingPushWith payload: PKPushPayload,
+		for type: PKPushType,
+		completion: @escaping () -> Void
+	) {
+		switch type {
+		case .voIP:
+			SecuredCallsVoice.reportNewInComingCall(payload: payload)
+		default:
+			return
+		}
+		completion()
+	}
+}
+```
 
 ## Notes
 
