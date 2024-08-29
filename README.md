@@ -76,7 +76,40 @@ Add the following keys to your `Info.plist` file:
 1. In the **"Signing & Capabilities"** tab, click **"+"**.
 2. Add **"App Groups"** and configure the identifier.
 
+### Creating a Notification Service Extension in Xcode
+
+Follow these steps to create a Notification Service Extension in your Xcode project. This extension allows you to modify the content of remote notifications before they are delivered to the user.
+
+#### 1. Add a New Notification Service Extension Target
+
+1. Open your Xcode project.
+2. Select the project file in the Navigator pane.
+3. Click on the `+` button at the bottom of the target list to add a new target.
+4. Choose `Notification Service Extension` from the list of available templates.
+5. Click `Next`, give your extension a name (e.g., `MyNotificationServiceExtension`), and click `Finish`.
+
+#### 2. Implement the Notification Service Extension Logic
+
+1. Open the `NotificationService.swift` file in the newly created extension folder.
+2. Modify the `didReceive` method to customize the notification's content.
+
+```swift
+import SecuredCallsVoiceSDK
+import UserNotifications
+
+class NotificationService: UNNotificationServiceExtension {
+	override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
+		Task {
+			await SecuredCallsVoice.processNotificationAsync(request: request, withContentHandler: contentHandler)
+		}
+	}
+
+	override func serviceExtensionTimeWillExpire() {}
+}
+```
+
 ## SDK Initialization
+
 
 Initialize the SDK in `AppDelegate.swift`:
 
