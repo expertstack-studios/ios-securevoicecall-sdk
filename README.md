@@ -223,6 +223,7 @@ Add the following keys to your `Info.plist` file:
        }
        return true
    }
+
    private func registerForVoIPPushes() {
 	let voipRegistry = PKPushRegistry(queue: nil)
 	voipRegistry.delegate = self
