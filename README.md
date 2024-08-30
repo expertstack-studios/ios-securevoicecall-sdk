@@ -279,9 +279,6 @@ Add the following keys to your `Info.plist` file:
   ### Report Incoming VOIP Push
 
    ```swift
-   import SecuredCallsVoiceSDK
-   import PushKit
-
    func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
        if type == .voIP {
            SecuredCallsVoice.reportNewInComingCall(payload: payload)
