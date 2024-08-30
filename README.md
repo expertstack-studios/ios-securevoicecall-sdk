@@ -50,7 +50,7 @@ Add the following keys to your `Info.plist` file:
 - **SC_APP_GROUP**  
     ```xml
     <key>SC_APP_GROUP</key>
-    <string>group.your.app.identifier</string>
+    <string>group.branding</string>
     ```
 
 ## Enabling Capabilities in Xcode
@@ -74,7 +74,7 @@ Add the following keys to your `Info.plist` file:
 ### App Groups
 
 1. In the **"Signing & Capabilities"** tab, click **"+"**.
-2. Add **"App Groups"** and configure the identifier.
+2. Add **"App Groups"** and configure the identifier **group.branding**.
 
 ### Creating a Notification Service Extension in Xcode
 
@@ -107,201 +107,178 @@ class NotificationService: UNNotificationServiceExtension {
 	override func serviceExtensionTimeWillExpire() {}
 }
 ```
+#### 3. App Groups in Notification Service Extension
+
+1. In the **"Signing & Capabilities"** tab, click **"+"**.
+2. Add **"App Groups"** and configure the identifier **group.branding**.
+
+### Step-by-Step Setup for `AppDelegate` in SwiftUI
+
+1. **Create a new `AppDelegate` Class:**
+   - Right-click on your project folder in the Xcode Project Navigator.
+   - Select **New File** -> **Swift File**.
+   - Name the file `AppDelegate.swift`.
+
+2. **Define Your `AppDelegate` Class:**
+   - Open `AppDelegate.swift` and define the `AppDelegate` class that conforms to `UIApplicationDelegate`. You can also implement any delegate methods you need here.
+
+    ```swift
+    import UIKit
+    class AppDelegate: NSObject, UIApplicationDelegate {
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+            // Perform any necessary setup here
+            return true
+        }
+    }
+    ```
+
+4. **Modify the Main SwiftUI App Struct:**
+   - In your `App` struct (typically found in your `AppName.swift` file), use the `@UIApplicationDelegateAdaptor` property wrapper to connect your `AppDelegate` class with your SwiftUI application.
+
+    ```swift
+    import SwiftUI
+
+    @main
+    struct AppName_SwiftUIApp: App {
+        // Connect AppDelegate
+        @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+        
+        var body: some Scene {
+            WindowGroup {
+                ContentPage() 
+            }
+        }
+    }
+    ```
 
 ## SDK Initialization
 
+   ## Initialize the SDK in `AppDelegate.swift`:
 
-Initialize the SDK in `AppDelegate.swift`:
+   ```swift
+   import Foundation
+   import PushKit
+   import SecuredCallsVoiceSDK
+   import UIKit
 
-```swift
-import SecuredCallsVoiceSDK
+   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+       do {
+            // initialize SDK
+           try SecuredCallsVoice.initialize("xxxxxxxSECRETxxxxxxx")
+       } catch {
+           print("Failed to initialize SecuredCallsVoice SDK: \(error.localizedDescription)")
+       }
+       return true
+   }
+   ```
 
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    do {
-        try SecuredCallsVoice.initialize("xxxxxxxSECRETxxxxxxx")
-    } catch {
-        print("Failed to initialize SecuredCallsVoice SDK: \(error.localizedDescription)")
-    }
-    return true
-}
-```
-## Requesting Permissions
+   ## Requesting Permissions
+   ### Request Contact Access and Notification Permission
 
-### Request Contact Access
+   ```swift
+   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+       do {
+           UNUserNotificationCenter.current().delegate = self
+           registerForVoIPPushes()
+           try SecuredCallsVoice.initialize("1c8386ngg812la83fjc9qs9rj0henhj75qqpmaav5p3dm8r5bbsc")
+        
+           // Request permissions and login asynchronously
+           Task {
+               await SecuredCallsVoice.requestNotificationPermissionAsync()
+               await SecuredCallsVoice.requestContactAccessAsync()
+           }
+       } catch {
+           print("\(error.localizedDescription)")
+       }
+       return true
+   }
+   ```
 
+   ## User Login
 
-```swift
-import SecuredCallsVoiceSDK
+   - ### UserIdentifier
+   **UserIdentifier can be any user identifier if you are only using in-app calls. However, if you have configured both in-app and PSTN calls, the user identifier should be a mobile number.**
+   ```swift
+   let userIdentifier = "userIdentifier"
+   ```
+   - ### Login Code
+   ```swift
+   let userIdentifier = "userIdentifier"
 
-func requestContactAccess() async {
-    await SecuredCallsVoice.requestContactAccessAsync()
-}
-``` 
+   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+       do {
+           UNUserNotificationCenter.current().delegate = self
+           registerForVoIPPushes()
+           try SecuredCallsVoice.initialize("1c8386ngg812la83fjc9qs9rj0henhj75qqpmaav5p3dm8r5bbsc")
+        
+           Task {
+               await SecuredCallsVoice.requestNotificationPermissionAsync()
+               await SecuredCallsVoice.requestContactAccessAsync()
+               // Request permissions and login asynchronously
+               let loginStatus = await SecuredCallsVoice.loginAsync(identifier: userIdentifier)
+           }
+       } catch {
+           print("\(error.localizedDescription)")
+       }
+       return true
+   }
+   ```
 
-### Request Notification Permission
-
-```swift
-
-import SecuredCallsVoiceSDK
-
-func requestNotificationPermission() async {
-    await SecuredCallsVoice.requestNotificationPermissionAsync()
-} 
-```
-
-## User Login
-
-### Login Code
-
-```swift
-
-import SecuredCallsVoiceSDK
-
-func loginUser(userIdentifier: String) async {
-    let success = await SecuredCallsVoice.loginAsync(identifier: userIdentifier)
-    print("SecuredCallsVoice login status = \(success)")
-} 
-```
-
-## APNS and VOIP Token Management
+   ## APNS and VOIP Token Management
 
 ### Register Device APNS Token
 
-```swift
+   ```swift
 
-import SecuredCallsVoiceSDK
+   import SecuredCallsVoiceSDK
 
-func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-    let token = deviceToken.hexString
-    Task {
-        if let userIdentifier = UserDefaults.standard.string(forKey: "userIdentifier") {
-            // Retrieve the 'isProduction' flag from UserDefaults to determine the environment
-            // 'true' indicates a production environment, while 'false' indicates a sandbox environment
-            // This flag should be set by the client based on the current deployment stage
-            let isProduction = UserDefaults.standard.bool(forKey: "isProduction")
-            await SecuredCallsVoice.registerDeviceAsync(customerId: userIdentifier, token: token, isProduction: isProduction)
-        } else {
-            print("\(#function) user not registered")
-        }
-    }
-}
-```
+   func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+       let token = deviceToken.hexString
+       Task {
+           if let userIdentifier = UserDefaults.standard.string(forKey: "userIdentifier") {
+               // Retrieve the 'isProduction' flag from UserDefaults to determine the environment
+               // 'true' indicates a production environment, while 'false' indicates a sandbox environment
+               // This flag should be set by the client based on the current deployment stage
+               let isProduction = UserDefaults.standard.bool(forKey: "isProduction")
+               await SecuredCallsVoice.registerDeviceAsync(customerId: userIdentifier, token: token, isProduction: isProduction)
+           } else {
+               print("\(#function) user not registered")
+           }
+       }
+   }
+   ```
 
 ### Register Device VOIP Token
 
-```swift
+   ```swift
 
-import SecuredCallsVoiceSDK
-import PushKit
+   import SecuredCallsVoiceSDK
+   import PushKit
 
-func pushRegistry(_ registry: PKPushRegistry, didUpdate pushCredentials: PKPushCredentials, for type: PKPushType) {
-    if type == .voIP {
-        Task {
-            await SecuredCallsVoice.registerVoipTokenAsync(token: pushCredentials.token)
-        }
-    }
-}
-```
+   func pushRegistry(_ registry: PKPushRegistry, didUpdate pushCredentials: PKPushCredentials, for type: PKPushType) {
+       if type == .voIP {
+           Task {
+               await SecuredCallsVoice.registerVoipTokenAsync(token: pushCredentials.token)
+           }
+       }
+   }
+   ```
 
 ### Report Incoming VOIP Push
 
-```swift
+   ```swift
 
-import SecuredCallsVoiceSDK
-import PushKit
+   import SecuredCallsVoiceSDK
+   import PushKit
 
-func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
-    if type == .voIP {
-        SecuredCallsVoice.reportNewInComingCall(payload: payload)
-    }
-    completion()
-}
+   func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
+       if type == .voIP {
+           SecuredCallsVoice.reportNewInComingCall(payload: payload)
+       }
+       completion()
+   }
 ```
 
-### Appdelegate
-
-```swift
-class AppDelegate: NSObject, UIApplicationDelegate {
-	let userIdentifier = "919930848454"
-
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-		do {
-			registerForVoIPPushes()
-			try SecuredCallsVoice.initialize("xxxxSecretxxxxx")
-			Task {
-				await SecuredCallsVoice.requestNotificationPermissionAsync()
-				await SecuredCallsVoice.requestContactAccessAsync()
-				let securedCallsVoiceHasLoggedIn = await SecuredCallsVoice.loginAsync(identifier: userIdentifier)
-			}
-		} catch {
-			print("\(error.localizedDescription)")
-		}
-		return true
-	}
-
-	private func registerForVoIPPushes() {
-		let voipRegistry = PKPushRegistry(queue: nil)
-		voipRegistry.delegate = self
-		voipRegistry.desiredPushTypes = [.voIP]
-	}
-}
-```
-
-
-### UNNotificationServiceExtension
-
-```swift
-import UserNotifications
-import SecuredCallsVoiceSDK
-
-class NotificationService: UNNotificationServiceExtension {
-	
-	override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
-		Task{
-			await SecuredCallsVoice.processNotificationAsync(request: request, withContentHandler: contentHandler)
-		}
-	}
-	
-	override func serviceExtensionTimeWillExpire() {
-	}
-	
-}
-```
-
-### Appdelegate extension PKPushRegistryDelegate
-
-```swift
-extension AppDelegate: PKPushRegistryDelegate {
-	func pushRegistry(
-		_ registry: PKPushRegistry,
-		didUpdate pushCredentials: PKPushCredentials,
-		for type: PKPushType
-	) {
-		if type == PKPushType.voIP {
-			Task {
-				await SecuredCallsVoice.registerVoipTokenAsync(
-					token: pushCredentials.token
-				)
-			}
-		}
-	}
-
-	func pushRegistry(
-		_ registry: PKPushRegistry,
-		didReceiveIncomingPushWith payload: PKPushPayload,
-		for type: PKPushType,
-		completion: @escaping () -> Void
-	) {
-		switch type {
-		case .voIP:
-			SecuredCallsVoice.reportNewInComingCall(payload: payload)
-		default:
-			return
-		}
-		completion()
-	}
-}
-```
 
 ## Notes
 
