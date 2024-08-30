@@ -180,7 +180,6 @@ Add the following keys to your `Info.plist` file:
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
        do {
            UNUserNotificationCenter.current().delegate = self
-           registerForVoIPPushes()
            try SecuredCallsVoice.initialize("xxxxxxxSECRETxxxxxxx")
         
            // Request permissions and login asynchronously
@@ -197,7 +196,7 @@ Add the following keys to your `Info.plist` file:
 
    ## User Login
 
-   - ### UserIdentifier
+   ### UserIdentifier
    **UserIdentifier can be any user identifier if you are only using in-app calls. However, if you have configured both in-app and PSTN calls, the user identifier should be a mobile number.**
    ```swift
    let userIdentifier = "userIdentifier"
@@ -236,9 +235,6 @@ Add the following keys to your `Info.plist` file:
    ### Register Device APNS Token
 
    ```swift
-
-   import SecuredCallsVoiceSDK
-
    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
        let token = deviceToken.hexString
        Task {
@@ -251,26 +247,38 @@ Add the following keys to your `Info.plist` file:
    }
    ```
 
-   ### Register Device VOIP Token
+   ```swift
+	extension Data {
+		var hexString: String {
+			return map { String(format: "%02.2hhx", $0) }.joined()
+		}
+	}
+```
+
+
+   ### Register Device VOIP Token And Report Incoming VOIP Push
 
    ```swift
-
-   import SecuredCallsVoiceSDK
-   import PushKit
-
-   func pushRegistry(_ registry: PKPushRegistry, didUpdate pushCredentials: PKPushCredentials, for type: PKPushType) {
-       if type == .voIP {
-           Task {
-               await SecuredCallsVoice.registerVoipTokenAsync(token: pushCredentials.token)
-           }
-       }
+   extension AppDelegate: PKPushRegistryDelegate {
+	func pushRegistry(
+		_ registry: PKPushRegistry,
+		didUpdate pushCredentials: PKPushCredentials,
+		for type: PKPushType
+	) {
+		if type == PKPushType.voIP {
+			Task {
+				await SecuredCallsVoice.registerVoipTokenAsync(
+					token: pushCredentials.token
+				)
+			}
+		}
+	}
    }
    ```
 
   ### Report Incoming VOIP Push
 
    ```swift
-
    import SecuredCallsVoiceSDK
    import PushKit
 
@@ -280,7 +288,7 @@ Add the following keys to your `Info.plist` file:
        }
        completion()
    }
-```
+  ```
 
 
 ## Notes
