@@ -25,21 +25,6 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
-@_inheritsConvenienceInitializers @objc(ContactsEntity) public class ContactsEntity : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
-  @objc deinit
-}
-public struct CallInfoModel {
-  public var callId: Swift.String
-  public var intent: Swift.String
-  public var note: Swift.String?
-  public var contactNumber: Swift.String
-  public var businessName: Swift.String
-  public var brandImage: Foundation.Data
-  public var acceptIncomingCalls: Swift.Bool
-  public var callType: SecuredCallsVoiceSDK.CallType
-  public var callTime: Foundation.Date
-}
 public struct MarqueeText : SwiftUI.View {
   public var text: Swift.String
   public var font: UIKit.UIFont
@@ -56,29 +41,57 @@ public struct MarqueeText : SwiftUI.View {
 extension SecuredCallsVoiceSDK.MarqueeText {
   public func makeCompact(_ compact: Swift.Bool = true) -> SecuredCallsVoiceSDK.MarqueeText
 }
-extension Foundation.Data {
-  public var prettyJson: Swift.String {
-    get
+public protocol ILoggerService {
+  func logInformation(message: Swift.String)
+  func logWarning(message: Swift.String)
+  func logError(message: Swift.String)
+  func logDebug(message: Swift.String)
+}
+
+extension SecuredCallsVoiceSDK.UserEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.UserEntity>
+  @objc @NSManaged dynamic public var businessName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Foundation.UUID? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var image: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var intent: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var mobileNo: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var notes: Swift.String? {
+    @objc get
+    @objc set
   }
 }
-
-
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SheetViewController : UIKit.UIViewController, UIKit.UISheetPresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) public func showSheet(isContactPermissionAvailable: Swift.Bool, isNotificationPermissionAvailable: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func dismissSheet()
-  @_Concurrency.MainActor(unsafe) @objc public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerWillBeginDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidEndDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidChangeDetent(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidAttemptToDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+@_inheritsConvenienceInitializers @objc(CallHistoryEntity) public class CallHistoryEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   @objc deinit
 }
-public enum PermissionBottomSheetViewPresenter {
-  public static func showSheet(isContactPermissionAvailable: Swift.Bool, isNotificationPermissionAvailable: Swift.Bool)
-  public static func dismissSheet()
+extension Foundation.Bundle {
+  public static var app: Foundation.Bundle {
+    get
+  }
+  public var isExtension: Swift.Bool {
+    get
+  }
+  public var appDisplayName: Swift.String {
+    get
+  }
+  public var verionInfo: Swift.String {
+    get
+  }
 }
 
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class VoiceCallScreenViewController : UIKit.UIViewController, UIKit.UISheetPresentationControllerDelegate {
@@ -97,6 +110,25 @@ public enum PermissionBottomSheetViewPresenter {
 public enum VoiceCallScreenPresenter {
   public static func showCallView()
   public static func hideCallView()
+}
+@_inheritsConvenienceInitializers @objc(ContactsEntity) public class ContactsEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension Foundation.Data {
+  public var prettyJson: Swift.String {
+    get
+  }
+}
+public struct ScreenDimensions : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_Concurrency.MainActor public class DeviceInfoHeader : Swift.Codable {
+  @_Concurrency.MainActor public init()
+  @_Concurrency.MainActor required public init(from decoder: any Swift.Decoder) throws
+  @_Concurrency.MainActor public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
 }
 public struct ScVoiceCallButton : SwiftUI.View {
   public init(buttonText: Swift.String = "Call", numberToCall: Swift.String? = nil, action: @escaping () -> Swift.Void)
@@ -162,97 +194,6 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public protocol ILoggerService {
-  func logInformation(message: Swift.String)
-  func logWarning(message: Swift.String)
-  func logError(message: Swift.String)
-  func logDebug(message: Swift.String)
-}
-@_inheritsConvenienceInitializers @objc(UserEntity) public class UserEntity : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
-  @objc deinit
-}
-
-extension Foundation.Bundle {
-  public static var app: Foundation.Bundle {
-    get
-  }
-  public var isExtension: Swift.Bool {
-    get
-  }
-  public var appDisplayName: Swift.String {
-    get
-  }
-  public var verionInfo: Swift.String {
-    get
-  }
-}
-extension SecuredCallsVoiceSDK.UserEntity {
-  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.UserEntity>
-  @objc @NSManaged dynamic public var businessName: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var id: Foundation.UUID? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var image: Foundation.Data? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var intent: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var mobileNo: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var notes: Swift.String? {
-    @objc get
-    @objc set
-  }
-}
-public struct ScreenDimensions : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-@_Concurrency.MainActor public class DeviceInfoHeader : Swift.Codable {
-  @_Concurrency.MainActor public init()
-  @_Concurrency.MainActor required public init(from decoder: any Swift.Decoder) throws
-  @_Concurrency.MainActor public func encode(to encoder: any Swift.Encoder) throws
-  @objc deinit
-}
-extension SecuredCallsVoiceSDK.ContactsEntity {
-  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.ContactsEntity>
-  @objc @NSManaged dynamic public var contactIdentifier: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var id: Swift.String? {
-    @objc get
-    @objc set
-  }
-}
-extension Foundation.NSNotification {
-  public static let didRegisterForRemoteNotificationNotification: Foundation.NSNotification.Name
-  public static let didFailToRegisterForRemoteNotification: Foundation.NSNotification.Name
-}
-@_inheritsConvenienceInitializers @objc(CallHistoryEntity) public class CallHistoryEntity : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
-  @objc deinit
-}
-
-public enum CallType : Swift.Int16, Swift.Codable {
-  case inApp
-  case pstn
-  public init?(rawValue: Swift.Int16)
-  public typealias RawValue = Swift.Int16
-  public var rawValue: Swift.Int16 {
-    get
-  }
-}
 extension SecuredCallsVoiceSDK.CallHistoryEntity {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.CallHistoryEntity>
   @objc @NSManaged dynamic public var callId: Swift.String? {
@@ -291,6 +232,83 @@ extension SecuredCallsVoiceSDK.CallHistoryEntity {
     @objc get
     @objc set
   }
+}
+extension SecuredCallsVoiceSDK.ContactsEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.ContactsEntity>
+  @objc @NSManaged dynamic public var contactIdentifier: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+
+public enum CallType : Swift.Int16, Swift.Codable {
+  case inApp
+  case pstn
+  public init?(rawValue: Swift.Int16)
+  public typealias RawValue = Swift.Int16
+  public var rawValue: Swift.Int16 {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(UserEntity) public class UserEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+public struct CallInfoModel {
+  public var callId: Swift.String
+  public var intent: Swift.String
+  public var note: Swift.String?
+  public var contactNumber: Swift.String
+  public var businessName: Swift.String
+  public var brandImage: Foundation.Data
+  public var acceptIncomingCalls: Swift.Bool
+  public var callType: SecuredCallsVoiceSDK.CallType
+  public var callTime: Foundation.Date
+}
+
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SheetViewController : UIKit.UIViewController, UIKit.UISheetPresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) public func showSheet(isContactPermissionAvailable: Swift.Bool, isNotificationPermissionAvailable: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func dismissSheet()
+  @_Concurrency.MainActor(unsafe) @objc public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerWillBeginDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidEndDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidChangeDetent(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidAttemptToDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum PermissionBottomSheetViewPresenter {
+  public static func showSheet(isContactPermissionAvailable: Swift.Bool, isNotificationPermissionAvailable: Swift.Bool)
+  public static func dismissSheet()
+}
+extension Foundation.NSNotification {
+  public static let didRegisterForRemoteNotificationNotification: Foundation.NSNotification.Name
+  public static let didFailToRegisterForRemoteNotification: Foundation.NSNotification.Name
+}
+
+@_inheritsConvenienceInitializers @objc(ScreenConfigEntity) public class ScreenConfigEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension SecuredCallsVoiceSDK.ScreenConfigEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.ScreenConfigEntity>
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var screenConfig: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+extension SecuredCallsVoiceSDK.ScreenConfigEntity : Swift.Identifiable {
+  public typealias ID = Swift.String?
 }
 extension SecuredCallsVoiceSDK.DeviceInfoHeader : Swift.Sendable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.Equatable {}
