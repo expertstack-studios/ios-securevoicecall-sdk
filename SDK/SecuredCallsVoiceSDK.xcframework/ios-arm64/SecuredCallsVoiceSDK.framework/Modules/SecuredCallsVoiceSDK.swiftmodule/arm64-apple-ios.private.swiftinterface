@@ -6,6 +6,7 @@ import CallKit
 import Combine
 import Contacts
 import CoreData
+import CoreImage
 import DeveloperToolsSupport
 import Foundation
 import OSLog

@@ -7436,6 +7436,13 @@
       },
       {
         "kind": "Import",
+        "name": "CoreImage",
+        "printedName": "CoreImage",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -9724,7 +9731,7 @@
     {
       "filePath": "\/Users\/viveklalan\/Workspace\/ExpertStack\/sc-ios-v1\/SecuredCallsVoiceSDK\/UserInterface\/View\/ScreenSnaphot.swift",
       "kind": "StringLiteral",
-      "offset": 1026,
+      "offset": 1461,
       "length": 7,
       "value": "\"Hello\""
     },
