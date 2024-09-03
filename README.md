@@ -88,20 +88,20 @@ Add the following keys to your `Info.plist` file:
    4. Choose `Notification Service Extension` from the list of available templates.
    5. Click `Next`, give your extension a name (e.g., `MyNotificationServiceExtension`), and click `Finish`.
    6. Add the required framework:
-	- Select the main Notification Service Extension target in the Targets section.
-	- Navigate to the General tab.
-	- Scroll down to the Frameworks, Libraries, and Embedded Content section.
-	- Click on the + button.
-	- Search for and select the SecuredCallsVoiceSDK.framework you need 
-	- Click Add to include the framework in your project.
+      - Select the main Notification Service Extension target in the Targets section.
+      - Navigate to the General tab.
+      - Scroll down to the Frameworks, Libraries, and Embedded Content section.
+      - Click on the + button.
+      - Search for and select the SecuredCallsVoiceSDK.framework you need 
+      - Click Add to include the framework in your project.
    7. App Groups in Notification Service Extension
-     - 1. In the **"Signing & Capabilities"** tab, click **"+"**.
-     - 2. Add **"App Groups"** and configure the identifier **group.branding**.
-     - 3. Add Environment Configuration to Info.plist file
-      		```xml
+      - In the **"Signing & Capabilities"** tab, click **"+"**.
+      - Add **"App Groups"** and configure the identifier **group.branding**.
+      - Add Environment Configuration to Info.plist file
+      ```xml
 	    <key>SC_APP_GROUP</key>
 	    <string>group.branding</string>
-	```
+```
       
     
    #### 2. Implement the Notification Service Extension Logic
