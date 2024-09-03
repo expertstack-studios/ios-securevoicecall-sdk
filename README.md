@@ -101,7 +101,7 @@ Add the following keys to your `Info.plist` file:
       ```xml
 	    <key>SC_APP_GROUP</key>
 	    <string>group.branding</string>
-```
+      ```
       
     
    #### 2. Implement the Notification Service Extension Logic
