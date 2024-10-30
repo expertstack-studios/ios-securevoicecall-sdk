@@ -1,9 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
 // swift-module-flags: -target arm64-apple-ios16.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name SecuredCallsVoiceSDK
 import AVFoundation
 import CallKit
 import Combine
+import CommonCrypto
 import Contacts
 import CoreData
 import CoreImage
@@ -25,22 +26,21 @@ import VonageClientSDKVoice
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-import os
-public struct MarqueeText : SwiftUI.View {
-  public var text: Swift.String
-  public var font: UIKit.UIFont
-  public var leftFade: CoreFoundation.CGFloat
-  public var rightFade: CoreFoundation.CGFloat
-  public var startDelay: Swift.Double
-  public var alignment: SwiftUI.Alignment
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+@_Concurrency.MainActor @preconcurrency public struct MarqueeText : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var text: Swift.String
+  @_Concurrency.MainActor @preconcurrency public var font: UIKit.UIFont
+  @_Concurrency.MainActor @preconcurrency public var leftFade: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var rightFade: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var startDelay: Swift.Double
+  @_Concurrency.MainActor @preconcurrency public var alignment: SwiftUICore.Alignment
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
-  public init(text: Swift.String, font: UIKit.UIFont, leftFade: CoreFoundation.CGFloat, rightFade: CoreFoundation.CGFloat, startDelay: Swift.Double, alignment: SwiftUI.Alignment? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(text: Swift.String, font: UIKit.UIFont, leftFade: CoreFoundation.CGFloat, rightFade: CoreFoundation.CGFloat, startDelay: Swift.Double, alignment: SwiftUICore.Alignment? = nil)
   public typealias Body = @_opaqueReturnTypeOf("$s20SecuredCallsVoiceSDK11MarqueeTextV4bodyQrvp", 0) __
 }
 extension SecuredCallsVoiceSDK.MarqueeText {
-  public func makeCompact(_ compact: Swift.Bool = true) -> SecuredCallsVoiceSDK.MarqueeText
+  @_Concurrency.MainActor @preconcurrency public func makeCompact(_ compact: Swift.Bool = true) -> SecuredCallsVoiceSDK.MarqueeText
 }
 public protocol ILoggerService {
   func logInformation(message: Swift.String)
@@ -95,17 +95,17 @@ extension Foundation.Bundle {
   }
 }
 
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class VoiceCallScreenViewController : UIKit.UIViewController, UIKit.UISheetPresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) public static let shared: SecuredCallsVoiceSDK.VoiceCallScreenViewController
-  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
-  @_Concurrency.MainActor(unsafe) public func showSheet()
-  @_Concurrency.MainActor(unsafe) public func dismissSheet()
-  @_Concurrency.MainActor(unsafe) @objc public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerWillBeginDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidEndDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidChangeDetent(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidAttemptToDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class VoiceCallScreenViewController : UIKit.UIViewController, UIKit.UISheetPresentationControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency public static let shared: SecuredCallsVoiceSDK.VoiceCallScreenViewController
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
+  @_Concurrency.MainActor @preconcurrency public func showSheet()
+  @_Concurrency.MainActor @preconcurrency public func dismissSheet()
+  @_Concurrency.MainActor @preconcurrency @objc public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
+  @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerDidDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerWillBeginDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerDidEndDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerDidChangeDetent(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerDidAttemptToDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
   @objc deinit
 }
 public enum VoiceCallScreenPresenter {
@@ -131,14 +131,6 @@ public struct ScreenDimensions : Swift.Codable {
   @_Concurrency.MainActor public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
-public struct ScVoiceCallButton : SwiftUI.View {
-  public init(buttonText: Swift.String = "Call", numberToCall: Swift.String? = nil, action: @escaping () -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s20SecuredCallsVoiceSDK02ScC10CallButtonV4bodyQrvp", 0) __
-}
-
 
 public protocol ICallStatusDelegate : AnyObject {
   func callStarted()
@@ -148,50 +140,28 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   func didUpdateCallHistory()
 }
 @_hasMissingDesignatedInitializers public class SecuredCallsVoice : Foundation.ObservableObject {
-  public static func initialize(_ clientSecret: Swift.String, configFileName: Swift.String = "Config") throws
-  #if compiler(>=5.3) && $AsyncAwait
+  public static func initialize(_ clientSecret: Swift.String, configFileName: Swift.String = "Config", handlePermission: Swift.Bool = false) throws
   public static func loginAsync(identifier: Swift.String) async -> Swift.Bool
-  #endif
   public static func reportNewInComingCall(payload: PushKit.PKPushPayload)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func registerVoipTokenAsync(token: Foundation.Data) async
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func deRegisterVoipTokenAsync() async
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
-  public static func startCallAsync(number: Swift.String? = nil) async
-  #endif
+  public static func startCallAsync(number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "") async
   public static func instance() -> SecuredCallsVoiceSDK.SecuredCallsVoice
-  #if compiler(>=5.3) && $AsyncAwait
   public static func processNotificationAsync(request: UserNotifications.UNNotificationRequest, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void) async
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   @discardableResult
   public static func registerConsumerAsync(customerId: Swift.String) async -> Swift.Result<Swift.Bool, any Swift.Error>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   @discardableResult
   public static func registerDeviceAsync(customerId: Swift.String, token: Swift.String, isProduction: Swift.Bool = true) async -> Swift.Result<Swift.Bool, any Swift.Error>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   @discardableResult
   public static func deRegisterDeviceAsync(customerId: Swift.String) async -> Swift.Result<Swift.Bool, any Swift.Error>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public static func getCallHistoryAsync() async -> Swift.Result<[SecuredCallsVoiceSDK.CallInfoModel], any Swift.Error>
-  #endif
   public static func setHistoryDelegate(_ delegate: (any SecuredCallsVoiceSDK.SecuredCallsVoiceDelegate)?)
   public static func setCallStatusDelegate(_ delegate: (any SecuredCallsVoiceSDK.ICallStatusDelegate)?)
   public static func callEnded()
   public static func callStarted()
   public static func processNotification()
-  #if compiler(>=5.3) && $AsyncAwait
   public static func requestNotificationPermissionAsync() async
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public static func requestContactAccessAsync() async
-  #endif
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
@@ -271,17 +241,17 @@ public struct CallInfoModel {
   public var callTime: Foundation.Date
 }
 
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SheetViewController : UIKit.UIViewController, UIKit.UISheetPresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) public func showSheet(isContactPermissionAvailable: Swift.Bool, isNotificationPermissionAvailable: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func dismissSheet()
-  @_Concurrency.MainActor(unsafe) @objc public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerWillBeginDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidEndDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidChangeDetent(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) public func sheetPresentationControllerDidAttemptToDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SheetViewController : UIKit.UIViewController, UIKit.UISheetPresentationControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency public func showSheet(isContactPermissionAvailable: Swift.Bool, isNotificationPermissionAvailable: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func dismissSheet()
+  @_Concurrency.MainActor @preconcurrency @objc public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
+  @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerDidDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerWillBeginDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerDidEndDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerDidChangeDetent(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerDidAttemptToDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 public enum PermissionBottomSheetViewPresenter {
@@ -311,6 +281,7 @@ extension SecuredCallsVoiceSDK.ScreenConfigEntity {
 extension SecuredCallsVoiceSDK.ScreenConfigEntity : Swift.Identifiable {
   public typealias ID = Swift.String?
 }
+extension SecuredCallsVoiceSDK.MarqueeText : Swift.Sendable {}
 extension SecuredCallsVoiceSDK.DeviceInfoHeader : Swift.Sendable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.Equatable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.Hashable {}
