@@ -1166,6 +1166,291 @@
           },
           {
             "kind": "Var",
+            "name": "acceptIncomingCalls",
+            "printedName": "acceptIncomingCalls",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)acceptIncomingCalls",
+            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC014acceptIncomingB0Sbvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)acceptIncomingCalls",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC014acceptIncomingB0Sbvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setAcceptIncomingCalls:",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC014acceptIncomingB0Sbvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "brandImage",
+            "printedName": "brandImage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)brandImage",
+            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC10brandImage10Foundation4DataVSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)brandImage",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC10brandImage10Foundation4DataVSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setBrandImage:",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC10brandImage10Foundation4DataVSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "brandName",
+            "printedName": "brandName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)brandName",
+            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC9brandNameSSSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)brandName",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC9brandNameSSSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setBrandName:",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC9brandNameSSSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "callId",
             "printedName": "callId",
             "children": [
@@ -1256,6 +1541,291 @@
                 "declKind": "Accessor",
                 "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setCallId:",
                 "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC6callIdSSSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "callTime",
+            "printedName": "callTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)callTime",
+            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC8callTime10Foundation4DateVSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)callTime",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC8callTime10Foundation4DateVSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setCallTime:",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC8callTime10Foundation4DateVSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "callType",
+            "printedName": "callType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int16",
+                "printedName": "Swift.Int16",
+                "usr": "s:s5Int16V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)callType",
+            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC8callTypes5Int16Vvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int16",
+                    "printedName": "Swift.Int16",
+                    "usr": "s:s5Int16V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)callType",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC8callTypes5Int16Vvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int16",
+                    "printedName": "Swift.Int16",
+                    "usr": "s:s5Int16V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setCallType:",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC8callTypes5Int16Vvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "contactNumber",
+            "printedName": "contactNumber",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)contactNumber",
+            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC13contactNumberSSSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)contactNumber",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC13contactNumberSSSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setContactNumber:",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC13contactNumberSSSgvs",
                 "moduleName": "SecuredCallsVoiceSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -1475,27 +2045,27 @@
           },
           {
             "kind": "Var",
-            "name": "contactNumber",
-            "printedName": "contactNumber",
+            "name": "brandingData",
+            "printedName": "brandingData",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.String?",
+                "printedName": "SecuredCallsVoiceSDK.BrandingEntity?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "BrandingEntity",
+                    "printedName": "SecuredCallsVoiceSDK.BrandingEntity",
+                    "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)BrandingEntity"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)contactNumber",
-            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC13contactNumberSSSgvp",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)brandingData",
+            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC12brandingDataAA08BrandingG0CSgvp",
             "moduleName": "SecuredCallsVoiceSDK",
             "declAttributes": [
               "Dynamic",
@@ -1513,21 +2083,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.String?",
+                    "printedName": "SecuredCallsVoiceSDK.BrandingEntity?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
+                        "name": "BrandingEntity",
+                        "printedName": "SecuredCallsVoiceSDK.BrandingEntity",
+                        "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)BrandingEntity"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)contactNumber",
-                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC13contactNumberSSSgvg",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)brandingData",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC12brandingDataAA08BrandingG0CSgvg",
                 "moduleName": "SecuredCallsVoiceSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -1550,488 +2120,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.String?",
+                    "printedName": "SecuredCallsVoiceSDK.BrandingEntity?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
+                        "name": "BrandingEntity",
+                        "printedName": "SecuredCallsVoiceSDK.BrandingEntity",
+                        "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)BrandingEntity"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setContactNumber:",
-                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC13contactNumberSSSgvs",
-                "moduleName": "SecuredCallsVoiceSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Dynamic",
-                  "ObjC"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "set"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "brandName",
-            "printedName": "brandName",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)brandName",
-            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC9brandNameSSSgvp",
-            "moduleName": "SecuredCallsVoiceSDK",
-            "declAttributes": [
-              "Dynamic",
-              "AccessControl",
-              "NSManaged",
-              "ObjC"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)brandName",
-                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC9brandNameSSSgvg",
-                "moduleName": "SecuredCallsVoiceSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Dynamic",
-                  "ObjC"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setBrandName:",
-                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC9brandNameSSSgvs",
-                "moduleName": "SecuredCallsVoiceSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Dynamic",
-                  "ObjC"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "set"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "brandImage",
-            "printedName": "brandImage",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.Data?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Data",
-                    "printedName": "Foundation.Data",
-                    "usr": "s:10Foundation4DataV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)brandImage",
-            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC10brandImage10Foundation4DataVSgvp",
-            "moduleName": "SecuredCallsVoiceSDK",
-            "declAttributes": [
-              "Dynamic",
-              "AccessControl",
-              "NSManaged",
-              "ObjC"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Data?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Data",
-                        "printedName": "Foundation.Data",
-                        "usr": "s:10Foundation4DataV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)brandImage",
-                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC10brandImage10Foundation4DataVSgvg",
-                "moduleName": "SecuredCallsVoiceSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Dynamic",
-                  "ObjC"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Data?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Data",
-                        "printedName": "Foundation.Data",
-                        "usr": "s:10Foundation4DataV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setBrandImage:",
-                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC10brandImage10Foundation4DataVSgvs",
-                "moduleName": "SecuredCallsVoiceSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Dynamic",
-                  "ObjC"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "set"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "acceptIncomingCalls",
-            "printedName": "acceptIncomingCalls",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)acceptIncomingCalls",
-            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC014acceptIncomingB0Sbvp",
-            "moduleName": "SecuredCallsVoiceSDK",
-            "declAttributes": [
-              "Dynamic",
-              "AccessControl",
-              "NSManaged",
-              "ObjC"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)acceptIncomingCalls",
-                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC014acceptIncomingB0Sbvg",
-                "moduleName": "SecuredCallsVoiceSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Dynamic",
-                  "ObjC"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setAcceptIncomingCalls:",
-                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC014acceptIncomingB0Sbvs",
-                "moduleName": "SecuredCallsVoiceSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Dynamic",
-                  "ObjC"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "set"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "callType",
-            "printedName": "callType",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int16",
-                "printedName": "Swift.Int16",
-                "usr": "s:s5Int16V"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)callType",
-            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC8callTypes5Int16Vvp",
-            "moduleName": "SecuredCallsVoiceSDK",
-            "declAttributes": [
-              "Dynamic",
-              "AccessControl",
-              "NSManaged",
-              "ObjC"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int16",
-                    "printedName": "Swift.Int16",
-                    "usr": "s:s5Int16V"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)callType",
-                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC8callTypes5Int16Vvg",
-                "moduleName": "SecuredCallsVoiceSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Dynamic",
-                  "ObjC"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int16",
-                    "printedName": "Swift.Int16",
-                    "usr": "s:s5Int16V"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setCallType:",
-                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC8callTypes5Int16Vvs",
-                "moduleName": "SecuredCallsVoiceSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Dynamic",
-                  "ObjC"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "set"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "callTime",
-            "printedName": "callTime",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.Date?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Date",
-                    "printedName": "Foundation.Date",
-                    "usr": "s:10Foundation4DateV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(py)callTime",
-            "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC8callTime10Foundation4DateVSgvp",
-            "moduleName": "SecuredCallsVoiceSDK",
-            "declAttributes": [
-              "Dynamic",
-              "AccessControl",
-              "NSManaged",
-              "ObjC"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Date?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Date",
-                        "printedName": "Foundation.Date",
-                        "usr": "s:10Foundation4DateV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)callTime",
-                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC8callTime10Foundation4DateVSgvg",
-                "moduleName": "SecuredCallsVoiceSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Dynamic",
-                  "ObjC"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Date?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Date",
-                        "printedName": "Foundation.Date",
-                        "usr": "s:10Foundation4DateV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setCallTime:",
-                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC8callTime10Foundation4DateVSgvs",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)CallHistoryEntity(im)setBrandingData:",
+                "mangledName": "$s20SecuredCallsVoiceSDK17CallHistoryEntityC12brandingDataAA08BrandingG0CSgvs",
                 "moduleName": "SecuredCallsVoiceSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -2144,6 +2247,28 @@
             ],
             "usr": "s:7Combine16ObservableObjectP",
             "mangledName": "$s7Combine16ObservableObjectP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObjectIdentifier",
+                    "printedName": "Swift.ObjectIdentifier",
+                    "usr": "s:SO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
           }
         ]
       },
@@ -3602,6 +3727,13 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "Import",
         "name": "CallKit",
         "printedName": "CallKit",
         "declKind": "Import",
@@ -3978,6 +4110,62 @@
               "Final",
               "AccessControl",
               "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callBackFromCallHistory",
+            "printedName": "callBackFromCallHistory(callId:number:callType:callIntent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CallType",
+                "printedName": "SecuredCallsVoiceSDK.CallType",
+                "usr": "s:20SecuredCallsVoiceSDK8CallTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id6number0E4Type0E6IntentySS_SSSgAA0hL0OSStYaFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id6number0E4Type0E6IntentySS_SSSgAA0hL0OSStYaFZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4576,16 +4764,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "Swinject",
         "printedName": "Swinject",
         "declKind": "Import",
@@ -5007,6 +5185,233 @@
         "declKind": "Enum",
         "usr": "s:20SecuredCallsVoiceSDK8CallTypeO",
         "mangledName": "$s20SecuredCallsVoiceSDK8CallTypeO",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "Int16",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int16",
+                    "printedName": "Swift.Int16",
+                    "usr": "s:s5Int16V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CallDirection",
+        "printedName": "CallDirection",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "incoming",
+            "printedName": "incoming",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.CallDirection.Type) -> SecuredCallsVoiceSDK.CallDirection",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallDirection",
+                    "printedName": "SecuredCallsVoiceSDK.CallDirection",
+                    "usr": "s:20SecuredCallsVoiceSDK13CallDirectionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.CallDirection.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CallDirection",
+                        "printedName": "SecuredCallsVoiceSDK.CallDirection",
+                        "usr": "s:20SecuredCallsVoiceSDK13CallDirectionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK13CallDirectionO8incomingyA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK13CallDirectionO8incomingyA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "outgoing",
+            "printedName": "outgoing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.CallDirection.Type) -> SecuredCallsVoiceSDK.CallDirection",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallDirection",
+                    "printedName": "SecuredCallsVoiceSDK.CallDirection",
+                    "usr": "s:20SecuredCallsVoiceSDK13CallDirectionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.CallDirection.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CallDirection",
+                        "printedName": "SecuredCallsVoiceSDK.CallDirection",
+                        "usr": "s:20SecuredCallsVoiceSDK13CallDirectionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK13CallDirectionO8outgoingyA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK13CallDirectionO8outgoingyA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SecuredCallsVoiceSDK.CallDirection?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallDirection",
+                    "printedName": "SecuredCallsVoiceSDK.CallDirection",
+                    "usr": "s:20SecuredCallsVoiceSDK13CallDirectionO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int16",
+                "printedName": "Swift.Int16",
+                "usr": "s:s5Int16V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20SecuredCallsVoiceSDK13CallDirectionO8rawValueACSgs5Int16V_tcfc",
+            "mangledName": "$s20SecuredCallsVoiceSDK13CallDirectionO8rawValueACSgs5Int16V_tcfc",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int16",
+                "printedName": "Swift.Int16",
+                "usr": "s:s5Int16V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK13CallDirectionO8rawValues5Int16Vvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK13CallDirectionO8rawValues5Int16Vvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int16",
+                    "printedName": "Swift.Int16",
+                    "usr": "s:s5Int16V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK13CallDirectionO8rawValues5Int16Vvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK13CallDirectionO8rawValues5Int16Vvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20SecuredCallsVoiceSDK13CallDirectionO",
+        "mangledName": "$s20SecuredCallsVoiceSDK13CallDirectionO",
         "moduleName": "SecuredCallsVoiceSDK",
         "declAttributes": [
           "AccessControl"
@@ -7608,8 +8013,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "ScreenConfigEntity",
-        "printedName": "ScreenConfigEntity",
+        "name": "BrandingEntity",
+        "printedName": "BrandingEntity",
         "children": [
           {
             "kind": "Constructor",
@@ -7618,9 +8023,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ScreenConfigEntity",
-                "printedName": "SecuredCallsVoiceSDK.ScreenConfigEntity",
-                "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)ScreenConfigEntity"
+                "name": "BrandingEntity",
+                "printedName": "SecuredCallsVoiceSDK.BrandingEntity",
+                "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)BrandingEntity"
               },
               {
                 "kind": "TypeNominal",
@@ -7644,8 +8049,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)ScreenConfigEntity(im)initWithEntity:insertIntoManagedObjectContext:",
-            "mangledName": "$s20SecuredCallsVoiceSDK18ScreenConfigEntityC6entity10insertIntoACSo19NSEntityDescriptionC_So22NSManagedObjectContextCSgtcfc",
+            "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)initWithEntity:insertIntoManagedObjectContext:",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC6entity10insertIntoACSo19NSEntityDescriptionC_So22NSManagedObjectContextCSgtcfc",
             "moduleName": "SecuredCallsVoiceSDK",
             "overriding": true,
             "implicit": true,
@@ -7658,6 +8063,396 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Var",
+            "name": "wrappedAnswerCallButtonBackgroundColor",
+            "printedName": "wrappedAnswerCallButtonBackgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC38wrappedAnswerCallButtonBackgroundColorSSvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC38wrappedAnswerCallButtonBackgroundColorSSvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC38wrappedAnswerCallButtonBackgroundColorSSvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC38wrappedAnswerCallButtonBackgroundColorSSvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedAnswerCallButtonForegroundColor",
+            "printedName": "wrappedAnswerCallButtonForegroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC38wrappedAnswerCallButtonForegroundColorSSvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC38wrappedAnswerCallButtonForegroundColorSSvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC38wrappedAnswerCallButtonForegroundColorSSvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC38wrappedAnswerCallButtonForegroundColorSSvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedBackgroundColor",
+            "printedName": "wrappedBackgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC22wrappedBackgroundColorSSvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC22wrappedBackgroundColorSSvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC22wrappedBackgroundColorSSvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC22wrappedBackgroundColorSSvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedEndCallButtonBackgroundColor",
+            "printedName": "wrappedEndCallButtonBackgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC35wrappedEndCallButtonBackgroundColorSSvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC35wrappedEndCallButtonBackgroundColorSSvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC35wrappedEndCallButtonBackgroundColorSSvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC35wrappedEndCallButtonBackgroundColorSSvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedEndCallButtonForegroundColor",
+            "printedName": "wrappedEndCallButtonForegroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC35wrappedEndCallButtonForegroundColorSSvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC35wrappedEndCallButtonForegroundColorSSvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC35wrappedEndCallButtonForegroundColorSSvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC35wrappedEndCallButtonForegroundColorSSvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedIntent",
+            "printedName": "wrappedIntent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC13wrappedIntentSSvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC13wrappedIntentSSvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC13wrappedIntentSSvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC13wrappedIntentSSvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedOtherButtonBackgroundColor",
+            "printedName": "wrappedOtherButtonBackgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC33wrappedOtherButtonBackgroundColorSSvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC33wrappedOtherButtonBackgroundColorSSvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC33wrappedOtherButtonBackgroundColorSSvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC33wrappedOtherButtonBackgroundColorSSvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedOtherButtonForegroundColor",
+            "printedName": "wrappedOtherButtonForegroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC33wrappedOtherButtonForegroundColorSSvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC33wrappedOtherButtonForegroundColorSSvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC33wrappedOtherButtonForegroundColorSSvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC33wrappedOtherButtonForegroundColorSSvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedBrandName",
+            "printedName": "wrappedBrandName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC16wrappedBrandNameSSvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC16wrappedBrandNameSSvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC16wrappedBrandNameSSvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC16wrappedBrandNameSSvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedBrandImage",
+            "printedName": "wrappedBrandImage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC17wrappedBrandImage10Foundation4DataVvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC17wrappedBrandImage10Foundation4DataVvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC17wrappedBrandImage10Foundation4DataVvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC17wrappedBrandImage10Foundation4DataVvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "fetchRequest",
             "printedName": "fetchRequest()",
@@ -7665,21 +8460,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "NSFetchRequest",
-                "printedName": "CoreData.NSFetchRequest<SecuredCallsVoiceSDK.ScreenConfigEntity>",
+                "printedName": "CoreData.NSFetchRequest<SecuredCallsVoiceSDK.BrandingEntity>",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ScreenConfigEntity",
-                    "printedName": "SecuredCallsVoiceSDK.ScreenConfigEntity",
-                    "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)ScreenConfigEntity"
+                    "name": "BrandingEntity",
+                    "printedName": "SecuredCallsVoiceSDK.BrandingEntity",
+                    "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)BrandingEntity"
                   }
                 ],
                 "usr": "c:objc(cs)NSFetchRequest"
               }
             ],
             "declKind": "Func",
-            "usr": "s:20SecuredCallsVoiceSDK18ScreenConfigEntityC12fetchRequestSo07NSFetchI0CyACGyFZ",
-            "mangledName": "$s20SecuredCallsVoiceSDK18ScreenConfigEntityC12fetchRequestSo07NSFetchI0CyACGyFZ",
+            "usr": "s:20SecuredCallsVoiceSDK14BrandingEntityC12fetchRequestSo07NSFetchH0CyACGyFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC12fetchRequestSo07NSFetchH0CyACGyFZ",
             "moduleName": "SecuredCallsVoiceSDK",
             "static": true,
             "declAttributes": [
@@ -7691,8 +8486,8 @@
           },
           {
             "kind": "Var",
-            "name": "id",
-            "printedName": "id",
+            "name": "answerCallButtonBackgroundColor",
+            "printedName": "answerCallButtonBackgroundColor",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7710,8 +8505,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ScreenConfigEntity(py)id",
-            "mangledName": "$s20SecuredCallsVoiceSDK18ScreenConfigEntityC2idSSSgvp",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(py)answerCallButtonBackgroundColor",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC31answerCallButtonBackgroundColorSSSgvp",
             "moduleName": "SecuredCallsVoiceSDK",
             "declAttributes": [
               "Dynamic",
@@ -7742,8 +8537,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ScreenConfigEntity(im)id",
-                "mangledName": "$s20SecuredCallsVoiceSDK18ScreenConfigEntityC2idSSSgvg",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)answerCallButtonBackgroundColor",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC31answerCallButtonBackgroundColorSSSgvg",
                 "moduleName": "SecuredCallsVoiceSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -7779,8 +8574,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ScreenConfigEntity(im)setId:",
-                "mangledName": "$s20SecuredCallsVoiceSDK18ScreenConfigEntityC2idSSSgvs",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)setAnswerCallButtonBackgroundColor:",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC31answerCallButtonBackgroundColorSSSgvs",
                 "moduleName": "SecuredCallsVoiceSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -7794,8 +8589,8 @@
           },
           {
             "kind": "Var",
-            "name": "screenConfig",
-            "printedName": "screenConfig",
+            "name": "answerCallButtonForegroundColor",
+            "printedName": "answerCallButtonForegroundColor",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7813,8 +8608,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ScreenConfigEntity(py)screenConfig",
-            "mangledName": "$s20SecuredCallsVoiceSDK18ScreenConfigEntityC06screenF0SSSgvp",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(py)answerCallButtonForegroundColor",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC31answerCallButtonForegroundColorSSSgvp",
             "moduleName": "SecuredCallsVoiceSDK",
             "declAttributes": [
               "Dynamic",
@@ -7845,8 +8640,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ScreenConfigEntity(im)screenConfig",
-                "mangledName": "$s20SecuredCallsVoiceSDK18ScreenConfigEntityC06screenF0SSSgvg",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)answerCallButtonForegroundColor",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC31answerCallButtonForegroundColorSSSgvg",
                 "moduleName": "SecuredCallsVoiceSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -7882,8 +8677,990 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ScreenConfigEntity(im)setScreenConfig:",
-                "mangledName": "$s20SecuredCallsVoiceSDK18ScreenConfigEntityC06screenF0SSSgvs",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)setAnswerCallButtonForegroundColor:",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC31answerCallButtonForegroundColorSSSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "backgroundColor",
+            "printedName": "backgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(py)backgroundColor",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC15backgroundColorSSSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)backgroundColor",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC15backgroundColorSSSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)setBackgroundColor:",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC15backgroundColorSSSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "brandImage",
+            "printedName": "brandImage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(py)brandImage",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC10brandImage10Foundation4DataVSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)brandImage",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC10brandImage10Foundation4DataVSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)setBrandImage:",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC10brandImage10Foundation4DataVSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "brandName",
+            "printedName": "brandName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(py)brandName",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC9brandNameSSSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)brandName",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC9brandNameSSSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)setBrandName:",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC9brandNameSSSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "endCallButtonBackgroundColor",
+            "printedName": "endCallButtonBackgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(py)endCallButtonBackgroundColor",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC28endCallButtonBackgroundColorSSSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)endCallButtonBackgroundColor",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC28endCallButtonBackgroundColorSSSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)setEndCallButtonBackgroundColor:",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC28endCallButtonBackgroundColorSSSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "endCallButtonForegroundColor",
+            "printedName": "endCallButtonForegroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(py)endCallButtonForegroundColor",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC28endCallButtonForegroundColorSSSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)endCallButtonForegroundColor",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC28endCallButtonForegroundColorSSSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)setEndCallButtonForegroundColor:",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC28endCallButtonForegroundColorSSSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "intent",
+            "printedName": "intent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(py)intent",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC6intentSSSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)intent",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC6intentSSSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)setIntent:",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC6intentSSSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "logoHeight",
+            "printedName": "logoHeight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(py)logoHeight",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC10logoHeightSdvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)logoHeight",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC10logoHeightSdvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)setLogoHeight:",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC10logoHeightSdvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "logoWidth",
+            "printedName": "logoWidth",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(py)logoWidth",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC9logoWidthSdvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)logoWidth",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC9logoWidthSdvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)setLogoWidth:",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC9logoWidthSdvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "otherButtonBackgroundColor",
+            "printedName": "otherButtonBackgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(py)otherButtonBackgroundColor",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC26otherButtonBackgroundColorSSSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)otherButtonBackgroundColor",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC26otherButtonBackgroundColorSSSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)setOtherButtonBackgroundColor:",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC26otherButtonBackgroundColorSSSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "otherButtonForegroundColor",
+            "printedName": "otherButtonForegroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(py)otherButtonForegroundColor",
+            "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC26otherButtonForegroundColorSSSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)otherButtonForegroundColor",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC26otherButtonForegroundColorSSSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)BrandingEntity(im)setOtherButtonForegroundColor:",
+                "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC26otherButtonForegroundColorSSSgvs",
                 "moduleName": "SecuredCallsVoiceSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -7897,10 +9674,10 @@
           }
         ],
         "declKind": "Class",
-        "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)ScreenConfigEntity",
-        "mangledName": "$s20SecuredCallsVoiceSDK18ScreenConfigEntityC",
+        "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)BrandingEntity",
+        "mangledName": "$s20SecuredCallsVoiceSDK14BrandingEntityC",
         "moduleName": "SecuredCallsVoiceSDK",
-        "objc_name": "ScreenConfigEntity",
+        "objc_name": "BrandingEntity",
         "declAttributes": [
           "AccessControl",
           "ObjC"
@@ -8009,17 +9786,9 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
+                    "name": "ObjectIdentifier",
+                    "printedName": "Swift.ObjectIdentifier",
+                    "usr": "s:SO"
                   }
                 ]
               }
@@ -9311,14 +11080,14 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/AddPayloadModel.swift",
       "kind": "StringLiteral",
-      "offset": 1044,
+      "offset": 1043,
       "length": 9,
       "value": "\"setupId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/AddPayloadModel.swift",
       "kind": "StringLiteral",
-      "offset": 1162,
+      "offset": 1161,
       "length": 15,
       "value": "\"brandImageUrl\""
     },
@@ -9367,84 +11136,84 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 241,
+      "offset": 280,
       "length": 14,
       "value": "\"Expert Stack\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 262,
+      "offset": 301,
       "length": 114,
       "value": "\"https:\/\/sc-demo-stack-securedcallsdemofiles8627e022-ntgcxeufhtcb.s3.ap-southeast-2.amazonaws.com\/expertstack.png\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/ScVoiceConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 396,
+      "offset": 435,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/ScVoiceConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 409,
+      "offset": 448,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 426,
+      "offset": 465,
       "length": 30,
       "value": "\"Delivery from Australia post\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 518,
+      "offset": 557,
       "length": 9,
       "value": "\"#484848\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 541,
+      "offset": 580,
       "length": 9,
       "value": "\"#FEFEFE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 616,
+      "offset": 655,
       "length": 9,
       "value": "\"#D70013\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 639,
+      "offset": 678,
       "length": 9,
       "value": "\"#FEFEFE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 717,
+      "offset": 756,
       "length": 9,
       "value": "\"#248A3D\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 740,
+      "offset": 779,
       "length": 9,
       "value": "\"#FEFEFE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 792,
+      "offset": 831,
       "length": 9,
       "value": "\"#2B2B2B\""
     },
@@ -9458,28 +11227,35 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 3125,
+      "offset": 3138,
       "length": 8,
       "value": "\"Config\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 3160,
+      "offset": 3173,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 7929,
+      "offset": 7942,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
+      "kind": "StringLiteral",
+      "offset": 9217,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 17446,
+      "offset": 18116,
       "length": 4,
       "value": "true"
     },
@@ -9815,8 +11591,15 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Enums\/CallType.swift",
       "kind": "IntegerLiteral",
-      "offset": 156,
+      "offset": 148,
       "length": 4,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Enums\/CallType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 221,
+      "length": 8,
       "value": "1"
     },
     {
@@ -9934,28 +11717,21 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "StringLiteral",
-      "offset": 4180,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
-      "kind": "StringLiteral",
-      "offset": 4221,
+      "offset": 4034,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "FloatLiteral",
-      "offset": 4264,
+      "offset": 4077,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "FloatLiteral",
-      "offset": 4307,
+      "offset": 4120,
       "length": 3,
       "value": "0.0"
     },

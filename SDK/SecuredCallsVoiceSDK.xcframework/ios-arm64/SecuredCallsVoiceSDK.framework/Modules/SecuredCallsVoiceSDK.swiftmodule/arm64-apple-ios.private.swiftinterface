@@ -76,6 +76,38 @@ extension SecuredCallsVoiceSDK.UserEntity {
     @objc set
   }
 }
+extension SecuredCallsVoiceSDK.BrandingEntity {
+  public var wrappedAnswerCallButtonBackgroundColor: Swift.String {
+    get
+  }
+  public var wrappedAnswerCallButtonForegroundColor: Swift.String {
+    get
+  }
+  public var wrappedBackgroundColor: Swift.String {
+    get
+  }
+  public var wrappedEndCallButtonBackgroundColor: Swift.String {
+    get
+  }
+  public var wrappedEndCallButtonForegroundColor: Swift.String {
+    get
+  }
+  public var wrappedIntent: Swift.String {
+    get
+  }
+  public var wrappedOtherButtonBackgroundColor: Swift.String {
+    get
+  }
+  public var wrappedOtherButtonForegroundColor: Swift.String {
+    get
+  }
+  public var wrappedBrandName: Swift.String {
+    get
+  }
+  public var wrappedBrandImage: Foundation.Data {
+    get
+  }
+}
 @_inheritsConvenienceInitializers @objc(CallHistoryEntity) public class CallHistoryEntity : CoreData.NSManagedObject {
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   @objc deinit
@@ -146,6 +178,7 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   public static func registerVoipTokenAsync(token: Foundation.Data) async
   public func deRegisterVoipTokenAsync() async
   public static func startCallAsync(number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "") async
+  public static func callBackFromCallHistory(callId: Swift.String, number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "") async
   public static func instance() -> SecuredCallsVoiceSDK.SecuredCallsVoice
   public static func processNotificationAsync(request: UserNotifications.UNNotificationRequest, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void) async
   @discardableResult
@@ -167,7 +200,31 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
 }
 extension SecuredCallsVoiceSDK.CallHistoryEntity {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.CallHistoryEntity>
+  @objc @NSManaged dynamic public var acceptIncomingCalls: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var brandImage: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var brandName: Swift.String? {
+    @objc get
+    @objc set
+  }
   @objc @NSManaged dynamic public var callId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var callTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var callType: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var contactNumber: Swift.String? {
     @objc get
     @objc set
   }
@@ -179,30 +236,13 @@ extension SecuredCallsVoiceSDK.CallHistoryEntity {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var contactNumber: Swift.String? {
+  @objc @NSManaged dynamic public var brandingData: SecuredCallsVoiceSDK.BrandingEntity? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var brandName: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var brandImage: Foundation.Data? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var acceptIncomingCalls: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var callType: Swift.Int16 {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var callTime: Foundation.Date? {
-    @objc get
-    @objc set
-  }
+}
+extension SecuredCallsVoiceSDK.CallHistoryEntity : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
 }
 extension SecuredCallsVoiceSDK.ContactsEntity {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.ContactsEntity>
@@ -219,6 +259,15 @@ extension SecuredCallsVoiceSDK.ContactsEntity {
 public enum CallType : Swift.Int16, Swift.Codable {
   case inApp
   case pstn
+  public init?(rawValue: Swift.Int16)
+  public typealias RawValue = Swift.Int16
+  public var rawValue: Swift.Int16 {
+    get
+  }
+}
+public enum CallDirection : Swift.Int16, Swift.Codable {
+  case incoming
+  case outgoing
   public init?(rawValue: Swift.Int16)
   public typealias RawValue = Swift.Int16
   public var rawValue: Swift.Int16 {
@@ -263,26 +312,69 @@ extension Foundation.NSNotification {
   public static let didFailToRegisterForRemoteNotification: Foundation.NSNotification.Name
 }
 
-@_inheritsConvenienceInitializers @objc(ScreenConfigEntity) public class ScreenConfigEntity : CoreData.NSManagedObject {
+@_inheritsConvenienceInitializers @objc(BrandingEntity) public class BrandingEntity : CoreData.NSManagedObject {
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   @objc deinit
 }
-extension SecuredCallsVoiceSDK.ScreenConfigEntity {
-  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.ScreenConfigEntity>
-  @objc @NSManaged dynamic public var id: Swift.String? {
+extension SecuredCallsVoiceSDK.BrandingEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.BrandingEntity>
+  @objc @NSManaged dynamic public var answerCallButtonBackgroundColor: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var screenConfig: Swift.String? {
+  @objc @NSManaged dynamic public var answerCallButtonForegroundColor: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var backgroundColor: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var brandImage: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var brandName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var endCallButtonBackgroundColor: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var endCallButtonForegroundColor: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var intent: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var logoHeight: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var logoWidth: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var otherButtonBackgroundColor: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var otherButtonForegroundColor: Swift.String? {
     @objc get
     @objc set
   }
 }
-extension SecuredCallsVoiceSDK.ScreenConfigEntity : Swift.Identifiable {
-  public typealias ID = Swift.String?
+extension SecuredCallsVoiceSDK.BrandingEntity : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
 }
 extension SecuredCallsVoiceSDK.MarqueeText : Swift.Sendable {}
 extension SecuredCallsVoiceSDK.DeviceInfoHeader : Swift.Sendable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.Equatable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.Hashable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.RawRepresentable {}
+extension SecuredCallsVoiceSDK.CallDirection : Swift.Equatable {}
+extension SecuredCallsVoiceSDK.CallDirection : Swift.Hashable {}
+extension SecuredCallsVoiceSDK.CallDirection : Swift.RawRepresentable {}
