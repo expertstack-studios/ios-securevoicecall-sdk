@@ -4015,7 +4015,7 @@
           {
             "kind": "Function",
             "name": "registerVoipTokenAsync",
-            "printedName": "registerVoipTokenAsync(token:)",
+            "printedName": "registerVoipTokenAsync(token:isProduction:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4027,11 +4027,17 @@
                 "name": "Data",
                 "printedName": "Foundation.Data",
                 "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:20SecuredCallsVoiceSDK0abC0C22registerVoipTokenAsync5tokeny10Foundation4DataV_tYaFZ",
-            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C22registerVoipTokenAsync5tokeny10Foundation4DataV_tYaFZ",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C22registerVoipTokenAsync5token12isProductiony10Foundation4DataV_SbtYaFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C22registerVoipTokenAsync5token12isProductiony10Foundation4DataV_SbtYaFZ",
             "moduleName": "SecuredCallsVoiceSDK",
             "static": true,
             "declAttributes": [
@@ -11003,14 +11009,21 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/ConfigurationService.swift",
       "kind": "StringLiteral",
-      "offset": 572,
+      "offset": 620,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/ConfigurationService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 713,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/ConfigurationService.swift",
       "kind": "StringLiteral",
-      "offset": 1344,
+      "offset": 1472,
       "length": 8,
       "value": "\"Config\""
     },
@@ -11241,21 +11254,21 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 7942,
+      "offset": 7981,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 9217,
+      "offset": 9255,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 18116,
+      "offset": 18157,
       "length": 4,
       "value": "true"
     },

@@ -175,7 +175,7 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   public static func initialize(_ clientSecret: Swift.String, configFileName: Swift.String = "Config", handlePermission: Swift.Bool = false) throws
   public static func loginAsync(identifier: Swift.String) async -> Swift.Bool
   public static func reportNewInComingCall(payload: PushKit.PKPushPayload)
-  public static func registerVoipTokenAsync(token: Foundation.Data) async
+  public static func registerVoipTokenAsync(token: Foundation.Data, isProduction: Swift.Bool) async
   public func deRegisterVoipTokenAsync() async
   public static func startCallAsync(number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "") async
   public static func callBackFromCallHistory(callId: Swift.String, number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "") async
