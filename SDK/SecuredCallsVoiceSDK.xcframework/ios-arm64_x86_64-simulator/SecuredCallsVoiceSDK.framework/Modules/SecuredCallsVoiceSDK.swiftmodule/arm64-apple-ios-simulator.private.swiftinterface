@@ -2,6 +2,7 @@
 // swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
 // swift-module-flags: -target arm64-apple-ios16.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name SecuredCallsVoiceSDK
 import AVFoundation
+import AVKit
 import CallKit
 import Combine
 import CommonCrypto
@@ -23,6 +24,7 @@ import UIKit
 import UserNotifications
 import VonageClientSDK
 import VonageClientSDKVoice
+import _AVKit_SwiftUI
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -41,12 +43,6 @@ import _SwiftConcurrencyShims
 }
 extension SecuredCallsVoiceSDK.MarqueeText {
   @_Concurrency.MainActor @preconcurrency public func makeCompact(_ compact: Swift.Bool = true) -> SecuredCallsVoiceSDK.MarqueeText
-}
-public protocol ILoggerService {
-  func logInformation(message: Swift.String)
-  func logWarning(message: Swift.String)
-  func logError(message: Swift.String)
-  func logDebug(message: Swift.String)
 }
 
 extension SecuredCallsVoiceSDK.UserEntity {
@@ -132,6 +128,7 @@ extension Foundation.Bundle {
   @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
   @_Concurrency.MainActor @preconcurrency public func showSheet()
   @_Concurrency.MainActor @preconcurrency public func dismissSheet()
+  @_Concurrency.MainActor @preconcurrency @objc public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
   @_Concurrency.MainActor @preconcurrency @objc public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
   @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerDidDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
   @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerWillBeginDismissalTransition(_ sheetPresentationController: UIKit.UISheetPresentationController)
@@ -142,7 +139,91 @@ extension Foundation.Bundle {
 }
 public enum VoiceCallScreenPresenter {
   public static func showCallView()
+  public static func endAndDismissCallView()
   public static func hideCallView()
+}
+@objc @_inheritsConvenienceInitializers final public class PipViewController : ObjectiveC.NSObject, Combine.ObservableObject, AVKit.AVPictureInPictureControllerDelegate, AVKit.AVPictureInPictureSampleBufferPlaybackDelegate {
+  public static let shared: SecuredCallsVoiceSDK.PipViewController
+  public static var isSupported: Swift.Bool {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($renderSize) final public var renderSize: CoreFoundation.CGSize {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $renderSize: Combine.Published<CoreFoundation.CGSize>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isPlaying) final public var isPlaying: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isPlaying: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($enabled) final public var enabled: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $enabled: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @objc override dynamic public init()
+  @objc final public func pictureInPictureControllerDidStartPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
+  @objc final public func pictureInPictureControllerDidStopPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
+  @objc final public func pictureInPictureControllerShouldProhibitBackgroundAudioPlayback(_ pictureInPictureController: AVKit.AVPictureInPictureController) -> Swift.Bool
+  @objc final public func pictureInPictureController(_ pictureInPictureController: AVKit.AVPictureInPictureController, failedToStartPictureInPictureWithError error: any Swift.Error)
+  @objc final public func pictureInPictureController(_ pictureInPictureController: AVKit.AVPictureInPictureController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc final public func pictureInPictureController(_ pictureInPictureController: AVKit.AVPictureInPictureController, setPlaying playing: Swift.Bool)
+  @objc final public func pictureInPictureControllerIsPlaybackPaused(_ pictureInPictureController: AVKit.AVPictureInPictureController) -> Swift.Bool
+  @objc final public func pictureInPictureControllerTimeRangeForPlayback(_ pictureInPictureController: AVKit.AVPictureInPictureController) -> CoreMedia.CMTimeRange
+  @objc final public func pictureInPictureController(_ pictureInPictureController: AVKit.AVPictureInPictureController, didTransitionToRenderSize newRenderSize: CoreMedia.CMVideoDimensions)
+  @objc final public func pictureInPictureController(_ pictureInPictureController: AVKit.AVPictureInPictureController, skipByInterval skipInterval: CoreMedia.CMTime) async
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+extension SwiftUICore.View {
+  @warn_unqualified_access
+  @_Concurrency.MainActor @preconcurrency public func onPipPlayPause(closure: @escaping (Swift.Bool) -> Swift.Void) -> some SwiftUICore.View
+  
+  @warn_unqualified_access
+  @_Concurrency.MainActor @preconcurrency public func onPipSkip(closure: @escaping (Swift.Bool) -> Swift.Void) -> some SwiftUICore.View
+  
+  @warn_unqualified_access
+  @_Concurrency.MainActor @preconcurrency public func onPipStart(closure: @escaping () -> Swift.Void) -> some SwiftUICore.View
+  
+  @warn_unqualified_access
+  @_Concurrency.MainActor @preconcurrency public func onPipStop(closure: @escaping () -> Swift.Void) -> some SwiftUICore.View
+  
+  @warn_unqualified_access
+  @_Concurrency.MainActor @preconcurrency public func onPipRenderSizeChanged(closure: @escaping (CoreFoundation.CGSize) -> Swift.Void) -> some SwiftUICore.View
+  
+  @warn_unqualified_access
+  @_Concurrency.MainActor @preconcurrency public func pipBindProgress(progress: SwiftUICore.Binding<Swift.Double>) -> some SwiftUICore.View
+  
+}
+extension SwiftUICore.View {
+  @warn_unqualified_access
+  @_Concurrency.MainActor @preconcurrency public func PipView<PipView>(isPresented: SwiftUICore.Binding<Swift.Bool>, content: @escaping () -> PipView) -> some SwiftUICore.View where PipView : SwiftUICore.View
+  
+  @warn_unqualified_access
+  @_Concurrency.MainActor @preconcurrency public func PipView(isPresented: SwiftUICore.Binding<Swift.Bool>) -> some SwiftUICore.View
+  
 }
 @_inheritsConvenienceInitializers @objc(ContactsEntity) public class ContactsEntity : CoreData.NSManagedObject {
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
@@ -172,13 +253,13 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   func didUpdateCallHistory()
 }
 @_hasMissingDesignatedInitializers public class SecuredCallsVoice : Foundation.ObservableObject {
-  public static func initialize(_ clientSecret: Swift.String, configFileName: Swift.String = "Config", handlePermission: Swift.Bool = false) throws
+  public static func initialize(_ clientSecret: Swift.String, configFileName: Swift.String = "Config", settings: SecuredCallsVoiceSDK.ScSDKSettingsModel = .default) throws
   public static func loginAsync(identifier: Swift.String) async -> Swift.Bool
   public static func reportNewInComingCall(payload: PushKit.PKPushPayload)
   public static func registerVoipTokenAsync(token: Foundation.Data, isProduction: Swift.Bool) async
   public func deRegisterVoipTokenAsync() async
-  public static func startCallAsync(number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "") async
-  public static func callBackFromCallHistory(callId: Swift.String, number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "") async
+  public static func startCallAsync(number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "") async throws
+  public static func callBackFromCallHistory(callId: Swift.String, number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "") async throws
   public static func instance() -> SecuredCallsVoiceSDK.SecuredCallsVoice
   public static func processNotificationAsync(request: UserNotifications.UNNotificationRequest, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void) async
   @discardableResult
@@ -255,6 +336,18 @@ extension SecuredCallsVoiceSDK.ContactsEntity {
     @objc set
   }
 }
+public enum LogLevel : Swift.Int {
+  case Error
+  case Warning
+  case Debug
+  case Information
+  case Off
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 
 public enum CallType : Swift.Int16, Swift.Codable {
   case inApp
@@ -310,6 +403,15 @@ public enum PermissionBottomSheetViewPresenter {
 extension Foundation.NSNotification {
   public static let didRegisterForRemoteNotificationNotification: Foundation.NSNotification.Name
   public static let didFailToRegisterForRemoteNotification: Foundation.NSNotification.Name
+}
+public struct ScSDKSettingsModel : Swift.Hashable {
+  public init(handlePermission: Swift.Bool = true, showPipView: Swift.Bool = true, logLevel: SecuredCallsVoiceSDK.LogLevel = .Off)
+  public static let `default`: SecuredCallsVoiceSDK.ScSDKSettingsModel
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SecuredCallsVoiceSDK.ScSDKSettingsModel, b: SecuredCallsVoiceSDK.ScSDKSettingsModel) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 
 @_inheritsConvenienceInitializers @objc(BrandingEntity) public class BrandingEntity : CoreData.NSManagedObject {
@@ -372,6 +474,9 @@ extension SecuredCallsVoiceSDK.BrandingEntity : Swift.Identifiable {
 }
 extension SecuredCallsVoiceSDK.MarqueeText : Swift.Sendable {}
 extension SecuredCallsVoiceSDK.DeviceInfoHeader : Swift.Sendable {}
+extension SecuredCallsVoiceSDK.LogLevel : Swift.Equatable {}
+extension SecuredCallsVoiceSDK.LogLevel : Swift.Hashable {}
+extension SecuredCallsVoiceSDK.LogLevel : Swift.RawRepresentable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.Equatable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.Hashable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.RawRepresentable {}
