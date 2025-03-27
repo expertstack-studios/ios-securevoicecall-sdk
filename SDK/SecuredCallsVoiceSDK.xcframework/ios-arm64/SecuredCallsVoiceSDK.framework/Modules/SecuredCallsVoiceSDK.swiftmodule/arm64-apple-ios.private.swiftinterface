@@ -9,6 +9,7 @@ import CommonCrypto
 import Contacts
 import CoreData
 import CoreImage
+import CoreLocation
 import DeveloperToolsSupport
 import Foundation
 import OSLog
@@ -28,6 +29,16 @@ import _AVKit_SwiftUI
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public enum LocationError : Swift.Error {
+  case permissionDenied
+  case locationUnavailable
+  case timeout
+  public static func == (a: SecuredCallsVoiceSDK.LocationError, b: SecuredCallsVoiceSDK.LocationError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 @_Concurrency.MainActor @preconcurrency public struct MarqueeText : SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public var text: Swift.String
   @_Concurrency.MainActor @preconcurrency public var font: UIKit.UIFont
@@ -276,6 +287,7 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   public static func processNotification()
   public static func requestNotificationPermissionAsync() async
   public static func requestContactAccessAsync() async
+  public class func requestLocationPermissionAsync() async
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
@@ -310,6 +322,10 @@ extension SecuredCallsVoiceSDK.CallHistoryEntity {
     @objc set
   }
   @objc @NSManaged dynamic public var intent: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isIncomingCall: Swift.Bool {
     @objc get
     @objc set
   }
@@ -352,6 +368,9 @@ public enum LogLevel : Swift.Int {
 public enum CallType : Swift.Int16, Swift.Codable {
   case inApp
   case pstn
+  public var stringValue: Swift.String {
+    get
+  }
   public init?(rawValue: Swift.Int16)
   public typealias RawValue = Swift.Int16
   public var rawValue: Swift.Int16 {
@@ -381,10 +400,11 @@ public struct CallInfoModel {
   public var acceptIncomingCalls: Swift.Bool
   public var callType: SecuredCallsVoiceSDK.CallType
   public var callTime: Foundation.Date
+  public var isIncomingCall: Swift.Bool
 }
 
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SheetViewController : UIKit.UIViewController, UIKit.UISheetPresentationControllerDelegate {
-  @_Concurrency.MainActor @preconcurrency public func showSheet(isContactPermissionAvailable: Swift.Bool, isNotificationPermissionAvailable: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func showSheet(isContactPermissionAvailable: Swift.Bool, isNotificationPermissionAvailable: Swift.Bool, isLocationPermissionAvailable: Swift.Bool, isUsingLocationService: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency public func dismissSheet()
   @_Concurrency.MainActor @preconcurrency @objc public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
   @_Concurrency.MainActor @preconcurrency public func sheetPresentationControllerDidDismiss(_ sheetPresentationController: UIKit.UISheetPresentationController)
@@ -397,7 +417,7 @@ public struct CallInfoModel {
   @objc deinit
 }
 public enum PermissionBottomSheetViewPresenter {
-  public static func showSheet(isContactPermissionAvailable: Swift.Bool, isNotificationPermissionAvailable: Swift.Bool)
+  public static func showSheet(isContactPermissionAvailable: Swift.Bool, isNotificationPermissionAvailable: Swift.Bool, isLocationPermissionAvailable: Swift.Bool, isUsingLocationService: Swift.Bool)
   public static func dismissSheet()
 }
 extension Foundation.NSNotification {
@@ -413,7 +433,6 @@ public struct ScSDKSettingsModel : Swift.Hashable {
     get
   }
 }
-
 @_inheritsConvenienceInitializers @objc(BrandingEntity) public class BrandingEntity : CoreData.NSManagedObject {
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   @objc deinit
@@ -472,6 +491,8 @@ extension SecuredCallsVoiceSDK.BrandingEntity {
 extension SecuredCallsVoiceSDK.BrandingEntity : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
+extension SecuredCallsVoiceSDK.LocationError : Swift.Equatable {}
+extension SecuredCallsVoiceSDK.LocationError : Swift.Hashable {}
 extension SecuredCallsVoiceSDK.MarqueeText : Swift.Sendable {}
 extension SecuredCallsVoiceSDK.DeviceInfoHeader : Swift.Sendable {}
 extension SecuredCallsVoiceSDK.LogLevel : Swift.Equatable {}
