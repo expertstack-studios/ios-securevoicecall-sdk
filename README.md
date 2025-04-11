@@ -278,10 +278,12 @@ Add the following keys to your `Info.plist` file:
 		didUpdate pushCredentials: PKPushCredentials,
 		for type: PKPushType
 	) {
+		let isProduction = false
 		if type == PKPushType.voIP {
 			Task {
 				await SecuredCallsVoice.registerVoipTokenAsync(
-					token: pushCredentials.token
+					token: pushCredentials.token,
+					isProduction: isProduction
 				)
 			}
 		}
