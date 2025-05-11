@@ -265,12 +265,12 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
 }
 @_hasMissingDesignatedInitializers public class SecuredCallsVoice : Foundation.ObservableObject {
   public static func initialize(_ clientSecret: Swift.String, configFileName: Swift.String = "Config", settings: SecuredCallsVoiceSDK.ScSDKSettingsModel = .default) throws
-  public static func loginAsync(identifier: Swift.String) async -> Swift.Bool
+  public static func loginAsync(identifier: Swift.String, isForceLogin: Swift.Bool = false) async -> Swift.Bool
   public static func reportNewInComingCall(payload: PushKit.PKPushPayload)
   public static func registerVoipTokenAsync(token: Foundation.Data, isProduction: Swift.Bool) async
   public func deRegisterVoipTokenAsync() async
-  public static func startCallAsync(number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "") async throws
-  public static func callBackFromCallHistory(callId: Swift.String, number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "") async throws
+  public static func startCallAsync(number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "", customData: [Swift.String : Any] = [:]) async throws
+  public static func callBackFromCallHistory(callId: Swift.String, number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "", customData: [Swift.String : Any] = [:]) async throws
   public static func instance() -> SecuredCallsVoiceSDK.SecuredCallsVoice
   public static func processNotificationAsync(request: UserNotifications.UNNotificationRequest, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void) async
   @discardableResult
@@ -288,6 +288,8 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   public static func requestNotificationPermissionAsync() async
   public static func requestContactAccessAsync() async
   public class func requestLocationPermissionAsync() async
+  public class func getLogs() async -> [Swift.String]
+  public class func clearLogs() async
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
@@ -365,6 +367,34 @@ public enum LogLevel : Swift.Int {
   }
 }
 
+@_hasMissingDesignatedInitializers public class UserDefaultWrapper {
+  public static let shared: SecuredCallsVoiceSDK.UserDefaultWrapper
+  public enum UserDefaultsKey : Swift.String {
+    case authToken
+    case authTokenExpiry
+    case consumerRegisterationComplete
+    case deviceRegisterationComplete
+    case appConfig
+    case logs
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func set(_ value: Swift.String, forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey)
+  public func getString(forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey) -> Swift.String?
+  public func set(_ value: [Swift.String], forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey)
+  public func getStringArray(forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey) -> [Swift.String]?
+  public func set(_ value: Swift.Bool, forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey)
+  public func getBool(forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey) -> Swift.Bool
+  public func set(_ value: Swift.Int, forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey)
+  public func getInt(forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey) -> Swift.Int
+  public func set<T>(_ value: T, forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey) where T : Swift.Decodable, T : Swift.Encodable
+  public func getObject<T>(forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey, type: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
+  public func remove(forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey)
+  @objc deinit
+}
 public enum CallType : Swift.Int16, Swift.Codable {
   case inApp
   case pstn
@@ -424,6 +454,36 @@ extension Foundation.NSNotification {
   public static let didRegisterForRemoteNotificationNotification: Foundation.NSNotification.Name
   public static let didFailToRegisterForRemoteNotification: Foundation.NSNotification.Name
 }
+extension SecuredCallsVoiceSDK.ConfigEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.ConfigEntity>
+  @objc @NSManaged dynamic public var showPermissionSheet: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var allowIncomingCallIntent: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var useLocation: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var vonageRegion: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var signatureIntervalSeconds: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+}
+extension SecuredCallsVoiceSDK.ConfigEntity : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+@_inheritsConvenienceInitializers @objc(ConfigEntity) public class ConfigEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
 public struct ScSDKSettingsModel : Swift.Hashable {
   public init(handlePermission: Swift.Bool = true, showPipView: Swift.Bool = true, logLevel: SecuredCallsVoiceSDK.LogLevel = .Off)
   public static let `default`: SecuredCallsVoiceSDK.ScSDKSettingsModel
@@ -432,6 +492,24 @@ public struct ScSDKSettingsModel : Swift.Hashable {
   public var hashValue: Swift.Int {
     get
   }
+}
+@_inheritsConvenienceInitializers @objc(LogsEntity) public class LogsEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension SecuredCallsVoiceSDK.LogsEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.LogsEntity>
+  @objc @NSManaged dynamic public var message: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var datetime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+}
+extension SecuredCallsVoiceSDK.LogsEntity : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
 }
 @_inheritsConvenienceInitializers @objc(BrandingEntity) public class BrandingEntity : CoreData.NSManagedObject {
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
@@ -498,6 +576,9 @@ extension SecuredCallsVoiceSDK.DeviceInfoHeader : Swift.Sendable {}
 extension SecuredCallsVoiceSDK.LogLevel : Swift.Equatable {}
 extension SecuredCallsVoiceSDK.LogLevel : Swift.Hashable {}
 extension SecuredCallsVoiceSDK.LogLevel : Swift.RawRepresentable {}
+extension SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey : Swift.Equatable {}
+extension SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey : Swift.Hashable {}
+extension SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey : Swift.RawRepresentable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.Equatable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.Hashable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.RawRepresentable {}

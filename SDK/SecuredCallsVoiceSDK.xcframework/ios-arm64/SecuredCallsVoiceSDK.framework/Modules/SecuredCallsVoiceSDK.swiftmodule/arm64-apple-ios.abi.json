@@ -5539,7 +5539,7 @@
           {
             "kind": "Function",
             "name": "loginAsync",
-            "printedName": "loginAsync(identifier:)",
+            "printedName": "loginAsync(identifier:isForceLogin:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5552,17 +5552,23 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:20SecuredCallsVoiceSDK0abC0C10loginAsync10identifierSbSS_tYaFZ",
-            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C10loginAsync10identifierSbSS_tYaFZ",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C10loginAsync10identifier12isForceLoginSbSS_SbtYaFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C10loginAsync10identifier12isForceLoginSbSS_SbtYaFZ",
             "moduleName": "SecuredCallsVoiceSDK",
             "static": true,
             "declAttributes": [
               "Final",
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -5654,7 +5660,7 @@
           {
             "kind": "Function",
             "name": "startCallAsync",
-            "printedName": "startCallAsync(number:callType:callIntent:)",
+            "printedName": "startCallAsync(number:callType:callIntent:customData:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5688,11 +5694,31 @@
                 "printedName": "Swift.String",
                 "hasDefaultArg": true,
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
               }
             ],
             "declKind": "Func",
-            "usr": "s:20SecuredCallsVoiceSDK0abC0C14startCallAsync6number8callType0I6IntentySSSg_AA0fJ0OSStYaKFZ",
-            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C14startCallAsync6number8callType0I6IntentySSSg_AA0fJ0OSStYaKFZ",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C14startCallAsync6number8callType0I6Intent10customDataySSSg_AA0fJ0OSSSDySSypGtYaKFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C14startCallAsync6number8callType0I6Intent10customDataySSSg_AA0fJ0OSSSDySSypGtYaKFZ",
             "moduleName": "SecuredCallsVoiceSDK",
             "static": true,
             "declAttributes": [
@@ -5706,7 +5732,7 @@
           {
             "kind": "Function",
             "name": "callBackFromCallHistory",
-            "printedName": "callBackFromCallHistory(callId:number:callType:callIntent:)",
+            "printedName": "callBackFromCallHistory(callId:number:callType:callIntent:customData:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5746,11 +5772,31 @@
                 "printedName": "Swift.String",
                 "hasDefaultArg": true,
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
               }
             ],
             "declKind": "Func",
-            "usr": "s:20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id6number0E4Type0E6IntentySS_SSSgAA0hL0OSStYaKFZ",
-            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id6number0E4Type0E6IntentySS_SSSgAA0hL0OSStYaKFZ",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id6number0E4Type0E6Intent10customDataySS_SSSgAA0hL0OSSSDySSypGtYaKFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id6number0E4Type0E6Intent10customDataySS_SSSgAA0hL0OSSSDySSypGtYaKFZ",
             "moduleName": "SecuredCallsVoiceSDK",
             "static": true,
             "declAttributes": [
@@ -6224,6 +6270,58 @@
             "declKind": "Func",
             "usr": "s:20SecuredCallsVoiceSDK0abC0C30requestLocationPermissionAsyncyyYaFZ",
             "mangledName": "$s20SecuredCallsVoiceSDK0abC0C30requestLocationPermissionAsyncyyYaFZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getLogs",
+            "printedName": "getLogs()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C7getLogsSaySSGyYaFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C7getLogsSaySSGyYaFZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearLogs",
+            "printedName": "clearLogs()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C9clearLogsyyYaFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C9clearLogsyyYaFZ",
             "moduleName": "SecuredCallsVoiceSDK",
             "static": true,
             "declAttributes": [
@@ -6945,6 +7043,832 @@
         "printedName": "VonageClientSDKVoice",
         "declKind": "Import",
         "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UserDefaultWrapper",
+        "printedName": "UserDefaultWrapper",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultWrapper",
+                "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC6sharedACvpZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC6sharedACvpZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserDefaultWrapper",
+                    "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper",
+                    "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC6sharedACvgZ",
+                "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC6sharedACvgZ",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "UserDefaultsKey",
+            "printedName": "UserDefaultsKey",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "authToken",
+                "printedName": "authToken",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey.Type) -> SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserDefaultsKey",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                        "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UserDefaultsKey",
+                            "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO9authTokenyA2EmF",
+                "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO9authTokenyA2EmF",
+                "moduleName": "SecuredCallsVoiceSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "authTokenExpiry",
+                "printedName": "authTokenExpiry",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey.Type) -> SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserDefaultsKey",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                        "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UserDefaultsKey",
+                            "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO15authTokenExpiryyA2EmF",
+                "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO15authTokenExpiryyA2EmF",
+                "moduleName": "SecuredCallsVoiceSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "consumerRegisterationComplete",
+                "printedName": "consumerRegisterationComplete",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey.Type) -> SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserDefaultsKey",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                        "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UserDefaultsKey",
+                            "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO29consumerRegisterationCompleteyA2EmF",
+                "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO29consumerRegisterationCompleteyA2EmF",
+                "moduleName": "SecuredCallsVoiceSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "deviceRegisterationComplete",
+                "printedName": "deviceRegisterationComplete",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey.Type) -> SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserDefaultsKey",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                        "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UserDefaultsKey",
+                            "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO27deviceRegisterationCompleteyA2EmF",
+                "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO27deviceRegisterationCompleteyA2EmF",
+                "moduleName": "SecuredCallsVoiceSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "appConfig",
+                "printedName": "appConfig",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey.Type) -> SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserDefaultsKey",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                        "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UserDefaultsKey",
+                            "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO9appConfigyA2EmF",
+                "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO9appConfigyA2EmF",
+                "moduleName": "SecuredCallsVoiceSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "logs",
+                "printedName": "logs",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey.Type) -> SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserDefaultsKey",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                        "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UserDefaultsKey",
+                            "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO4logsyA2EmF",
+                "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO4logsyA2EmF",
+                "moduleName": "SecuredCallsVoiceSDK"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserDefaultsKey",
+                        "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                        "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO8rawValueAESgSS_tcfc",
+                "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO8rawValueAESgSS_tcfc",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO8rawValueSSvp",
+                "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO8rawValueSSvp",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO8rawValueSSvg",
+                    "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO8rawValueSSvg",
+                    "moduleName": "SecuredCallsVoiceSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsKey",
+                "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC3set_6forKeyySS_AC0e8DefaultsJ0OtF",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC3set_6forKeyySS_AC0e8DefaultsJ0OtF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getString",
+            "printedName": "getString(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsKey",
+                "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC9getString6forKeySSSgAC0e8DefaultsK0O_tF",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC9getString6forKeySSSgAC0e8DefaultsK0O_tF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsKey",
+                "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC3set_6forKeyySaySSG_AC0e8DefaultsJ0OtF",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC3set_6forKeyySaySSG_AC0e8DefaultsJ0OtF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getStringArray",
+            "printedName": "getStringArray(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsKey",
+                "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC14getStringArray6forKeySaySSGSgAC0e8DefaultsL0O_tF",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC14getStringArray6forKeySaySSGSgAC0e8DefaultsL0O_tF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsKey",
+                "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC3set_6forKeyySb_AC0e8DefaultsJ0OtF",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC3set_6forKeyySb_AC0e8DefaultsJ0OtF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getBool",
+            "printedName": "getBool(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsKey",
+                "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC7getBool6forKeySbAC0e8DefaultsK0O_tF",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC7getBool6forKeySbAC0e8DefaultsK0O_tF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsKey",
+                "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC3set_6forKeyySi_AC0e8DefaultsJ0OtF",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC3set_6forKeyySi_AC0e8DefaultsJ0OtF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getInt",
+            "printedName": "getInt(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsKey",
+                "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC6getInt6forKeySiAC0e8DefaultsK0O_tF",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC6getInt6forKeySiAC0e8DefaultsK0O_tF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsKey",
+                "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC3set_6forKeyyx_AC0e8DefaultsJ0OtSeRzSERzlF",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC3set_6forKeyyx_AC0e8DefaultsJ0OtSeRzSERzlF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getObject",
+            "printedName": "getObject(forKey:type:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsKey",
+                "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC9getObject6forKey4typexSgAC0e8DefaultsK0O_xmtSeRzSERzlF",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC9getObject6forKey4typexSgAC0e8DefaultsK0O_xmtSeRzSERzlF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "remove",
+            "printedName": "remove(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsKey",
+                "printedName": "SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey",
+                "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC0E11DefaultsKeyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC6remove6forKeyyAC0e8DefaultsJ0O_tF",
+            "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC6remove6forKeyyAC0e8DefaultsJ0O_tF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:20SecuredCallsVoiceSDK18UserDefaultWrapperC",
+        "mangledName": "$s20SecuredCallsVoiceSDK18UserDefaultWrapperC",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -9914,6 +10838,662 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConfigEntity",
+        "printedName": "ConfigEntity",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(entity:insertInto:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConfigEntity",
+                "printedName": "SecuredCallsVoiceSDK.ConfigEntity",
+                "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)ConfigEntity"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSEntityDescription",
+                "printedName": "CoreData.NSEntityDescription",
+                "usr": "c:objc(cs)NSEntityDescription"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreData.NSManagedObjectContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSManagedObjectContext",
+                    "printedName": "CoreData.NSManagedObjectContext",
+                    "usr": "c:objc(cs)NSManagedObjectContext"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(im)initWithEntity:insertIntoManagedObjectContext:",
+            "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC6entity10insertIntoACSo19NSEntityDescriptionC_So22NSManagedObjectContextCSgtcfc",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithEntity:insertIntoManagedObjectContext:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "fetchRequest",
+            "printedName": "fetchRequest()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSFetchRequest",
+                "printedName": "CoreData.NSFetchRequest<SecuredCallsVoiceSDK.ConfigEntity>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConfigEntity",
+                    "printedName": "SecuredCallsVoiceSDK.ConfigEntity",
+                    "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)ConfigEntity"
+                  }
+                ],
+                "usr": "c:objc(cs)NSFetchRequest"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK12ConfigEntityC12fetchRequestSo07NSFetchH0CyACGyFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC12fetchRequestSo07NSFetchH0CyACGyFZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "declAttributes": [
+              "NonObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "showPermissionSheet",
+            "printedName": "showPermissionSheet",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(py)showPermissionSheet",
+            "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC19showPermissionSheetSbvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(im)showPermissionSheet",
+                "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC19showPermissionSheetSbvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(im)setShowPermissionSheet:",
+                "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC19showPermissionSheetSbvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allowIncomingCallIntent",
+            "printedName": "allowIncomingCallIntent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(py)allowIncomingCallIntent",
+            "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC23allowIncomingCallIntentSbvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(im)allowIncomingCallIntent",
+                "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC23allowIncomingCallIntentSbvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(im)setAllowIncomingCallIntent:",
+                "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC23allowIncomingCallIntentSbvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "useLocation",
+            "printedName": "useLocation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(py)useLocation",
+            "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC11useLocationSbvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(im)useLocation",
+                "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC11useLocationSbvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(im)setUseLocation:",
+                "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC11useLocationSbvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "vonageRegion",
+            "printedName": "vonageRegion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(py)vonageRegion",
+            "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC12vonageRegionSSSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(im)vonageRegion",
+                "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC12vonageRegionSSSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(im)setVonageRegion:",
+                "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC12vonageRegionSSSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signatureIntervalSeconds",
+            "printedName": "signatureIntervalSeconds",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int16",
+                "printedName": "Swift.Int16",
+                "usr": "s:s5Int16V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(py)signatureIntervalSeconds",
+            "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC24signatureIntervalSecondss5Int16Vvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int16",
+                    "printedName": "Swift.Int16",
+                    "usr": "s:s5Int16V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(im)signatureIntervalSeconds",
+                "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC24signatureIntervalSecondss5Int16Vvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int16",
+                    "printedName": "Swift.Int16",
+                    "usr": "s:s5Int16V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)ConfigEntity(im)setSignatureIntervalSeconds:",
+                "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC24signatureIntervalSecondss5Int16Vvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)ConfigEntity",
+        "mangledName": "$s20SecuredCallsVoiceSDK12ConfigEntityC",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "objc_name": "ConfigEntity",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSManagedObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "CoreData.NSManagedObject",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObservableObject",
+            "printedName": "ObservableObject",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ObjectWillChangePublisher",
+                "printedName": "ObjectWillChangePublisher",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObservableObjectPublisher",
+                    "printedName": "Combine.ObservableObjectPublisher",
+                    "usr": "s:7Combine25ObservableObjectPublisherC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7Combine16ObservableObjectP",
+            "mangledName": "$s7Combine16ObservableObjectP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObjectIdentifier",
+                    "printedName": "Swift.ObjectIdentifier",
+                    "usr": "s:SO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          }
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "ScSDKSettingsModel",
         "printedName": "ScSDKSettingsModel",
@@ -10235,6 +11815,455 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LogsEntity",
+        "printedName": "LogsEntity",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(entity:insertInto:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LogsEntity",
+                "printedName": "SecuredCallsVoiceSDK.LogsEntity",
+                "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)LogsEntity"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSEntityDescription",
+                "printedName": "CoreData.NSEntityDescription",
+                "usr": "c:objc(cs)NSEntityDescription"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreData.NSManagedObjectContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSManagedObjectContext",
+                    "printedName": "CoreData.NSManagedObjectContext",
+                    "usr": "c:objc(cs)NSManagedObjectContext"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)LogsEntity(im)initWithEntity:insertIntoManagedObjectContext:",
+            "mangledName": "$s20SecuredCallsVoiceSDK10LogsEntityC6entity10insertIntoACSo19NSEntityDescriptionC_So22NSManagedObjectContextCSgtcfc",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithEntity:insertIntoManagedObjectContext:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "fetchRequest",
+            "printedName": "fetchRequest()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSFetchRequest",
+                "printedName": "CoreData.NSFetchRequest<SecuredCallsVoiceSDK.LogsEntity>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogsEntity",
+                    "printedName": "SecuredCallsVoiceSDK.LogsEntity",
+                    "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)LogsEntity"
+                  }
+                ],
+                "usr": "c:objc(cs)NSFetchRequest"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK10LogsEntityC12fetchRequestSo07NSFetchH0CyACGyFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK10LogsEntityC12fetchRequestSo07NSFetchH0CyACGyFZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "NonObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)LogsEntity(py)message",
+            "mangledName": "$s20SecuredCallsVoiceSDK10LogsEntityC7messageSSSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)LogsEntity(im)message",
+                "mangledName": "$s20SecuredCallsVoiceSDK10LogsEntityC7messageSSSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)LogsEntity(im)setMessage:",
+                "mangledName": "$s20SecuredCallsVoiceSDK10LogsEntityC7messageSSSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "datetime",
+            "printedName": "datetime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)LogsEntity(py)datetime",
+            "mangledName": "$s20SecuredCallsVoiceSDK10LogsEntityC8datetime10Foundation4DateVSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)LogsEntity(im)datetime",
+                "mangledName": "$s20SecuredCallsVoiceSDK10LogsEntityC8datetime10Foundation4DateVSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@SecuredCallsVoiceSDK@objc(cs)LogsEntity(im)setDatetime:",
+                "mangledName": "$s20SecuredCallsVoiceSDK10LogsEntityC8datetime10Foundation4DateVSgvs",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SecuredCallsVoiceSDK@objc(cs)LogsEntity",
+        "mangledName": "$s20SecuredCallsVoiceSDK10LogsEntityC",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "objc_name": "LogsEntity",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSManagedObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "CoreData.NSManagedObject",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObservableObject",
+            "printedName": "ObservableObject",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ObjectWillChangePublisher",
+                "printedName": "ObjectWillChangePublisher",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObservableObjectPublisher",
+                    "printedName": "Combine.ObservableObjectPublisher",
+                    "usr": "s:7Combine25ObservableObjectPublisherC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7Combine16ObservableObjectP",
+            "mangledName": "$s7Combine16ObservableObjectP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObjectIdentifier",
+                    "printedName": "Swift.ObjectIdentifier",
+                    "usr": "s:SO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
       },
       {
         "kind": "Import",
@@ -13782,21 +15811,28 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/ConfigurationService.swift",
       "kind": "StringLiteral",
-      "offset": 590,
+      "offset": 982,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/ConfigurationService.swift",
       "kind": "BooleanLiteral",
-      "offset": 683,
+      "offset": 1040,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/ConfigurationService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1328,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/ConfigurationService.swift",
       "kind": "StringLiteral",
-      "offset": 1535,
+      "offset": 2124,
       "length": 8,
       "value": "\"Config\""
     },
@@ -13920,27 +15956,6 @@
       "value": "\"brandImageUrl\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/AuthenticationTokenService.swift",
-      "kind": "StringLiteral",
-      "offset": 616,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/AuthenticationTokenService.swift",
-      "kind": "StringLiteral",
-      "offset": 647,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/AuthenticationTokenService.swift",
-      "kind": "StringLiteral",
-      "offset": 673,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithText.swift",
       "kind": "StringLiteral",
       "offset": 401,
@@ -14062,28 +16077,56 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 3208,
+      "offset": 3125,
       "length": 8,
       "value": "\"Config\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
-      "kind": "StringLiteral",
-      "offset": 8227,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
-      "kind": "StringLiteral",
-      "offset": 10721,
-      "length": 2,
-      "value": "\"\""
+      "kind": "BooleanLiteral",
+      "offset": 4500,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 21165,
+      "offset": 4579,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
+      "kind": "StringLiteral",
+      "offset": 9637,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
+      "kind": "Dictionary",
+      "offset": 9671,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
+      "kind": "StringLiteral",
+      "offset": 12275,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
+      "kind": "Dictionary",
+      "offset": 12309,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
+      "kind": "BooleanLiteral",
+      "offset": 23193,
       "length": 4,
       "value": "true"
     },
@@ -14214,34 +16257,6 @@
       "value": "\"salt\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/SignatureService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 195,
-      "length": 4,
-      "value": "7200"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/SignatureService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 222,
-      "length": 3,
-      "value": "300"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/SignatureService.swift",
-      "kind": "StringLiteral",
-      "offset": 588,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/SignatureService.swift",
-      "kind": "StringLiteral",
-      "offset": 619,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Services\/Implementations\/CXProviderDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 3632,
@@ -14370,21 +16385,42 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "StringLiteral",
-      "offset": 3450,
-      "length": 62,
-      "value": "\"https:\/\/api.development.securedcalls.com\/branding\/device\/log\""
+      "offset": 3955,
+      "length": 6,
+      "value": "\"logs\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "StringLiteral",
-      "offset": 3824,
+      "offset": 4091,
       "length": 5,
       "value": "\"iOS\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "BooleanLiteral",
-      "offset": 3847,
+      "offset": 4114,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
+      "kind": "StringLiteral",
+      "offset": 4784,
+      "length": 62,
+      "value": "\"https:\/\/api.development.securedcalls.com\/branding\/device\/log\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
+      "kind": "StringLiteral",
+      "offset": 5158,
+      "length": 5,
+      "value": "\"iOS\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5181,
       "length": 5,
       "value": "false"
     },
@@ -14443,6 +16479,48 @@
       "offset": 1708,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/UserDefaultWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 397,
+      "length": 14,
+      "value": "\"SC-AuthToken\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/UserDefaultWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 437,
+      "length": 20,
+      "value": "\"SC-AuthTokenExpiry\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/UserDefaultWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 497,
+      "length": 34,
+      "value": "\"SC-ConsumerRegisterationComplete\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/UserDefaultWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 569,
+      "length": 32,
+      "value": "\"SC-DeviceRegisterationComplete\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/UserDefaultWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 621,
+      "length": 14,
+      "value": "\"SC-AppConfig\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/UserDefaultWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 650,
+      "length": 9,
+      "value": "\"SC-Logs\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Enums\/CallType.swift",
@@ -14529,27 +16607,6 @@
       "value": "\"didFailToRegisterForRemoteNotificationsWithErrorNotification\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Configuration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 298,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Configuration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 327,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Configuration.swift",
-      "kind": "StringLiteral",
-      "offset": 361,
-      "length": 4,
-      "value": "\"ap\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/ScSDKSettingsModel.swift",
       "kind": "BooleanLiteral",
       "offset": 305,
@@ -14566,7 +16623,7 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/UserInterface\/View\/GetCallScreenService.swift",
       "kind": "FloatLiteral",
-      "offset": 8495,
+      "offset": 8512,
       "length": 3,
       "value": "1.0"
     },
