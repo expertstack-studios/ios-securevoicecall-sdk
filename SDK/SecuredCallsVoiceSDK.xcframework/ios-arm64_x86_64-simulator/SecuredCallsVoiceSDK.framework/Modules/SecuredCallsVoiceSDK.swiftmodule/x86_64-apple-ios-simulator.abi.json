@@ -15979,84 +15979,84 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 280,
+      "offset": 320,
       "length": 14,
       "value": "\"Expert Stack\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 301,
+      "offset": 341,
       "length": 114,
       "value": "\"https:\/\/sc-demo-stack-securedcallsdemofiles8627e022-ntgcxeufhtcb.s3.ap-southeast-2.amazonaws.com\/expertstack.png\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/ScVoiceConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 435,
+      "offset": 475,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/ScVoiceConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 448,
+      "offset": 488,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 465,
+      "offset": 505,
       "length": 30,
       "value": "\"Delivery from Australia post\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 557,
+      "offset": 597,
       "length": 9,
       "value": "\"#484848\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 580,
+      "offset": 620,
       "length": 9,
       "value": "\"#FEFEFE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 655,
+      "offset": 695,
       "length": 9,
       "value": "\"#D70013\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 678,
+      "offset": 718,
       "length": 9,
       "value": "\"#FEFEFE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 756,
+      "offset": 796,
       "length": 9,
       "value": "\"#248A3D\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 779,
+      "offset": 819,
       "length": 9,
       "value": "\"#FEFEFE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/ScVoiceConfig.swift",
       "kind": "StringLiteral",
-      "offset": 831,
+      "offset": 871,
       "length": 9,
       "value": "\"#2B2B2B\""
     },
@@ -16098,35 +16098,35 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 9637,
+      "offset": 9632,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "Dictionary",
-      "offset": 9671,
+      "offset": 9666,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 12275,
+      "offset": 12270,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "Dictionary",
-      "offset": 12309,
+      "offset": 12304,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 23193,
+      "offset": 23187,
       "length": 4,
       "value": "true"
     },
