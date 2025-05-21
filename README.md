@@ -1,4 +1,5 @@
 
+
 # SecuredCalls Voice SDK Integration Guide
 
 ## Prerequisites
@@ -301,7 +302,18 @@ Add the following keys to your `Info.plist` file:
        completion()
    }
   ```
+  
+  ### Make Outbound callback to Customer care
 
+   ```swift
+   Task {
+		do {
+			try await SecuredCallsVoice.startCallAsync(number: "61450000001", callType: .inApp)
+		} catch {
+			print("Error: \(error)")
+		}
+	}
+  ```
 
 ## Notes
 
