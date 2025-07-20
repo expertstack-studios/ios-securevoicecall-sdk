@@ -46,6 +46,14 @@ Add the following keys to your `Info.plist` file:
     <string>Explain why access to contacts is needed.</string>
     ```
 
+- **Location Usage Description**  
+    ```xml
+    <key>Privacy - Location When In Use Usage Description</key>
+    <string>Explain why access to location is needed.</string>
+    <key>Privacy - Location Always and When In Use Usage Description</key>
+    <string>Explain why access to location is needed.</string>
+    ```
+
 ### Environment Configuration
 
 - **SC_APP_GROUP**  
@@ -179,7 +187,14 @@ Add the following keys to your `Info.plist` file:
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
        do {
             // initialize SDK
-           try SecuredCallsVoice.initialize("xxxxxxxSECRETxxxxxxx")
+           try SecuredCallsVoice.initialize(
+               "ZjZhNjk1MjItYWYyZi00OWE5LTliNjAtZTVkYzY2ZTdkZGRk",
+               settings: ScSDKSettingsModel(
+                         handlePermission: **true**,
+                         showPipView: **true**,
+                         logLevel: .Information
+                         )
+               )
        } catch {
            print("Failed to initialize SecuredCallsVoice SDK: \(error.localizedDescription)")
        }
@@ -200,6 +215,7 @@ Add the following keys to your `Info.plist` file:
            Task {
                await SecuredCallsVoice.requestNotificationPermissionAsync()
                await SecuredCallsVoice.requestContactAccessAsync()
+               await SecuredCallsVoice.requestLocationPermissionAsync()
            }
        } catch {
            print("\(error.localizedDescription)")
@@ -228,6 +244,7 @@ Add the following keys to your `Info.plist` file:
            Task {
                await SecuredCallsVoice.requestNotificationPermissionAsync()
                await SecuredCallsVoice.requestContactAccessAsync()
+               await SecuredCallsVoice.requestLocationPermissionAsync()
                // Request permissions and login asynchronously
                let loginStatus = await SecuredCallsVoice.loginAsync(identifier: userIdentifier)
            }
@@ -314,6 +331,7 @@ Add the following keys to your `Info.plist` file:
 		}
 	}
   ```
+
 
 ## Notes
 
