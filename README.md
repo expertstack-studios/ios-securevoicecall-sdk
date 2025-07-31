@@ -224,13 +224,33 @@ Add the following keys to your `Info.plist` file:
    }
    ```
 
-   ## User Login
-
-   ### UserIdentifier
+   ## UserIdentifier
    **UserIdentifier can be any user identifier if you are only using in-app calls. However, if you have configured both in-app and PSTN calls, the user identifier should be a mobile number.**
    ```swift
    let userIdentifier = "userIdentifier"
    ```
+   ## Consumer Registration Code
+   **Use the registerConsumerAsync(customerId:) method to register the user once per app installation.**
+   ```swift
+   let consumerRegistrationResult = await SecuredCallsVoice.registerConsumerAsync(customerId: userIdentifier)
+   let key = "isConsumerRegistered"
+        // Check if already registered
+        let alreadyRegistered = UserDefaults.standard.bool(forKey: key)
+        guard !alreadyRegistered else {
+            print("🔁 Already registered")
+            return
+        }
+
+        // Register consumer
+        do {
+            let result = try await SecuredCallsVoice.registerConsumerAsync(customerId: userIdentifier)
+            UserDefaults.standard.set(true, forKey: key)
+        } catch {
+            print("\(error.localizedDescription)")
+        }
+
+   ```
+   ## User Login
    - ### Login Code
    ```swift
    let userIdentifier = "userIdentifier"
