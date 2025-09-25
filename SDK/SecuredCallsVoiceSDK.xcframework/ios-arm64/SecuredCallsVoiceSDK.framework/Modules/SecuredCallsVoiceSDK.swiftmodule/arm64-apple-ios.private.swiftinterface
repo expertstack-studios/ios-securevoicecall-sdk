@@ -279,8 +279,9 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   @discardableResult
   public static func registerDeviceAsync(customerId: Swift.String, token: Swift.String, isProduction: Swift.Bool = true) async -> Swift.Result<Swift.Bool, any Swift.Error>
   @discardableResult
-  public static func deRegisterDeviceAsync(customerId: Swift.String) async -> Swift.Result<Swift.Bool, any Swift.Error>
+  public static func logoutAsync(identifier: Swift.String) async -> Swift.Result<Swift.Bool, any Swift.Error>
   public static func getCallHistoryAsync() async -> Swift.Result<[SecuredCallsVoiceSDK.CallInfoModel], any Swift.Error>
+  public static func clearAllCallHistoryAsync() async
   public static func setHistoryDelegate(_ delegate: (any SecuredCallsVoiceSDK.SecuredCallsVoiceDelegate)?)
   public static func setCallStatusDelegate(_ delegate: (any SecuredCallsVoiceSDK.ICallStatusDelegate)?)
   public static func callEnded()
@@ -376,7 +377,9 @@ public enum LogLevel : Swift.Int {
     case consumerRegisterationComplete
     case deviceRegisterationComplete
     case appConfig
+    case appConfigFileName
     case logs
+    case scCXProviderIconName
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -485,6 +488,22 @@ extension SecuredCallsVoiceSDK.ConfigEntity {
     @objc get
     @objc set
   }
+  @objc @NSManaged dynamic public var clientId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var baseUrl: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var contactCentreNumber: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var bundleId: Swift.String? {
+    @objc get
+    @objc set
+  }
 }
 extension SecuredCallsVoiceSDK.ConfigEntity : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
@@ -494,7 +513,7 @@ extension SecuredCallsVoiceSDK.ConfigEntity : Swift.Identifiable {
   @objc deinit
 }
 public struct ScSDKSettingsModel : Swift.Hashable {
-  public init(handlePermission: Swift.Bool = true, showPipView: Swift.Bool = true, logLevel: SecuredCallsVoiceSDK.LogLevel = .Off)
+  public init(handlePermission: Swift.Bool = true, showPipView: Swift.Bool = true, logLevel: SecuredCallsVoiceSDK.LogLevel = .Off, scCallKitIconName: Swift.String = "")
   public static let `default`: SecuredCallsVoiceSDK.ScSDKSettingsModel
   public static func == (a: SecuredCallsVoiceSDK.ScSDKSettingsModel, b: SecuredCallsVoiceSDK.ScSDKSettingsModel) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
