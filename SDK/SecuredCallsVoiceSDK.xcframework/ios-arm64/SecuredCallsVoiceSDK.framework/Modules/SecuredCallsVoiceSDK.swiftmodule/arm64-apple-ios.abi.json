@@ -5310,6 +5310,23 @@
       },
       {
         "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -6292,6 +6309,27 @@
             "declKind": "Func",
             "usr": "s:20SecuredCallsVoiceSDK0abC0C30requestLocationPermissionAsyncyyYaFZ",
             "mangledName": "$s20SecuredCallsVoiceSDK0abC0C30requestLocationPermissionAsyncyyYaFZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "requestMicrophonePermissionAsync",
+            "printedName": "requestMicrophonePermissionAsync()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C32requestMicrophonePermissionAsyncyyYaFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C32requestMicrophonePermissionAsyncyyYaFZ",
             "moduleName": "SecuredCallsVoiceSDK",
             "static": true,
             "declAttributes": [
@@ -17029,42 +17067,42 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "StringLiteral",
-      "offset": 3959,
+      "offset": 3969,
       "length": 6,
       "value": "\"logs\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "StringLiteral",
-      "offset": 4095,
+      "offset": 4105,
       "length": 5,
       "value": "\"iOS\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "BooleanLiteral",
-      "offset": 4118,
+      "offset": 4128,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "StringLiteral",
-      "offset": 4793,
+      "offset": 4803,
       "length": 62,
       "value": "\"https:\/\/api.development.securedcalls.com\/branding\/device\/log\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "StringLiteral",
-      "offset": 5167,
+      "offset": 5177,
       "length": 5,
       "value": "\"iOS\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "BooleanLiteral",
-      "offset": 5190,
+      "offset": 5200,
       "length": 5,
       "value": "false"
     },
