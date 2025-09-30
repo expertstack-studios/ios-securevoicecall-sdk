@@ -8,7 +8,7 @@ Ensure you have the following for using the SecuredCalls Voice SDK for iOS:
 
 - Mac OS with developer mode enabled
 - Xcode 11.0 or above
-- At least one physical iOS device running iOS 16.4 or later
+- At least one physical iOS device running iOS 16 or later
 - Swift 5.0 or later
 -    **Register on SecuredCalls.com** and obtain the `config.dat` file and secret
 
@@ -187,14 +187,16 @@ Add the following keys to your `Info.plist` file:
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
        do {
             // initialize SDK
-           try SecuredCallsVoice.initialize(
-               "ZjZhNjk1MjItYWYyZi00OWE5LTliNjAtZTVkYzY2ZTdkZGRk",
-               settings: ScSDKSettingsModel(
-                         handlePermission: **true**,
-                         showPipView: **true**,
-                         logLevel: .Information
-                         )
-               )
+			try SecuredCallsVoice.initialize(
+				"xxxxxxxSECRETxxxxxxx",
+				configFileName: "ConfigFileName",
+				settings: ScSDKSettingsModel(
+					handlePermission: true,
+					showPipView: true,
+					logLevel: .Debug,
+					scCallKitIconName: "AppIcon-Mono"
+				))
+        )
        } catch {
            print("Failed to initialize SecuredCallsVoice SDK: \(error.localizedDescription)")
        }
@@ -209,7 +211,15 @@ Add the following keys to your `Info.plist` file:
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
        do {
            UNUserNotificationCenter.current().delegate = self
-           try SecuredCallsVoice.initialize("xxxxxxxSECRETxxxxxxx")
+			try SecuredCallsVoice.initialize(
+				"xxxxxxxSECRETxxxxxxx",
+				configFileName: "ConfigFileName",
+				settings: ScSDKSettingsModel(
+					handlePermission: true,
+					showPipView: true,
+					logLevel: .Debug,
+					scCallKitIconName: "AppIcon-Mono"
+				))
         
            // Request permissions and login asynchronously
            Task {
@@ -257,9 +267,17 @@ Add the following keys to your `Info.plist` file:
 
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
        do {
-           UNUserNotificationCenter.current().delegate = self
-           registerForVoIPPushes()
-           try SecuredCallsVoice.initialize("xxxxxxxSECRETxxxxxxx")
+			UNUserNotificationCenter.current().delegate = self
+			registerForVoIPPushes()
+			try SecuredCallsVoice.initialize(
+				"xxxxxxxSECRETxxxxxxx",
+				configFileName: "ConfigFileName",
+				settings: ScSDKSettingsModel(
+					handlePermission: true,
+					showPipView: true,
+					logLevel: .Debug,
+					scCallKitIconName: "AppIcon-Mono"
+				))
         
            Task {
                await SecuredCallsVoice.requestNotificationPermissionAsync()
@@ -351,7 +369,19 @@ Add the following keys to your `Info.plist` file:
 		}
 	}
   ```
+### Logout User Session
 
+```swift
+	Task {
+		if let userIdentifier = UserDefaults.standard.string(forKey: "userIdentifier") {
+			do {
+				try await SecuredCallsVoice.logoutAsync(identifier: userIdentifier)
+			} catch {
+				print("Logout failed: \(error)")
+			}
+		}
+	}
+  ```
 
 ## Notes
 
