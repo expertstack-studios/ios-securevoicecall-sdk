@@ -266,7 +266,7 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
 }
 @_hasMissingDesignatedInitializers public class SecuredCallsVoice : Foundation.ObservableObject {
   public static func initialize(_ clientSecret: Swift.String, configFileName: Swift.String = "Config", settings: SecuredCallsVoiceSDK.ScSDKSettingsModel = .default) throws
-  public static func loginAsync(identifier: Swift.String, isForceLogin: Swift.Bool = false) async -> Swift.Bool
+  public static func loginAsync(identifier: Swift.String, isForceLogin: Swift.Bool = false) async -> Swift.Result<Swift.Bool, any Swift.Error>
   public static func reportNewInComingCall(payload: PushKit.PKPushPayload)
   public static func registerVoipTokenAsync(token: Foundation.Data, isProduction: Swift.Bool) async
   public func deRegisterVoipTokenAsync() async
