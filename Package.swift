@@ -29,7 +29,11 @@ let package = Package(
 				.product(name: "VonageClientSDK", package: "vonage-client-sdk-ios"),
 				.product(name: "VonageClientSDKVoice", package: "vonage-client-sdk-ios")
 			],
-			path: "./Sources/SecuredCallsVoiceSDKWrapper"
+			path: "./Sources/SecuredCallsVoiceSDKWrapper",
+			linkerSettings: [
+				.linkedFramework("VonageClientSDK"),
+				.linkedFramework("VonageClientSDKVoice")
+			]
 		)
 	]
 )
