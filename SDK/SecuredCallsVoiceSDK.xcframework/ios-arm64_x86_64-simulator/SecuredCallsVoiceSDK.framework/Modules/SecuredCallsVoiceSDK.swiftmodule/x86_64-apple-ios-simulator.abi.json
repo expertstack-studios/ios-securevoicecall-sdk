@@ -17099,42 +17099,42 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "StringLiteral",
-      "offset": 3979,
+      "offset": 3981,
       "length": 6,
       "value": "\"logs\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "StringLiteral",
-      "offset": 4115,
+      "offset": 4117,
       "length": 5,
       "value": "\"iOS\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "BooleanLiteral",
-      "offset": 4138,
+      "offset": 4140,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "StringLiteral",
-      "offset": 4813,
+      "offset": 4815,
       "length": 62,
       "value": "\"https:\/\/api.development.securedcalls.com\/branding\/device\/log\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "StringLiteral",
-      "offset": 5187,
+      "offset": 5189,
       "length": 5,
       "value": "\"iOS\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/LoggerService.swift",
       "kind": "BooleanLiteral",
-      "offset": 5210,
+      "offset": 5212,
       "length": 5,
       "value": "false"
     },
