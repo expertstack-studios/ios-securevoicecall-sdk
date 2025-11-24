@@ -14,11 +14,6 @@ let package = Package(
 			targets: ["SecuredCallsVoiceSDKWrapper"]
 		)
 	],
-	dependencies: [
-		.package(url: "https://github.com/Swinject/Swinject.git", from: "2.9.1"),
-		.package(url: "https://github.com/Swinject/SwinjectAutoregistration.git", from: "2.8.4"),
-		.package(url: "https://github.com/Vonage/vonage-client-sdk-ios", from: "1.6.0")
-	],
 	targets: [
 		.binaryTarget(
 			name: "SecuredCallsVoiceSDKBinary",
@@ -26,13 +21,6 @@ let package = Package(
 		),
 		.target(
 			name: "SecuredCallsVoiceSDKWrapper",
-			dependencies: [
-				"SecuredCallsVoiceSDKBinary",
-				.product(name: "Swinject", package: "Swinject"),
-				.product(name: "SwinjectAutoregistration", package: "SwinjectAutoregistration"),
-				.product(name: "VonageClientSDK", package: "vonage-client-sdk-ios"),
-				.product(name: "VonageClientSDKVoice", package: "vonage-client-sdk-ios")
-			],
 			path: "./Sources/SecuredCallsVoiceSDKWrapper"
 		)
 	]
