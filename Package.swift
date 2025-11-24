@@ -14,6 +14,9 @@ let package = Package(
 			targets: ["SecuredCallsVoiceSDKWrapper"]
 		)
 	],
+	dependencies: [
+		.package(url: "https://github.com/Vonage/vonage-client-sdk-ios", from: "1.6.0")
+	],
 	targets: [
 		.binaryTarget(
 			name: "SecuredCallsVoiceSDKBinary",
@@ -22,7 +25,9 @@ let package = Package(
 		.target(
 			name: "SecuredCallsVoiceSDKWrapper",
 			dependencies: [
-				"SecuredCallsVoiceSDKBinary"
+				"SecuredCallsVoiceSDKBinary",
+				.product(name: "VonageClientSDK", package: "vonage-client-sdk-ios"),
+				.product(name: "VonageClientSDKVoice", package: "vonage-client-sdk-ios")
 			],
 			path: "./Sources/SecuredCallsVoiceSDKWrapper"
 		)
