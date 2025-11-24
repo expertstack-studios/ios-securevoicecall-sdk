@@ -20,12 +20,8 @@ import PushKit
 import Security
 import Swift
 import SwiftUI
-import Swinject
-import SwinjectAutoregistration
 import UIKit
 import UserNotifications
-import VonageClientSDK
-import VonageClientSDKVoice
 import _AVKit_SwiftUI
 import _Concurrency
 import _StringProcessing
