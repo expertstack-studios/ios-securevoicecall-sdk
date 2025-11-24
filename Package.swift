@@ -21,6 +21,9 @@ let package = Package(
 		),
 		.target(
 			name: "SecuredCallsVoiceSDKWrapper",
+			dependencies: [
+				"SecuredCallsVoiceSDKBinary"
+			],
 			path: "./Sources/SecuredCallsVoiceSDKWrapper"
 		)
 	]
