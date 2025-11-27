@@ -15,7 +15,7 @@ let package = Package(
 		)
 	],
 	dependencies: [
-		.package(url: "https://github.com/Vonage/vonage-client-sdk-ios", from: "1.6.0")
+		.package(url: "https://github.com/Vonage/vonage-client-sdk-ios", from: "2.1.3")
 	],
 	targets: [
 		.binaryTarget(
