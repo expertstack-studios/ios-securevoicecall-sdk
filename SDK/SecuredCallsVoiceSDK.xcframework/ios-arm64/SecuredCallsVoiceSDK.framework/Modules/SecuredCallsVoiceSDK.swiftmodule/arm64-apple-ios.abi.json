@@ -5515,7 +5515,7 @@
           {
             "kind": "Function",
             "name": "initialize",
-            "printedName": "initialize(_:configFileName:settings:)",
+            "printedName": "initialize(_:configFileName:settings:appGroupID:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5541,11 +5541,17 @@
                 "printedName": "SecuredCallsVoiceSDK.ScSDKSettingsModel",
                 "hasDefaultArg": true,
                 "usr": "s:20SecuredCallsVoiceSDK18ScSDKSettingsModelV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "s:20SecuredCallsVoiceSDK0abC0C10initialize_14configFileName8settingsySS_SSAA18ScSDKSettingsModelVtKFZ",
-            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C10initialize_14configFileName8settingsySS_SSAA18ScSDKSettingsModelVtKFZ",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C10initialize_14configFileName8settings10appGroupIDySS_SSAA18ScSDKSettingsModelVSStKFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C10initialize_14configFileName8settings10appGroupIDySS_SSAA18ScSDKSettingsModelVSStKFZ",
             "moduleName": "SecuredCallsVoiceSDK",
             "static": true,
             "declAttributes": [
@@ -5866,7 +5872,7 @@
           {
             "kind": "Function",
             "name": "processNotificationAsync",
-            "printedName": "processNotificationAsync(request:withContentHandler:)",
+            "printedName": "processNotificationAsync(request:appGroupID:withContentHandler:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5878,6 +5884,12 @@
                 "name": "UNNotificationRequest",
                 "printedName": "UserNotifications.UNNotificationRequest",
                 "usr": "c:objc(cs)UNNotificationRequest"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeFunc",
@@ -5899,8 +5911,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:20SecuredCallsVoiceSDK0abC0C24processNotificationAsync7request18withContentHandlerySo21UNNotificationRequestC_ySo0lJ0CctYaFZ",
-            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C24processNotificationAsync7request18withContentHandlerySo21UNNotificationRequestC_ySo0lJ0CctYaFZ",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C24processNotificationAsync7request10appGroupID18withContentHandlerySo21UNNotificationRequestC_SSySo0oM0CctYaFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C24processNotificationAsync7request10appGroupID18withContentHandlerySo21UNNotificationRequestC_SSySo0oM0CctYaFZ",
             "moduleName": "SecuredCallsVoiceSDK",
             "static": true,
             "declAttributes": [
@@ -16826,56 +16838,56 @@
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 3125,
+      "offset": 3130,
       "length": 8,
       "value": "\"Config\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 4900,
+      "offset": 4976,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 4979,
+      "offset": 5055,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 9927,
+      "offset": 10003,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "Dictionary",
-      "offset": 9961,
+      "offset": 10037,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 12710,
+      "offset": 12786,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "Dictionary",
-      "offset": 12744,
+      "offset": 12820,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/sc-ios-v1\/sc-ios-v1\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 23773,
+      "offset": 23916,
       "length": 4,
       "value": "true"
     },

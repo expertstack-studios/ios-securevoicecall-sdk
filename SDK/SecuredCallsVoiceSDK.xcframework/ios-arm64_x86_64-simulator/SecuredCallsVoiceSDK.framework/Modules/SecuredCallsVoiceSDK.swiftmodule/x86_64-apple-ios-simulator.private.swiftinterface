@@ -261,7 +261,7 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   func didUpdateCallHistory()
 }
 @_hasMissingDesignatedInitializers public class SecuredCallsVoice : Foundation.ObservableObject {
-  public static func initialize(_ clientSecret: Swift.String, configFileName: Swift.String = "Config", settings: SecuredCallsVoiceSDK.ScSDKSettingsModel = .default) throws
+  public static func initialize(_ clientSecret: Swift.String, configFileName: Swift.String = "Config", settings: SecuredCallsVoiceSDK.ScSDKSettingsModel = .default, appGroupID: Swift.String) throws
   public static func loginAsync(identifier: Swift.String, isForceLogin: Swift.Bool = false) async -> Swift.Result<Swift.Bool, any Swift.Error>
   public static func reportNewInComingCall(payload: PushKit.PKPushPayload)
   public static func registerVoipTokenAsync(token: Foundation.Data, isProduction: Swift.Bool) async
@@ -269,7 +269,7 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   public static func startCallAsync(number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "", customData: [Swift.String : Any] = [:]) async throws
   public static func callBackFromCallHistory(callId: Swift.String, number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "", customData: [Swift.String : Any] = [:]) async throws
   public static func instance() -> SecuredCallsVoiceSDK.SecuredCallsVoice
-  public static func processNotificationAsync(request: UserNotifications.UNNotificationRequest, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void) async
+  public static func processNotificationAsync(request: UserNotifications.UNNotificationRequest, appGroupID: Swift.String, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void) async
   @discardableResult
   public static func registerConsumerAsync(customerId: Swift.String) async -> Swift.Result<Swift.Bool, any Swift.Error>
   @discardableResult
