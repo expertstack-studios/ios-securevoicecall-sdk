@@ -54,14 +54,6 @@ Add the following keys to your `Info.plist` file:
     <string>Explain why access to location is needed.</string>
     ```
 
-### Environment Configuration
-
-- **SC_APP_GROUP**  
-    ```xml
-    <key>SC_APP_GROUP</key>
-    <string>group.branding</string>
-    ```
-
 ## Enabling Capabilities in Xcode
 
   ### Background Modes
@@ -83,7 +75,7 @@ Add the following keys to your `Info.plist` file:
 ## App Groups
 
   1. In the **"Signing & Capabilities"** tab, click **"+"**.
-  2. Add **"App Groups"** and configure the identifier **group.branding**.
+  2. Add **"App Groups"** and configure the identifier **group.com.your.app**.
 
 ## Creating a Notification Service Extension in Xcode
 
@@ -105,12 +97,7 @@ Add the following keys to your `Info.plist` file:
       - Click Add to include the framework in your project.
    7. App Groups in Notification Service Extension
       - In the **"Signing & Capabilities"** tab, click **"+"**.
-      - Add **"App Groups"** and configure the identifier **group.branding**.
-      - Add Environment Configuration to Info.plist file
-      ```xml
-	    <key>SC_APP_GROUP</key>
-	    <string>group.branding</string>
-      ```
+      - Add **"App Groups"** and configure the identifier **group.com.your.app**.
       
     
    #### 2. Implement the Notification Service Extension Logic
@@ -125,7 +112,21 @@ Add the following keys to your `Info.plist` file:
    class NotificationService: UNNotificationServiceExtension {
 	override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
 		Task {
-			await SecuredCallsVoice.processNotificationAsync(request: request, withContentHandler: contentHandler)
+			await SecuredCallsVoice.processNotificationAsync(
+                    request: request,
+                    // ✅ The incoming UNNotificationRequest received by
+                    // the Notification Service / Notification Extension.
+                    
+                    appGroupID: "group.com.your.app",
+                    // ✅ App Group Identifier used for sharing data between
+                    // the Main App and the Notification Extension.
+                    // ⚠️ IMPORTANT: This MUST be the SAME App Group ID
+                    // that was passed during `SecuredCallsVoice.initialize(...)`.
+                    
+                    withContentHandler: contentHandler
+                    // ✅ Completion handler used to return the modified
+                    // notification content to the system after SDK processing.
+                )
 		}
 	}
 
@@ -188,15 +189,41 @@ Add the following keys to your `Info.plist` file:
        do {
             // initialize SDK
 			try SecuredCallsVoice.initialize(
-				"xxxxxxxSECRETxxxxxxx",
-				configFileName: "ConfigFileName",
-				settings: ScSDKSettingsModel(
-					handlePermission: true,
-					showPipView: true,
-					logLevel: .Debug,
-					scCallKitIconName: "AppIcon-Mono"
-				))
-        )
+                    "xxxxxxxSECRETxxxxxxx", 
+                    // ✅ SecuredCalls client secret provided by the SecuredCalls team
+                    
+                    configFileName: "ConfigFileName", 
+                    // ✅ Name of the configuration file (without extension) used by the SDK
+                    
+                    settings: ScSDKSettingsModel(
+                        handlePermission: true,
+                        // ✅ When true, the SDK will automatically check and request
+                        // required permissions via system popups if not already granted.
+                        
+                        showPipView: true,
+                        // ✅ When true, enables Picture-in-Picture (PiP) mode,
+                        // allowing the user to continue using the app during an ongoing call.
+                        
+                        logLevel: .Debug,
+                        // ✅ Controls SDK logging level:
+                        // case Error = 0
+                        // case Warning = 1
+                        // case Debug = 2
+                        // case Information = 3
+                        // case Off = -1 (Default)
+                        
+                        scCallKitIconName: "AppIcon-Mono"
+                        // ✅ Mono-color image name used on the CallKit screen.
+                        // ⚠️ The image MUST be a monochrome asset for proper display.
+                    ),
+                    
+                    appGroupID: "group.com.your.app"
+                    // ✅ App Group Identifier used for data sharing between
+                    // the Main App and the Notification Extension.
+                    // ⚠️ IMPORTANT: The SAME App Group ID must be used in BOTH
+                    // the main app and the notification extension.
+                )
+            )
        } catch {
            print("Failed to initialize SecuredCallsVoice SDK: \(error.localizedDescription)")
        }
@@ -219,7 +246,9 @@ Add the following keys to your `Info.plist` file:
 					showPipView: true,
 					logLevel: .Debug,
 					scCallKitIconName: "AppIcon-Mono"
-				))
+				),
+                appGroupID: "group.com.your.app"
+            )
         
            // Request permissions and login asynchronously
            Task {
@@ -254,6 +283,12 @@ Add the following keys to your `Info.plist` file:
         // Register consumer
         do {
             let result = try await SecuredCallsVoice.registerConsumerAsync(customerId: userIdentifier)
+            switch result {
+				case .success(let result):
+					logger.info("success")
+				case .failure(let error):
+					logger.info("failure : \(error.localizedDescription)")
+			}
             UserDefaults.standard.set(true, forKey: key)
         } catch {
             print("\(error.localizedDescription)")
@@ -277,14 +312,22 @@ Add the following keys to your `Info.plist` file:
 					showPipView: true,
 					logLevel: .Debug,
 					scCallKitIconName: "AppIcon-Mono"
-				))
+				),
+                appGroupID: "group.com.your.app"
+            )
         
            Task {
                await SecuredCallsVoice.requestNotificationPermissionAsync()
                await SecuredCallsVoice.requestContactAccessAsync()
                await SecuredCallsVoice.requestLocationPermissionAsync()
                // Request permissions and login asynchronously
-               let loginStatus = await SecuredCallsVoice.loginAsync(identifier: userIdentifier)
+               let loginResult = await SecuredCallsVoice.loginAsync(identifier: userIdentifier)
+               switch loginResult {
+				    case .success(let result):
+				    	logger.info("success")
+				    case .failure(let error):
+				    	logger.info("failure : \(error.localizedDescription)")
+			    }
            }
        } catch {
            print("\(error.localizedDescription)")
