@@ -18,8 +18,9 @@ Ensure you have the following for using the SecuredCalls Voice SDK for iOS:
 
 1. Open your project in Xcode.
 2. Go to **File** > **Swift Packages** > **Add Package Dependency...**.
-3. Enter the repository URL: https://github.com/expertstack-studios/ios-securevoicecall-sdk
-4. Select the latest version and click **Next**.
+3. Enter the repository URL:  
+   `https://github.com/expertstack-studios/ios-securevoicecall-sdk`
+4. When prompted for the version, select **Exact** and enter **1.0.17**, then click **Next**.
 5. Choose the packages required and click **Finish**.
 
 ## Configuring `Info.plist`
