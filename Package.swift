@@ -33,7 +33,6 @@ let package = Package(
 			swiftSettings: [
 				.enableExperimentalFeature("AccessLevelOnImport")
 			]
-			// Remove the linkerSettings - they're redundant and may cause issues
 		)
 	]
 )
