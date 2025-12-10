@@ -11,6 +11,7 @@ let package = Package(
 	products: [
 		.library(
 			name: "SecuredCallsVoiceSDK",
+			type: .dynamic,
 			targets: ["SecuredCallsVoiceSDKWrapper"]
 		)
 	],
@@ -30,6 +31,7 @@ let package = Package(
 				.product(name: "VonageClientSDKVoice", package: "vonage-client-sdk-ios")
 			],
 			path: "./Sources/SecuredCallsVoiceSDKWrapper",
+			resources: [], // Explicitly no resources
 			swiftSettings: [
 				.enableExperimentalFeature("AccessLevelOnImport")
 			]
