@@ -11,7 +11,7 @@ let package = Package(
 	products: [
 		.library(
 			name: "SecuredCallsVoiceSDK",
-			type: .dynamic,
+			type: .static,
 			targets: ["SecuredCallsVoiceSDKWrapper"]
 		)
 	],
