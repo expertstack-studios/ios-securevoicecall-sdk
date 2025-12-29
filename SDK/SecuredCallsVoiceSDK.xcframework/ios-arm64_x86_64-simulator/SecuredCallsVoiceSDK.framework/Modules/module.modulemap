@@ -1,6 +1,0 @@
-framework module SecuredCallsVoiceSDK {
-  umbrella header "SecuredCallsVoiceSDK.h"
-  export *
-
-  module * { export * }
-}
