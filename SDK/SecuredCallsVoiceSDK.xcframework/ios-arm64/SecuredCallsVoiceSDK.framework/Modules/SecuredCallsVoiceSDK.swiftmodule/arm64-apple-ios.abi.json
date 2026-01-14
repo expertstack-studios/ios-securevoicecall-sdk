@@ -4125,6 +4125,49 @@
           },
           {
             "kind": "Function",
+            "name": "clearBuffer",
+            "printedName": "clearBuffer()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK25EnhancedPipViewControllerC11clearBufferyyF",
+            "mangledName": "$s20SecuredCallsVoiceSDK25EnhancedPipViewControllerC11clearBufferyyF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resetPiP",
+            "printedName": "resetPiP()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK25EnhancedPipViewControllerC8resetPiPyyF",
+            "mangledName": "$s20SecuredCallsVoiceSDK25EnhancedPipViewControllerC8resetPiPyyF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "pictureInPictureControllerDidStartPictureInPicture",
             "printedName": "pictureInPictureControllerDidStartPictureInPicture(_:)",
             "children": [
@@ -16333,28 +16376,28 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/ConfigurationService.swift",
       "kind": "StringLiteral",
-      "offset": 1101,
+      "offset": 1163,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/ConfigurationService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1153,
+      "offset": 1215,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/ConfigurationService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1482,
+      "offset": 1544,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/ConfigurationService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1511,
+      "offset": 1573,
       "length": 4,
       "value": "true"
     },
@@ -16417,42 +16460,42 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 620,
+      "offset": 619,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 717,
+      "offset": 716,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 761,
+      "offset": 760,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 795,
+      "offset": 794,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 864,
+      "offset": 857,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4257,
+      "offset": 4148,
       "length": 2,
       "value": "30"
     },

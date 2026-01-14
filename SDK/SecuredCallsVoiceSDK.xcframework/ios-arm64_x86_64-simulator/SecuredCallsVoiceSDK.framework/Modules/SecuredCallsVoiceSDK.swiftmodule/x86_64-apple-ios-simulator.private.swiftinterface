@@ -207,6 +207,8 @@ public enum VoiceCallScreenPresenter {
   @objc override dynamic public init()
   final public func attachToRootViewController()
   final public func detachFromRootViewController()
+  final public func clearBuffer()
+  final public func resetPiP()
   @objc final public func pictureInPictureControllerDidStartPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
   @objc final public func pictureInPictureControllerDidStopPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
   @objc final public func pictureInPictureControllerShouldProhibitBackgroundAudioPlayback(_ pictureInPictureController: AVKit.AVPictureInPictureController) -> Swift.Bool
