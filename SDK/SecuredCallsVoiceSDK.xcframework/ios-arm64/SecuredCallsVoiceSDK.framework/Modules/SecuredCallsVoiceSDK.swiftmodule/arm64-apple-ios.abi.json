@@ -316,6 +316,23 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "Import",
         "name": "CommonCrypto",
         "printedName": "CommonCrypto",
         "declKind": "Import",
@@ -4609,6 +4626,23 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -6586,6 +6620,1025 @@
         "moduleName": "SecuredCallsVoiceSDK",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Typography",
+        "printedName": "Typography",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "displayLarge",
+            "printedName": "displayLarge",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV12displayLargeSo6UIFontCvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV12displayLargeSo6UIFontCvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV12displayLargeSo6UIFontCvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV12displayLargeSo6UIFontCvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timerDisplay",
+            "printedName": "timerDisplay",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV12timerDisplaySo6UIFontCvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV12timerDisplaySo6UIFontCvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV12timerDisplaySo6UIFontCvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV12timerDisplaySo6UIFontCvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV5titleSo6UIFontCvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV5titleSo6UIFontCvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV5titleSo6UIFontCvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV5titleSo6UIFontCvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "labelBold",
+            "printedName": "labelBold",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV9labelBoldSo6UIFontCvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV9labelBoldSo6UIFontCvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV9labelBoldSo6UIFontCvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV9labelBoldSo6UIFontCvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "footnote",
+            "printedName": "footnote",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV8footnoteSo6UIFontCvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV8footnoteSo6UIFontCvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV8footnoteSo6UIFontCvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV8footnoteSo6UIFontCvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "caption",
+            "printedName": "caption",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV7captionSo6UIFontCvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV7captionSo6UIFontCvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV7captionSo6UIFontCvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV7captionSo6UIFontCvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "captionSmall",
+            "printedName": "captionSmall",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV12captionSmallSo6UIFontCvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV12captionSmallSo6UIFontCvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV12captionSmallSo6UIFontCvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV12captionSmallSo6UIFontCvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "buttonTitle",
+            "printedName": "buttonTitle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV11buttonTitleSo6UIFontCvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV11buttonTitleSo6UIFontCvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV11buttonTitleSo6UIFontCvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV11buttonTitleSo6UIFontCvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(displayLarge:timerDisplay:title:labelBold:footnote:caption:captionSmall:buttonTitle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Typography",
+                "printedName": "SecuredCallsVoiceSDK.Typography",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIFont?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIFont?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIFont?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIFont?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIFont?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIFont?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIFont?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIFont?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV12displayLarge12timerDisplay5title9labelBold8footnote7caption0N5Small11buttonTitleACSo6UIFontCSg_A7Ntcfc",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV12displayLarge12timerDisplay5title9labelBold8footnote7caption0N5Small11buttonTitleACSo6UIFontCSg_A7Ntcfc",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Typography",
+                "printedName": "SecuredCallsVoiceSDK.Typography",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV7defaultACvpZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV7defaultACvpZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Typography",
+                    "printedName": "SecuredCallsVoiceSDK.Typography",
+                    "usr": "s:20SecuredCallsVoiceSDK10TypographyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV7defaultACvgZ",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV7defaultACvgZ",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV9hashValueSivp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV9hashValueSivp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV9hashValueSivg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV9hashValueSivg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV4hash4intoys6HasherVz_tF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Typography",
+                "printedName": "SecuredCallsVoiceSDK.Typography",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Typography",
+                "printedName": "SecuredCallsVoiceSDK.Typography",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV2eeoiySbAC_ACtFZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "displayLargeFont",
+            "printedName": "displayLargeFont",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Font",
+                "printedName": "SwiftUI.Font",
+                "usr": "s:7SwiftUI4FontV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV16displayLargeFont7SwiftUI0H0Vvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV16displayLargeFont7SwiftUI0H0Vvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SwiftUI.Font",
+                    "usr": "s:7SwiftUI4FontV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV16displayLargeFont7SwiftUI0H0Vvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV16displayLargeFont7SwiftUI0H0Vvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timerDisplayFont",
+            "printedName": "timerDisplayFont",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Font",
+                "printedName": "SwiftUI.Font",
+                "usr": "s:7SwiftUI4FontV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV16timerDisplayFont7SwiftUI0H0Vvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV16timerDisplayFont7SwiftUI0H0Vvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SwiftUI.Font",
+                    "usr": "s:7SwiftUI4FontV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV16timerDisplayFont7SwiftUI0H0Vvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV16timerDisplayFont7SwiftUI0H0Vvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "titleFont",
+            "printedName": "titleFont",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Font",
+                "printedName": "SwiftUI.Font",
+                "usr": "s:7SwiftUI4FontV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV9titleFont7SwiftUI0G0Vvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV9titleFont7SwiftUI0G0Vvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SwiftUI.Font",
+                    "usr": "s:7SwiftUI4FontV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV9titleFont7SwiftUI0G0Vvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV9titleFont7SwiftUI0G0Vvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "labelBoldFont",
+            "printedName": "labelBoldFont",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Font",
+                "printedName": "SwiftUI.Font",
+                "usr": "s:7SwiftUI4FontV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV13labelBoldFont7SwiftUI0H0Vvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV13labelBoldFont7SwiftUI0H0Vvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SwiftUI.Font",
+                    "usr": "s:7SwiftUI4FontV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV13labelBoldFont7SwiftUI0H0Vvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV13labelBoldFont7SwiftUI0H0Vvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "footnoteFont",
+            "printedName": "footnoteFont",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Font",
+                "printedName": "SwiftUI.Font",
+                "usr": "s:7SwiftUI4FontV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV12footnoteFont7SwiftUI0G0Vvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV12footnoteFont7SwiftUI0G0Vvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SwiftUI.Font",
+                    "usr": "s:7SwiftUI4FontV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV12footnoteFont7SwiftUI0G0Vvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV12footnoteFont7SwiftUI0G0Vvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "captionFont",
+            "printedName": "captionFont",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Font",
+                "printedName": "SwiftUI.Font",
+                "usr": "s:7SwiftUI4FontV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV11captionFont7SwiftUI0G0Vvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV11captionFont7SwiftUI0G0Vvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SwiftUI.Font",
+                    "usr": "s:7SwiftUI4FontV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV11captionFont7SwiftUI0G0Vvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV11captionFont7SwiftUI0G0Vvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "captionSmallFont",
+            "printedName": "captionSmallFont",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Font",
+                "printedName": "SwiftUI.Font",
+                "usr": "s:7SwiftUI4FontV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV16captionSmallFont7SwiftUI0H0Vvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV16captionSmallFont7SwiftUI0H0Vvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SwiftUI.Font",
+                    "usr": "s:7SwiftUI4FontV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV16captionSmallFont7SwiftUI0H0Vvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV16captionSmallFont7SwiftUI0H0Vvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "buttonTitleFont",
+            "printedName": "buttonTitleFont",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Font",
+                "printedName": "SwiftUI.Font",
+                "usr": "s:7SwiftUI4FontV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK10TypographyV15buttonTitleFont7SwiftUI0H0Vvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV15buttonTitleFont7SwiftUI0H0Vvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SwiftUI.Font",
+                    "usr": "s:7SwiftUI4FontV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV15buttonTitleFont7SwiftUI0H0Vvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV15buttonTitleFont7SwiftUI0H0Vvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20SecuredCallsVoiceSDK10TypographyV",
+        "mangledName": "$s20SecuredCallsVoiceSDK10TypographyV",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
         ]
       },
       {
@@ -12422,7 +13475,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(handlePermission:showPipView:logLevel:scCallKitIconName:)",
+            "printedName": "init(handlePermission:showPipView:logLevel:scCallKitIconName:typography:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -12457,11 +13510,18 @@
                 "printedName": "Swift.String",
                 "hasDefaultArg": true,
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Typography",
+                "printedName": "SecuredCallsVoiceSDK.Typography",
+                "hasDefaultArg": true,
+                "usr": "s:20SecuredCallsVoiceSDK10TypographyV"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:20SecuredCallsVoiceSDK18ScSDKSettingsModelV16handlePermission11showPipView8logLevel17scCallKitIconNameACSb_SbAA03LogN0OSStcfc",
-            "mangledName": "$s20SecuredCallsVoiceSDK18ScSDKSettingsModelV16handlePermission11showPipView8logLevel17scCallKitIconNameACSb_SbAA03LogN0OSStcfc",
+            "usr": "s:20SecuredCallsVoiceSDK18ScSDKSettingsModelV16handlePermission11showPipView8logLevel17scCallKitIconName10typographyACSb_SbAA03LogN0OSSAA10TypographyVtcfc",
+            "mangledName": "$s20SecuredCallsVoiceSDK18ScSDKSettingsModelV16handlePermission11showPipView8logLevel17scCallKitIconName10typographyACSb_SbAA03LogN0OSSAA10TypographyVtcfc",
             "moduleName": "SecuredCallsVoiceSDK",
             "declAttributes": [
               "AccessControl",
@@ -12699,6 +13759,16 @@
         "printedName": "Security",
         "declKind": "Import",
         "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -16086,6 +17156,172 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "UIFont",
+        "printedName": "UIFont",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "systemFont",
+            "printedName": "systemFont(ofSize:weight:design:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Weight",
+                "printedName": "UIKit.UIFont.Weight",
+                "usr": "c:@T@UIFontWeight"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SystemDesign",
+                "printedName": "UIKit.UIFontDescriptor.SystemDesign",
+                "usr": "c:@T@UIFontDescriptorSystemDesign"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIFontC20SecuredCallsVoiceSDKE10systemFont6ofSize6weight6designAB14CoreFoundation7CGFloatV_So0A6WeightaSo0A22DescriptorSystemDesignatFZ",
+            "mangledName": "$sSo6UIFontC20SecuredCallsVoiceSDKE10systemFont6ofSize6weight6designAB12CoreGraphics7CGFloatV_So0A6WeightaSo0A22DescriptorSystemDesignatFZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "withMonospacedDigits",
+            "printedName": "withMonospacedDigits()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIFontC20SecuredCallsVoiceSDKE20withMonospacedDigitsAByF",
+            "mangledName": "$sSo6UIFontC20SecuredCallsVoiceSDKE20withMonospacedDigitsAByF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIFont",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIFont",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "NSNotification",
         "printedName": "NSNotification",
         "children": [
@@ -16642,58 +17878,93 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 3130,
+      "offset": 3251,
       "length": 8,
       "value": "\"Config\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 4976,
+      "offset": 5162,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 5055,
+      "offset": 5241,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 10003,
+      "offset": 10189,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "Dictionary",
-      "offset": 10037,
+      "offset": 10223,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "StringLiteral",
-      "offset": 12786,
+      "offset": 12972,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "Dictionary",
-      "offset": 12820,
+      "offset": 13006,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 23916,
+      "offset": 24102,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Theme\/Typography.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1555,
+      "length": 2,
+      "value": "38"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Theme\/Typography.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1633,
+      "length": 2,
+      "value": "38"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Theme\/Typography.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1722,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Theme\/Typography.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1797,
+      "length": 2,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Theme\/Typography.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2015,
+      "length": 2,
+      "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Enums\/TokenStatus.swift",
@@ -16955,58 +18226,44 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithImageAndText.swift",
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithSystemImageAndText.swift",
       "kind": "StringLiteral",
-      "offset": 428,
+      "offset": 470,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithImageAndText.swift",
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithSystemImageAndText.swift",
       "kind": "IntegerLiteral",
-      "offset": 450,
+      "offset": 492,
       "length": 2,
       "value": "54"
     },
     {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithImageAndText.swift",
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithSystemImageAndText.swift",
       "kind": "StringLiteral",
-      "offset": 855,
+      "offset": 1011,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithImageAndText.swift",
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithSystemImageAndText.swift",
       "kind": "IntegerLiteral",
-      "offset": 877,
+      "offset": 1033,
       "length": 2,
       "value": "54"
     },
     {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithImageAndText.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1383,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithImageAndText.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1399,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithImageAndText.swift",
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithSystemImageAndText.swift",
       "kind": "StringLiteral",
-      "offset": 1697,
+      "offset": 2050,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithImageAndText.swift",
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithSystemImageAndText.swift",
       "kind": "StringLiteral",
-      "offset": 1708,
+      "offset": 2061,
       "length": 2,
       "value": "\"\""
     },
@@ -17104,7 +18361,7 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Services\/Implementations\/AudioDeviceService.swift",
       "kind": "Array",
-      "offset": 257,
+      "offset": 646,
       "length": 2,
       "value": "[]"
     },
@@ -17153,23 +18410,51 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/ScSDKSettingsModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 339,
+      "offset": 367,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/ScSDKSettingsModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 365,
+      "offset": 393,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/ScSDKSettingsModel.swift",
       "kind": "StringLiteral",
-      "offset": 426,
+      "offset": 454,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithImageAndText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 477,
+      "length": 2,
+      "value": "54"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithImageAndText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1012,
+      "length": 2,
+      "value": "54"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithImageAndText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1613,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/RoundButtonWithImageAndText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1629,
+      "length": 1,
+      "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/GetCallScreenService.swift",
@@ -17247,6 +18532,20 @@
       "offset": 729,
       "length": 10,
       "value": "\"IconMask\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/SecuredCalls-ekhfgaqvnhcecccqwhzuqgszygxm\/Build\/Intermediates.noindex\/ArchiveIntermediates\/SecuredCallsVoiceSDK\/IntermediateBuildFilesPath\/SecuredCallsVoiceSDK.build\/Release-iphoneos\/SecuredCallsVoiceSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 863,
+      "length": 9,
+      "value": "\"MicIcon\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/SecuredCalls-ekhfgaqvnhcecccqwhzuqgszygxm\/Build\/Intermediates.noindex\/ArchiveIntermediates\/SecuredCallsVoiceSDK\/IntermediateBuildFilesPath\/SecuredCallsVoiceSDK.build\/Release-iphoneos\/SecuredCallsVoiceSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1004,
+      "length": 13,
+      "value": "\"SpeakerIcon\""
     }
   ]
 }

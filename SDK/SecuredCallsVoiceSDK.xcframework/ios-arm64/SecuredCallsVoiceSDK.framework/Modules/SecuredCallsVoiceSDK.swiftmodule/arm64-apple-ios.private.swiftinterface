@@ -301,6 +301,55 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
+public struct Typography : Swift.Hashable {
+  public let displayLarge: UIKit.UIFont
+  public let timerDisplay: UIKit.UIFont
+  public let title: UIKit.UIFont
+  public let labelBold: UIKit.UIFont
+  public let footnote: UIKit.UIFont
+  public let caption: UIKit.UIFont
+  public let captionSmall: UIKit.UIFont
+  public let buttonTitle: UIKit.UIFont
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(displayLarge: UIKit.UIFont? = nil, timerDisplay: UIKit.UIFont? = nil, title: UIKit.UIFont? = nil, labelBold: UIKit.UIFont? = nil, footnote: UIKit.UIFont? = nil, caption: UIKit.UIFont? = nil, captionSmall: UIKit.UIFont? = nil, buttonTitle: UIKit.UIFont? = nil)
+  #endif
+  public static let `default`: SecuredCallsVoiceSDK.Typography
+  public static func == (a: SecuredCallsVoiceSDK.Typography, b: SecuredCallsVoiceSDK.Typography) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIFont {
+  public static func systemFont(ofSize size: CoreFoundation.CGFloat, weight: UIKit.UIFont.Weight, design: UIKit.UIFontDescriptor.SystemDesign) -> UIKit.UIFont
+  public func withMonospacedDigits() -> UIKit.UIFont
+}
+extension SecuredCallsVoiceSDK.Typography {
+  public var displayLargeFont: SwiftUICore.Font {
+    get
+  }
+  public var timerDisplayFont: SwiftUICore.Font {
+    get
+  }
+  public var titleFont: SwiftUICore.Font {
+    get
+  }
+  public var labelBoldFont: SwiftUICore.Font {
+    get
+  }
+  public var footnoteFont: SwiftUICore.Font {
+    get
+  }
+  public var captionFont: SwiftUICore.Font {
+    get
+  }
+  public var captionSmallFont: SwiftUICore.Font {
+    get
+  }
+  public var buttonTitleFont: SwiftUICore.Font {
+    get
+  }
+}
 extension SecuredCallsVoiceSDK.CallHistoryEntity {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.CallHistoryEntity>
   @objc @NSManaged nonisolated dynamic public var acceptIncomingCalls: Swift.Bool {
@@ -571,7 +620,7 @@ extension SecuredCallsVoiceSDK.ConfigEntity : Swift.Identifiable {
   @objc deinit
 }
 public struct ScSDKSettingsModel : Swift.Hashable {
-  public init(handlePermission: Swift.Bool = true, showPipView: Swift.Bool = true, logLevel: SecuredCallsVoiceSDK.LogLevel = .Off, scCallKitIconName: Swift.String = "")
+  public init(handlePermission: Swift.Bool = true, showPipView: Swift.Bool = true, logLevel: SecuredCallsVoiceSDK.LogLevel = .Off, scCallKitIconName: Swift.String = "", typography: SecuredCallsVoiceSDK.Typography = .default)
   public static let `default`: SecuredCallsVoiceSDK.ScSDKSettingsModel
   public static func == (a: SecuredCallsVoiceSDK.ScSDKSettingsModel, b: SecuredCallsVoiceSDK.ScSDKSettingsModel) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
