@@ -20,7 +20,7 @@ Ensure you have the following for using the SecuredCalls Voice SDK for iOS:
 2. Go to **File** > **Swift Packages** > **Add Package Dependency...**.
 3. Enter the repository URL:  
    `https://github.com/expertstack-studios/ios-securevoicecall-sdk`
-4. When prompted for the version, select **Exact** and enter **1.0.17**, then click **Next**.
+4. When prompted for the version, select **Exact** and enter **1.0.21**, then click **Next**.
 5. Choose the packages required and click **Finish**.
 
 ## Configuring `Info.plist`
@@ -188,6 +188,68 @@ Add the following keys to your `Info.plist` file:
    ```swift
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
        do {
+       
+			// MARK: - Optional Typography Customization
+			//
+			// The Typography object allows you to customize fonts used across
+			// different UI surfaces of the SecuredCalls SDK.
+			//
+			// ⚠️ IMPORTANT:
+			// • ALL typography fields are OPTIONAL
+			// • If Typography is not provided, or if any font is nil,
+			//   the SDK will automatically fall back to its DEFAULT system fonts
+			// • Font customization is purely visual and does NOT affect SDK behavior
+			//
+
+			var typography = Typography(
+				
+				displayName: UIFont(name: "AvenirNextLTPro-Demi", size: 36),
+				// Optional
+				// Used for: large display titles, marquee-style text
+				
+				timer: UIFont(name: "AvenirNext-Medium", size: 32)?.withMonospacedDigits(),
+				// Optional
+				// Used for: Call duration timer
+				// Recommended to use monospaced digits for stable timer rendering
+				
+				callStatus: UIFont(name: "AvenirNext-Regular", size: 20),
+				// Optional
+				// Used for: Call status labels such as
+				// "Incoming Call", "Connecting", "Dialing"
+				
+				poweredBy: UIFont(name: "AvenirNext-Medium", size: 18),
+				// Optional
+				// Used for: "Powered by" branding text
+				
+				callIntentTitle: UIFont(name: "AvenirNext-DemiBold", size: 16),
+				// Optional
+				// Used for: Call intent title text in in-app call UI
+				
+				callIntentBody: UIFont(name: "AvenirNext-DemiBold", size: 24),
+				// Optional
+				// Used for: Call intent body / primary message text
+				
+				buttonTitle: UIFont(name: "AvenirNext-DemiBold", size: 14),
+				// Optional
+				// Used for: Button titles across SDK UI
+				
+				callkitCallIntentTitle: UIFont(name: "AvenirNext-Regular", size: 8),
+				// Optional
+				// Used for: Call intent title shown on the iOS CallKit screen
+				// Smaller font size recommended due to CallKit layout constraints
+				
+				callkitCallIntentBody: UIFont(name: "AvenirNext-DemiBold", size: 16),
+				// Optional
+				// Used for: Call intent body text on the CallKit screen
+				
+				pipDisplayName: UIFont(name: "AvenirNext-DemiBold", size: 24),
+				// Optional
+				// Used for: Display name shown in Picture-in-Picture (PiP) mode
+				
+				keypadButtonTitle: UIFont(name: "AvenirNext-DemiBold", size: 24)
+				// Optional
+				// Used for: Dial pad / keypad button text
+			)
             // initialize SDK
 			try SecuredCallsVoice.initialize(
                     "xxxxxxxSECRETxxxxxxx", 
@@ -213,9 +275,13 @@ Add the following keys to your `Info.plist` file:
                         // case Information = 3
                         // case Off = -1 (Default)
                         
-                        scCallKitIconName: "AppIcon-Mono"
+                        scCallKitIconName: "AppIcon-Mono",
                         // ✅ Mono-color image name used on the CallKit screen.
                         // ⚠️ The image MUST be a monochrome asset for proper display.
+                        
+                        typography: typography
+						// Optional
+						// If not provided, SDK uses default typography
                     ),
                     
                     appGroupID: "group.com.your.app"
