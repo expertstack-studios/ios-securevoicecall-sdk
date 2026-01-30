@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		LaomZ8/ZXnzd9vxUpDPTXUV25+E=
+		Jdo0lNfH92SVpw8ngSaiDPifyEs=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PnPskVr5eM0RCEwv1hQbNCxUXX0=
+		xAL1GKYAXP8BumYX5d/kLW5pWjk=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		LaomZ8/ZXnzd9vxUpDPTXUV25+E=
+		Jdo0lNfH92SVpw8ngSaiDPifyEs=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		D7GCHMkUQdG2sc0JSd8FPPSmpOQ=
+		Z+H6IVqgZ8qoeeZz9bTaHR+Et7E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BnWRu93h0KWkguIAUaoqiTM7p3zr4xUFq1msVjLhon0=
+			VIFE0Tmyrfi6tXWDKA9E6dMObYuG4JOq7kHpq/z1Vfg=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -117,14 +117,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lzlTHf6D1IaIZOrqAx/aXy+C0FFK5YY2gQIFs4bcLZQ=
+			RIj4VkHg9avYP9LpVGKSxVBkBDqm414U1D3F86xGiTI=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BnWRu93h0KWkguIAUaoqiTM7p3zr4xUFq1msVjLhon0=
+			VIFE0Tmyrfi6tXWDKA9E6dMObYuG4JOq7kHpq/z1Vfg=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -152,7 +152,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RDRS/AfD+YFHJGU2gy5A40oLgL4WbPldep0QWYnE0us=
+			x2mhyX0G1vYDx/ncpHHDtIjz6qvUW2eF3eewfg1t0hQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
