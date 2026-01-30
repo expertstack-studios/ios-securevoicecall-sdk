@@ -551,6 +551,8 @@ public struct CallInfoModel {
   public var callType: SecuredCallsVoiceSDK.CallType
   public var callTime: Foundation.Date
   public var isIncomingCall: Swift.Bool
+  public var backgroundColor: Swift.String
+  public var useGradiant: Swift.Bool
 }
 
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SheetViewController : UIKit.UIViewController, UIKit.UISheetPresentationControllerDelegate {
