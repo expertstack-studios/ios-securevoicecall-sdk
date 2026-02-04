@@ -36,6 +36,79 @@ public enum LocationError : Swift.Error {
     get
   }
 }
+public struct Typography : Swift.Hashable {
+  public let displayName: UIKit.UIFont
+  public let timer: UIKit.UIFont
+  public let callStatus: UIKit.UIFont
+  public let poweredBy: UIKit.UIFont
+  public let callIntentBody: UIKit.UIFont
+  public let callIntentTitle: UIKit.UIFont
+  public let buttonTitle: UIKit.UIFont
+  public let callkitCallIntentTitle: UIKit.UIFont
+  public let callkitCallIntentBody: UIKit.UIFont
+  public let pipDisplayName: UIKit.UIFont
+  public let keypadButtonTitle: UIKit.UIFont
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(displayName: UIKit.UIFont? = nil, timer: UIKit.UIFont? = nil, callStatus: UIKit.UIFont? = nil, poweredBy: UIKit.UIFont? = nil, callIntentTitle: UIKit.UIFont? = nil, callIntentBody: UIKit.UIFont? = nil, buttonTitle: UIKit.UIFont? = nil, callkitCallIntentTitle: UIKit.UIFont? = nil, callkitCallIntentBody: UIKit.UIFont? = nil, pipDisplayName: UIKit.UIFont? = nil, keypadButtonTitle: UIKit.UIFont? = nil)
+  #endif
+  public static let `default`: SecuredCallsVoiceSDK.Typography
+  public static func == (a: SecuredCallsVoiceSDK.Typography, b: SecuredCallsVoiceSDK.Typography) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIFont {
+  public static func systemFont(ofSize size: CoreFoundation.CGFloat, weight: UIKit.UIFont.Weight, design: UIKit.UIFontDescriptor.SystemDesign) -> UIKit.UIFont
+  public func withMonospacedDigits() -> UIKit.UIFont
+}
+extension SecuredCallsVoiceSDK.Typography {
+  public var displayNameFont: SwiftUICore.Font {
+    get
+  }
+  public var timerFont: SwiftUICore.Font {
+    get
+  }
+  public var callStatusFont: SwiftUICore.Font {
+    get
+  }
+  public var poweredByFont: SwiftUICore.Font {
+    get
+  }
+  public var callIntentBodyFont: SwiftUICore.Font {
+    get
+  }
+  public var callIntentTitleFont: SwiftUICore.Font {
+    get
+  }
+  public var buttonTitleFont: SwiftUICore.Font {
+    get
+  }
+  public var pipDisplayNameFont: SwiftUICore.Font {
+    get
+  }
+  public var keypadButtonTitleFont: SwiftUICore.Font {
+    get
+  }
+}
+public struct FontDescriptor : Swift.Codable, Swift.Hashable {
+  public let name: Swift.String
+  public let size: CoreFoundation.CGFloat
+  public let isMonospaced: Swift.Bool
+  public init(font: UIKit.UIFont, isMonospaced: Swift.Bool = false)
+  public func toUIFont() -> UIKit.UIFont
+  public static func == (a: SecuredCallsVoiceSDK.FontDescriptor, b: SecuredCallsVoiceSDK.FontDescriptor) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TypographyDTO : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 @_Concurrency.MainActor @preconcurrency public struct MarqueeText : SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public var text: Swift.String
   @_Concurrency.MainActor @preconcurrency public var font: UIKit.UIFont
@@ -299,79 +372,6 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   public class func clearLogs() async
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
-}
-public struct Typography : Swift.Hashable {
-  public let displayName: UIKit.UIFont
-  public let timer: UIKit.UIFont
-  public let callStatus: UIKit.UIFont
-  public let poweredBy: UIKit.UIFont
-  public let callIntentBody: UIKit.UIFont
-  public let callIntentTitle: UIKit.UIFont
-  public let buttonTitle: UIKit.UIFont
-  public let callkitCallIntentTitle: UIKit.UIFont
-  public let callkitCallIntentBody: UIKit.UIFont
-  public let pipDisplayName: UIKit.UIFont
-  public let keypadButtonTitle: UIKit.UIFont
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(displayName: UIKit.UIFont? = nil, timer: UIKit.UIFont? = nil, callStatus: UIKit.UIFont? = nil, poweredBy: UIKit.UIFont? = nil, callIntentTitle: UIKit.UIFont? = nil, callIntentBody: UIKit.UIFont? = nil, buttonTitle: UIKit.UIFont? = nil, callkitCallIntentTitle: UIKit.UIFont? = nil, callkitCallIntentBody: UIKit.UIFont? = nil, pipDisplayName: UIKit.UIFont? = nil, keypadButtonTitle: UIKit.UIFont? = nil)
-  #endif
-  public static let `default`: SecuredCallsVoiceSDK.Typography
-  public static func == (a: SecuredCallsVoiceSDK.Typography, b: SecuredCallsVoiceSDK.Typography) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-extension UIKit.UIFont {
-  public static func systemFont(ofSize size: CoreFoundation.CGFloat, weight: UIKit.UIFont.Weight, design: UIKit.UIFontDescriptor.SystemDesign) -> UIKit.UIFont
-  public func withMonospacedDigits() -> UIKit.UIFont
-}
-extension SecuredCallsVoiceSDK.Typography {
-  public var displayNameFont: SwiftUICore.Font {
-    get
-  }
-  public var timerFont: SwiftUICore.Font {
-    get
-  }
-  public var callStatusFont: SwiftUICore.Font {
-    get
-  }
-  public var poweredByFont: SwiftUICore.Font {
-    get
-  }
-  public var callIntentBodyFont: SwiftUICore.Font {
-    get
-  }
-  public var callIntentTitleFont: SwiftUICore.Font {
-    get
-  }
-  public var buttonTitleFont: SwiftUICore.Font {
-    get
-  }
-  public var pipDisplayNameFont: SwiftUICore.Font {
-    get
-  }
-  public var keypadButtonTitleFont: SwiftUICore.Font {
-    get
-  }
-}
-public struct FontDescriptor : Swift.Codable, Swift.Hashable {
-  public let name: Swift.String
-  public let size: CoreFoundation.CGFloat
-  public let isMonospaced: Swift.Bool
-  public init(font: UIKit.UIFont, isMonospaced: Swift.Bool = false)
-  public func toUIFont() -> UIKit.UIFont
-  public static func == (a: SecuredCallsVoiceSDK.FontDescriptor, b: SecuredCallsVoiceSDK.FontDescriptor) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct TypographyDTO : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 extension SecuredCallsVoiceSDK.CallHistoryEntity {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<SecuredCallsVoiceSDK.CallHistoryEntity>
