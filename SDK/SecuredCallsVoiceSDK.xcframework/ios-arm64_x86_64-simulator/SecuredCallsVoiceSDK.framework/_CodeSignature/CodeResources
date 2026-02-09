@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		64D8sij0SdhF4cfrXXwHYtZoEhs=
+		0fx0Iu8aPkWJP8K+reN62mJJASI=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MUOS1twXyWDmEGVqs22n5hfh7r4=
+		Msr9SSNE22YjXHGvdi+8Th2n9A0=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		64D8sij0SdhF4cfrXXwHYtZoEhs=
+		0fx0Iu8aPkWJP8K+reN62mJJASI=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pbGmf8Jo1ppLg3Kv97PHXESPcoY=
+		0u3uVtDBYaVgo5la0nwUGwLI1yQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gT+QTLV5OCi9jyGCeyJsoq5FC92AJGAzgO/EjAX0mzQ=
+			KV8ZiDc4VGmaKqj+xat2qedb46JDqWzocunST2+br5U=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -117,14 +117,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Go9ZalD3Peffsx50924Xb07s9LvcLz0Z511j3U/Lexc=
+			YznL7Q1YsgtE+N8fKWnTvN/iRTEKNwEJiL3Pk/fCwc4=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gT+QTLV5OCi9jyGCeyJsoq5FC92AJGAzgO/EjAX0mzQ=
+			KV8ZiDc4VGmaKqj+xat2qedb46JDqWzocunST2+br5U=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -152,7 +152,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			b4h/FPk4dsAjKHI2yFQVfhNZz+sByskISOZGI04/MeE=
+			yOGtQJPFx7XVtYTPWIVd7qLILXDIC9Hp+OUyaMCB48c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
