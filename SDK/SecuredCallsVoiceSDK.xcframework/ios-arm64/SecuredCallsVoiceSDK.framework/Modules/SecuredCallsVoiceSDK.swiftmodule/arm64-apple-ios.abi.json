@@ -18811,14 +18811,14 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/AddPayloadModel.swift",
       "kind": "StringLiteral",
-      "offset": 1084,
+      "offset": 1037,
       "length": 9,
       "value": "\"setupId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Models\/AddPayloadModel.swift",
       "kind": "StringLiteral",
-      "offset": 1202,
+      "offset": 1137,
       "length": 15,
       "value": "\"brandImageUrl\""
     },
@@ -19000,7 +19000,7 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 24472,
+      "offset": 24981,
       "length": 4,
       "value": "true"
     },
@@ -19532,7 +19532,7 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/GetCallScreenService.swift",
       "kind": "FloatLiteral",
-      "offset": 12149,
+      "offset": 12140,
       "length": 3,
       "value": "1.0"
     },
