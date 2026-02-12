@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		7KJRZ7O6kTpvmJOwMhqx8dAVbq4=
+		4GH/04Z/l2Hh1fOGIFO0WqrztQA=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		1gB87nSoPpvz5hIPwFVaNtT8/NU=
+		tgZeNeNno7+DgAnDHEZhymR4M7A=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,7 +69,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7vq+A3PCwU/DKYgwrL3RjljyAmtl/Bsau7h15yBoEEI=
+			5POjDxti6JWhG5UeXV5P2k29v2QmR7dahfpjvC+R+Ho=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -97,7 +97,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			clyKnH4mUcinky86HUGxTk27dSE0rtSSqy0+WQ1u4vM=
+			ytSCTUWYzDrvJP1LR88r8rmjq0EfDdAYlS1JSCsuYy8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
