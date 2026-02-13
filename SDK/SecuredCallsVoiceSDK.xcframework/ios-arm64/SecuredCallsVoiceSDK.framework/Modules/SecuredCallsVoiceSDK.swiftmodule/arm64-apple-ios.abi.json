@@ -7636,7 +7636,7 @@
           {
             "kind": "Function",
             "name": "callBackFromCallHistory",
-            "printedName": "callBackFromCallHistory(callId:number:callType:callIntent:customData:)",
+            "printedName": "callBackFromCallHistory(callId:callType:customData:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7651,31 +7651,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
                 "name": "CallType",
                 "printedName": "SecuredCallsVoiceSDK.CallType",
                 "usr": "s:20SecuredCallsVoiceSDK8CallTypeO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -7699,8 +7677,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id6number0E4Type0E6Intent10customDataySS_SSSgAA0hL0OSSSDySSypGtYaKFZ",
-            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id6number0E4Type0E6Intent10customDataySS_SSSgAA0hL0OSSSDySSypGtYaKFZ",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id0E4Type10customDataySS_AA0hK0OSDySSypGtYaKFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id0E4Type10customDataySS_AA0hK0OSDySSypGtYaKFZ",
             "moduleName": "SecuredCallsVoiceSDK",
             "static": true,
             "declAttributes": [
@@ -18992,22 +18970,15 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
-      "kind": "StringLiteral",
-      "offset": 13284,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "Dictionary",
-      "offset": 13318,
+      "offset": 13266,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 24981,
+      "offset": 24987,
       "length": 4,
       "value": "true"
     },
@@ -19545,78 +19516,85 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
-      "kind": "BooleanLiteral",
-      "offset": 745,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
-      "kind": "BooleanLiteral",
-      "offset": 819,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
-      "kind": "BooleanLiteral",
-      "offset": 897,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1353,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1396,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "StringLiteral",
-      "offset": 1443,
+      "offset": 308,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "BooleanLiteral",
-      "offset": 2023,
+      "offset": 771,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
+      "kind": "BooleanLiteral",
+      "offset": 845,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
+      "kind": "BooleanLiteral",
+      "offset": 923,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1379,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1422,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "StringLiteral",
-      "offset": 3808,
+      "offset": 1469,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2049,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
+      "kind": "StringLiteral",
+      "offset": 3834,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "FloatLiteral",
-      "offset": 3851,
+      "offset": 3877,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "FloatLiteral",
-      "offset": 3894,
+      "offset": 3920,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "BooleanLiteral",
-      "offset": 4352,
+      "offset": 4378,
       "length": 5,
       "value": "false"
     },

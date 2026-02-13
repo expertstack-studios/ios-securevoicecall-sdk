@@ -334,9 +334,7 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   #if compiler(>=5.3) && $NonescapableTypes
   public static func startCallAsync(number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "", customData: [Swift.String : Any] = [:]) async throws
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public static func callBackFromCallHistory(callId: Swift.String, number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "", customData: [Swift.String : Any] = [:]) async throws
-  #endif
+  public static func callBackFromCallHistory(callId: Swift.String, callType: SecuredCallsVoiceSDK.CallType, customData: [Swift.String : Any] = [:]) async throws
   public static func instance() -> SecuredCallsVoiceSDK.SecuredCallsVoice
   public static func processNotificationAsync(request: UserNotifications.UNNotificationRequest, appGroupID: Swift.String, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void) async
   #if compiler(>=5.3) && $NonescapableTypes
