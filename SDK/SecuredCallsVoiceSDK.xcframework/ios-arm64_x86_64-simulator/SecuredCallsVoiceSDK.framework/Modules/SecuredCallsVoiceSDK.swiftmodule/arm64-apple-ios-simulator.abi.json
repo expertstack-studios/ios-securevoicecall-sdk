@@ -14659,6 +14659,600 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "SecuredCallError",
+        "printedName": "SecuredCallError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "invlaidClientSecret",
+            "printedName": "invlaidClientSecret",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.SecuredCallError.Type) -> SecuredCallsVoiceSDK.SecuredCallError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecuredCallError",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                    "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecuredCallError",
+                        "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                        "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO19invlaidClientSecretyA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO19invlaidClientSecretyA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidConfiguration",
+            "printedName": "invalidConfiguration",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.SecuredCallError.Type) -> SecuredCallsVoiceSDK.SecuredCallError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecuredCallError",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                    "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecuredCallError",
+                        "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                        "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO20invalidConfigurationyA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO20invalidConfigurationyA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "configMissing",
+            "printedName": "configMissing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.SecuredCallError.Type) -> SecuredCallsVoiceSDK.SecuredCallError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecuredCallError",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                    "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecuredCallError",
+                        "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                        "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO13configMissingyA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO13configMissingyA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidCustomerId",
+            "printedName": "invalidCustomerId",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.SecuredCallError.Type) -> SecuredCallsVoiceSDK.SecuredCallError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecuredCallError",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                    "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecuredCallError",
+                        "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                        "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO17invalidCustomerIdyA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO17invalidCustomerIdyA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "onGoingCall",
+            "printedName": "onGoingCall",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.SecuredCallError.Type) -> SecuredCallsVoiceSDK.SecuredCallError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecuredCallError",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                    "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecuredCallError",
+                        "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                        "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO07onGoingE0yA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO07onGoingE0yA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidNumber",
+            "printedName": "invalidNumber",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.SecuredCallError.Type) -> SecuredCallsVoiceSDK.SecuredCallError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecuredCallError",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                    "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecuredCallError",
+                        "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                        "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO13invalidNumberyA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO13invalidNumberyA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidPstnUrl",
+            "printedName": "invalidPstnUrl",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.SecuredCallError.Type) -> SecuredCallsVoiceSDK.SecuredCallError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecuredCallError",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                    "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecuredCallError",
+                        "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                        "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO14invalidPstnUrlyA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO14invalidPstnUrlyA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "bundleIdMissing",
+            "printedName": "bundleIdMissing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.SecuredCallError.Type) -> SecuredCallsVoiceSDK.SecuredCallError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecuredCallError",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                    "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecuredCallError",
+                        "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                        "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO15bundleIdMissingyA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO15bundleIdMissingyA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "configurationCorrupted",
+            "printedName": "configurationCorrupted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.SecuredCallError.Type) -> SecuredCallsVoiceSDK.SecuredCallError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecuredCallError",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                    "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecuredCallError",
+                        "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                        "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO22configurationCorruptedyA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO22configurationCorruptedyA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "microphonePermissionDenied",
+            "printedName": "microphonePermissionDenied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.SecuredCallError.Type) -> SecuredCallsVoiceSDK.SecuredCallError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecuredCallError",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                    "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecuredCallError",
+                        "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                        "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO26microphonePermissionDeniedyA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO26microphonePermissionDeniedyA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO16errorDescriptionSSSgvp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO16errorDescriptionSSSgvg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecuredCallError",
+                "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecuredCallError",
+                "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO9hashValueSivp",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO9hashValueSivp",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO9hashValueSivg",
+                "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO9hashValueSivg",
+                "moduleName": "SecuredCallsVoiceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO",
+        "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO",
+        "moduleName": "SecuredCallsVoiceSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -18978,7 +19572,7 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 24987,
+      "offset": 25034,
       "length": 4,
       "value": "true"
     },

@@ -652,6 +652,28 @@ public struct ScSDKSettingsModel : Swift.Hashable {
     get
   }
 }
+public enum SecuredCallError : Foundation.LocalizedError {
+  case invlaidClientSecret
+  case invalidConfiguration
+  case configMissing
+  case invalidCustomerId
+  case onGoingCall
+  case invalidNumber
+  case invalidPstnUrl
+  case bundleIdMissing
+  case configurationCorrupted
+  case microphonePermissionDenied
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+  public static func == (a: SecuredCallsVoiceSDK.SecuredCallError, b: SecuredCallsVoiceSDK.SecuredCallError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 @_inheritsConvenienceInitializers @objc(LogsEntity) nonisolated public class LogsEntity : CoreData.NSManagedObject {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
@@ -780,3 +802,5 @@ extension SecuredCallsVoiceSDK.CallType : Swift.RawRepresentable {}
 extension SecuredCallsVoiceSDK.CallDirection : Swift.Equatable {}
 extension SecuredCallsVoiceSDK.CallDirection : Swift.Hashable {}
 extension SecuredCallsVoiceSDK.CallDirection : Swift.RawRepresentable {}
+extension SecuredCallsVoiceSDK.SecuredCallError : Swift.Equatable {}
+extension SecuredCallsVoiceSDK.SecuredCallError : Swift.Hashable {}
