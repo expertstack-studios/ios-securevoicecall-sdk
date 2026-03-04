@@ -5023,48 +5023,6 @@
         "moduleName": "SecuredCallsVoiceSDK"
       },
       {
-        "kind": "Import",
-        "name": "AVKit",
-        "printedName": "AVKit",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "AVKit",
-        "printedName": "AVKit",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "SecuredCallsVoiceSDK"
-      },
-      {
         "kind": "TypeDecl",
         "name": "EnhancedPipViewController",
         "printedName": "EnhancedPipViewController",
@@ -5866,8 +5824,7 @@
             "moduleName": "SecuredCallsVoiceSDK",
             "declAttributes": [
               "Final",
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -6059,7 +6016,8 @@
             "declAttributes": [
               "Final",
               "ObjC",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -19341,42 +19299,49 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 634,
+      "offset": 389,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 731,
+      "offset": 486,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 775,
+      "offset": 530,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 809,
+      "offset": 563,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 872,
+      "offset": 626,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1536,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4163,
+      "offset": 6574,
       "length": 2,
       "value": "30"
     },
