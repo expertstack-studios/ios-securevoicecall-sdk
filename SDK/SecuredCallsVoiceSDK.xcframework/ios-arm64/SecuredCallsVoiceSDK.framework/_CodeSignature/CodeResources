@@ -18,23 +18,23 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		D9COhJlT9NJXHIlOv3fCZKe00m4=
+		Qu5XhnlTekNIy5pzILnV3cJ3Pqc=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		9dY3hoUAFpMBhcY4Cuy1qfR99QQ=
+		zxb/78aRwBz7W4hieFcDG/tYT9w=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		4IiLgIVfyrWo7dapJj41Ftv4DhE=
+		Kgtrec/IK65Str60L/811NhpTBQ=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		9dY3hoUAFpMBhcY4Cuy1qfR99QQ=
+		zxb/78aRwBz7W4hieFcDG/tYT9w=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ZoDUywqUgskqfTX1XyfvIkfddPY=
+		bazchwUwk62lVPqwXH43U9pNKlI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,35 +69,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IGWHaD4H750X+a5q+PYq4vB28IfO4uhd2JTkEQa3iNM=
+			RBjTmMSrNgeHqG9LohkUiDVJP56T6ZUnOf7wkLFOmkQ=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H6cBVlhG7aXwK/QkgV/qRHP/U201dbOgPZxNHKJ/ll8=
+			EGtnlLjgo6/kQEHTk10PvnUCScSNfXmmxZKypFHq068=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YwzYkfiEU7rYB7YNobhDbtb14sF1menv0oljdFpaUfk=
+			kj58DdxsB/E07tmd3t01QFGVv/rAkxY4vEo18574lew=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H6cBVlhG7aXwK/QkgV/qRHP/U201dbOgPZxNHKJ/ll8=
+			EGtnlLjgo6/kQEHTk10PvnUCScSNfXmmxZKypFHq068=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YcOvLQyqa5byPOzLU4yDkIW+BeCZec9jHuC4qA4LAhU=
+			/Y3jwaBegQ/GNJyxYZZcvFdvffNZAUnFuclTlpnSPOs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
