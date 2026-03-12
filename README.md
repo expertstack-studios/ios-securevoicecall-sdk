@@ -20,7 +20,7 @@ Ensure you have the following for using the SecuredCalls Voice SDK for iOS:
 2. Go to **File** > **Swift Packages** > **Add Package Dependency...**.
 3. Enter the repository URL:  
    `https://github.com/expertstack-studios/ios-securevoicecall-sdk`
-4. When prompted for the version, select **Exact** and enter **1.0.21**, then click **Next**.
+4. When prompted for the version, select **Exact** and enter **1.0.23**, then click **Next**.
 5. Choose the packages required and click **Finish**.
 
 ## Configuring `Info.plist`
@@ -493,6 +493,111 @@ Add the following keys to your `Info.plist` file:
 	}
   ```
 
+## Handling Callback from phone history (SwiftUI)
+
+When a user taps a call entry from the iOS Phone app call history (Recents) or initiates a call using Siri, iOS delivers an `NSUserActivity` containing a system call intent such as:
+
+- `INStartAudioCallIntent`
+- `INStartCallIntent`
+
+Your application must extract the call identifier from the system intent and forward it to the SecuredCalls Voice SDK.
+
+---
+
+### SwiftUI App Entry – Receiving and Forwarding Call Intents
+
+```swift
+import SwiftUI
+import Intents
+import SecuredCallsVoiceSDK
+
+@main
+struct AppName_SwiftUIApp: App {
+
+    @UIApplicationDelegateAdaptor(AppDelegate.self)
+    var appDelegate
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .onContinueUserActivity(
+                    "INStartAudioCallIntent",
+                    perform: handleCallIntent
+                )
+                .onContinueUserActivity(
+                    "INStartCallIntent",
+                    perform: handleCallIntent
+                )
+        }
+    }
+
+    /// Receives system call intents and forwards the extracted call
+    /// identifier to the SecuredCalls Voice SDK.
+    private func handleCallIntent(_ userActivity: NSUserActivity) {
+
+        guard let interaction = userActivity.interaction else {
+            return
+        }
+
+        var callId: String?
+
+        if let intent = interaction.intent as? INStartAudioCallIntent {
+            callId = intent.contacts?.first?.personHandle?.value
+        } else if let intent = interaction.intent as? INStartCallIntent {
+            callId = intent.contacts?.first?.personHandle?.value
+        }
+
+        guard let callIdentifier = callId else {
+            return
+        }
+
+        Task {
+            do {
+                try await SecuredCallsVoice.callBackFromCallHistory(
+                    callId: callIdentifier,
+                    callType: .inApp
+                )
+            } catch {
+                print("SecuredCalls: failed to process call intent – \(error.localizedDescription)")
+            }
+        }
+    }
+}
+
+## Handling Missed Call Notification Callback
+
+When a user misses an incoming call, the SDK automatically schedules a local notification. Tapping the notification will automatically initiate a call back.
+
+### Handle Notification Tap
+
+Add `userNotificationCenter(_:didReceive:withCompletionHandler:)` to your existing `UNUserNotificationCenterDelegate` extension in `AppDelegate`:
+```swift
+extension AppDelegate: UNUserNotificationCenterDelegate {
+
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        didReceive response: UNNotificationResponse,
+        withCompletionHandler completionHandler: @escaping () -> Void
+    ) {
+        Task {
+            try await SecuredCallsVoice.callBackFromMissedCallNotification(response)
+            completionHandler()
+        }
+    }
+}
+```
+### Notification Appearance
+
+The missed call notification displays:
+
+- **Title**: Call intent (if available), otherwise the app/brand name
+- **Body**: ☎️ Missed voice call
+- **Action**: Tap to call back instantly
+
+## Handling Callback from phone history (Appdelegate) * documentation in progress
+
+## Handling Callback from phone history (Scenedelegate) * documentation in progress
+
 ## Notes
 
 -   **API Key**: Replace `"xxxxxxxSECRETxxxxxxx"` with your actual API key.
@@ -512,6 +617,8 @@ By following these steps, you’ll integrate the SecuredCalls Voice SDK effectiv
 | **7. APNS and VOIP Token Management** | Handling APNS and VOIP token registration and reporting incoming VOIP pushes.      | 5 minutes          |
 | **8. Handling Notifications** | Managing push notifications and VOIP token updates. | 5 minutes | 
 | **9. Reporting Incoming Calls** | Reporting incoming VOIP calls to the SDK. | 5 minutes |
+| **10. Callback from phone history** | Handling Callback from phone history and pass data to SDK. | 5 minutes |
+| **11. Callback from missedcall notification** | Handling Callback from missedcall notification and pass data to SDK. | 5 minutes |
 
 
-**Total Estimated Time: 30 minutes**
+**Total Estimated Time: 40 minutes**
