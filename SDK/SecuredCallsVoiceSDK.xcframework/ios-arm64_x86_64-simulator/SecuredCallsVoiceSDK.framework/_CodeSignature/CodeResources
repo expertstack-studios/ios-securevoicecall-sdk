@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		fV3Ftp/lpGrGOFmzha2Ngp1PmdE=
+		mEy4PNLs49nsKRUO+5qXOUVywsM=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		6XQwGRKCvlviYelHjah+hkVptzA=
+		fUsHDQ27z680bcLCFtroHym7cZY=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		6XQwGRKCvlviYelHjah+hkVptzA=
+		fUsHDQ27z680bcLCFtroHym7cZY=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		aWvZwvqree+SDBu3VoE4yHtQkz4=
+		zd7zG3uXpBkFW7bPHfwUUaN1f7s=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		fV3Ftp/lpGrGOFmzha2Ngp1PmdE=
+		mEy4PNLs49nsKRUO+5qXOUVywsM=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		/n3a7RLIhf79DTGlJ/kebKwXPvw=
+		9Sdx7AGKwqIuwTa++QUMbzHOphQ=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/n3a7RLIhf79DTGlJ/kebKwXPvw=
+		9Sdx7AGKwqIuwTa++QUMbzHOphQ=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		KysBhsm3uW5GJwrCHgvWO1y6dq0=
+		vnkm4mKBbtSYcTB+4hHqcorFR5w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,14 +89,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Bh1pzEPv7/eSumXXKjtgBMvXE2Q204QyDKMQ5mJiIZU=
+			vV9kJPApeaTx9NLdsSO4+t1ya3lVE1IqRcOFkuSx1o0=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WUR7RKXAnRkdzWwFrj2yxQWqT0mf93ML2BO41d5MZkc=
+			l+KZNna/Tk7ZuQCaEfdeHyEHr/gUwo0G+4yqlXhCGZE=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -110,28 +110,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WUR7RKXAnRkdzWwFrj2yxQWqT0mf93ML2BO41d5MZkc=
+			l+KZNna/Tk7ZuQCaEfdeHyEHr/gUwo0G+4yqlXhCGZE=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RLJ+jFTruIDuhUeNDUVR5lIjKKrd/XvXeC8YBv7kCdE=
+			a9IoueQLoVKMEXKlgFfk20+YHZn0EOa6ziglGEkM7B8=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Bh1pzEPv7/eSumXXKjtgBMvXE2Q204QyDKMQ5mJiIZU=
+			vV9kJPApeaTx9NLdsSO4+t1ya3lVE1IqRcOFkuSx1o0=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uc37xN3caQVpi7KrXUuB9LBItHuRkp+ZjftYYUz0UUE=
+			qL3UodGjWCLghq2Ku4g3aGWIrRXZ7lJ4aEr+KRKX5P0=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -145,14 +145,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uc37xN3caQVpi7KrXUuB9LBItHuRkp+ZjftYYUz0UUE=
+			qL3UodGjWCLghq2Ku4g3aGWIrRXZ7lJ4aEr+KRKX5P0=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WE38YOGft2X2t6LsDu1YqmUogh+2YeEND5+NRI705T0=
+			9ESjDmAT09fmvc1ThcpLSKx6n1NeFhylZrwRbRns9ac=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

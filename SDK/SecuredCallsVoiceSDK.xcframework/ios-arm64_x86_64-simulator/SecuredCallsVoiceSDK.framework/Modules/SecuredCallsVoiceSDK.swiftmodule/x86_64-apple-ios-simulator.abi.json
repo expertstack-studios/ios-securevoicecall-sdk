@@ -5912,7 +5912,7 @@
           {
             "kind": "Function",
             "name": "callBackFromCallHistory",
-            "printedName": "callBackFromCallHistory(callId:callType:customData:)",
+            "printedName": "callBackFromCallHistory(callId:callType:fallbackNumber:customData:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5930,6 +5930,21 @@
                 "name": "CallType",
                 "printedName": "SecuredCallsVoiceSDK.CallType",
                 "usr": "s:20SecuredCallsVoiceSDK8CallTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -5953,8 +5968,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id0E4Type10customDataySS_AA0hK0OSDySSypGtYaKFZ",
-            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id0E4Type10customDataySS_AA0hK0OSDySSypGtYaKFZ",
+            "usr": "s:20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id0E4Type14fallbackNumber10customDataySS_AA0hK0OSSSgSDySSypGtYaKFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0abC0C23callBackFromCallHistory0E2Id0E4Type14fallbackNumber10customDataySS_AA0hK0OSSSgSDySSypGtYaKFZ",
             "moduleName": "SecuredCallsVoiceSDK",
             "static": true,
             "declAttributes": [
@@ -15064,6 +15079,43 @@
           },
           {
             "kind": "Var",
+            "name": "callDataNotAvailableInNotification",
+            "printedName": "callDataNotAvailableInNotification",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SecuredCallsVoiceSDK.SecuredCallError.Type) -> SecuredCallsVoiceSDK.SecuredCallError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecuredCallError",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                    "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SecuredCallsVoiceSDK.SecuredCallError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecuredCallError",
+                        "printedName": "SecuredCallsVoiceSDK.SecuredCallError",
+                        "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SecuredCallsVoiceSDK0A9CallErrorO34callDataNotAvailableInNotificationyA2CmF",
+            "mangledName": "$s20SecuredCallsVoiceSDK0A9CallErrorO34callDataNotAvailableInNotificationyA2CmF",
+            "moduleName": "SecuredCallsVoiceSDK"
+          },
+          {
+            "kind": "Var",
             "name": "errorDescription",
             "printedName": "errorDescription",
             "children": [
@@ -19138,6 +19190,93 @@
             "mangledName": "$ss16SendableMetatypeP"
           }
         ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CLLocationManager",
+        "printedName": "CLLocationManager",
+        "declKind": "Class",
+        "usr": "c:objc(cs)CLLocationManager",
+        "moduleName": "CoreLocation",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "CLLocationManager",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
@@ -19608,14 +19747,14 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "Dictionary",
-      "offset": 13266,
+      "offset": 13299,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Public\/SecuredCallsVoice.swift",
       "kind": "BooleanLiteral",
-      "offset": 25023,
+      "offset": 26615,
       "length": 4,
       "value": "true"
     },

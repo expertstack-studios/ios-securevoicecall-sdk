@@ -261,7 +261,9 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   #if compiler(>=5.3) && $NonescapableTypes
   public static func startCallAsync(number: Swift.String? = nil, callType: SecuredCallsVoiceSDK.CallType, callIntent: Swift.String = "", customData: [Swift.String : Any] = [:]) async throws
   #endif
-  public static func callBackFromCallHistory(callId: Swift.String, callType: SecuredCallsVoiceSDK.CallType, customData: [Swift.String : Any] = [:]) async throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func callBackFromCallHistory(callId: Swift.String, callType: SecuredCallsVoiceSDK.CallType, fallbackNumber: Swift.String? = nil, customData: [Swift.String : Any] = [:]) async throws
+  #endif
   public static func instance() -> SecuredCallsVoiceSDK.SecuredCallsVoice
   public static func processNotificationAsync(request: UserNotifications.UNNotificationRequest, appGroupID: Swift.String, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void) async
   #if compiler(>=5.3) && $NonescapableTypes
@@ -664,6 +666,7 @@ public enum SecuredCallError : Foundation.LocalizedError {
   case bundleIdMissing
   case configurationCorrupted
   case microphonePermissionDenied
+  case callDataNotAvailableInNotification
   #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
