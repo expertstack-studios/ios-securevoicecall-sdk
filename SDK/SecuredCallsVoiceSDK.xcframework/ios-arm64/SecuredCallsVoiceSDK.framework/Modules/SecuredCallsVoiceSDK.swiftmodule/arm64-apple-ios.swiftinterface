@@ -397,46 +397,6 @@ public enum LogLevel : Swift.Int {
   }
 }
 
-@_hasMissingDesignatedInitializers public class UserDefaultWrapper {
-  public static let shared: SecuredCallsVoiceSDK.UserDefaultWrapper
-  public enum UserDefaultsKey : Swift.String {
-    case authToken
-    case authTokenExpiry
-    case consumerRegisterationComplete
-    case deviceRegisterationComplete
-    case appConfig
-    case appConfigFileName
-    case logs
-    case scCXProviderIconName
-    case userIdentifier
-    case scTypography
-    #if compiler(>=5.3) && $NonescapableTypes
-    public init?(rawValue: Swift.String)
-    #endif
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public func set(_ value: Swift.String, forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey)
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func getString(forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey) -> Swift.String?
-  #endif
-  public func set(_ value: [Swift.String], forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey)
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func getStringArray(forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey) -> [Swift.String]?
-  #endif
-  public func set(_ value: Swift.Bool, forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey)
-  public func getBool(forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey) -> Swift.Bool
-  public func set(_ value: Swift.Int, forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey)
-  public func getInt(forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey) -> Swift.Int
-  public func set<T>(_ value: T, forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey) where T : Swift.Decodable, T : Swift.Encodable
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func getObject<T>(forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey, type: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
-  #endif
-  public func remove(forKey key: SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey)
-  @objc deinit
-}
 public enum CallType : Swift.Int16, Swift.Codable {
   case inApp
   case pstn
@@ -574,7 +534,7 @@ extension SecuredCallsVoiceSDK.ConfigEntity : Swift.Identifiable {
   @objc deinit
 }
 public struct ScSDKSettingsModel : Swift.Hashable {
-  public init(handlePermission: Swift.Bool = true, showPipView: Swift.Bool = true, logLevel: SecuredCallsVoiceSDK.LogLevel = .Off, scCallKitIconName: Swift.String = "", typography: SecuredCallsVoiceSDK.Typography = .default)
+  public init(handlePermission: Swift.Bool = true, showPipView: Swift.Bool = true, logLevel: SecuredCallsVoiceSDK.LogLevel = .Off, scCallKitIconName: Swift.String = "", typography: SecuredCallsVoiceSDK.Typography = .default, sessionReadyTimeoutSeconds: Swift.Double = 3.0)
   public static let `default`: SecuredCallsVoiceSDK.ScSDKSettingsModel
   public static func == (a: SecuredCallsVoiceSDK.ScSDKSettingsModel, b: SecuredCallsVoiceSDK.ScSDKSettingsModel) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
@@ -797,9 +757,6 @@ extension SecuredCallsVoiceSDK.DeviceInfoHeader : Swift.Sendable {}
 extension SecuredCallsVoiceSDK.LogLevel : Swift.Equatable {}
 extension SecuredCallsVoiceSDK.LogLevel : Swift.Hashable {}
 extension SecuredCallsVoiceSDK.LogLevel : Swift.RawRepresentable {}
-extension SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey : Swift.Equatable {}
-extension SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey : Swift.Hashable {}
-extension SecuredCallsVoiceSDK.UserDefaultWrapper.UserDefaultsKey : Swift.RawRepresentable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.Equatable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.Hashable {}
 extension SecuredCallsVoiceSDK.CallType : Swift.RawRepresentable {}
