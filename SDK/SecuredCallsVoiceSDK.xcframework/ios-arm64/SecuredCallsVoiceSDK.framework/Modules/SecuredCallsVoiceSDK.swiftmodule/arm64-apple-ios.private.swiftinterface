@@ -161,6 +161,7 @@ extension Foundation.Bundle {
   @objc deinit
 }
 public enum VoiceCallScreenPresenter {
+  public static func showConnectingScreen()
   public static func showCallView()
   public static func endAndDismissCallView()
   public static func hideCallView()

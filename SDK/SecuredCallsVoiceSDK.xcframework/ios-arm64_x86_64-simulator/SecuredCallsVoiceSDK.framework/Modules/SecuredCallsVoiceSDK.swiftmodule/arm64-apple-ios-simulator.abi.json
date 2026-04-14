@@ -3199,6 +3199,28 @@
         "children": [
           {
             "kind": "Function",
+            "name": "showConnectingScreen",
+            "printedName": "showConnectingScreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SecuredCallsVoiceSDK0C19CallScreenPresenterO014showConnectingF0yyFZ",
+            "mangledName": "$s20SecuredCallsVoiceSDK0C19CallScreenPresenterO014showConnectingF0yyFZ",
+            "moduleName": "SecuredCallsVoiceSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "showCallView",
             "printedName": "showCallView()",
             "children": [
@@ -19438,35 +19460,35 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "BooleanLiteral",
-      "offset": 2049,
+      "offset": 2389,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "StringLiteral",
-      "offset": 3834,
+      "offset": 4174,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "FloatLiteral",
-      "offset": 3877,
+      "offset": 4217,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "FloatLiteral",
-      "offset": 3920,
+      "offset": 4260,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/Model\/SecuredCall.swift",
       "kind": "BooleanLiteral",
-      "offset": 4378,
+      "offset": 4718,
       "length": 5,
       "value": "false"
     },
