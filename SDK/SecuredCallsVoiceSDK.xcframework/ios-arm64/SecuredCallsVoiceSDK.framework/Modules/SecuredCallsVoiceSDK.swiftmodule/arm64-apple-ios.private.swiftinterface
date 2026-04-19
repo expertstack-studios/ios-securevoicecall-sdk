@@ -247,6 +247,7 @@ public struct ScreenDimensions : Swift.Codable {
 public protocol ICallStatusDelegate : AnyObject {
   func callStarted()
   func callEnded()
+  func callFailed(reason: Swift.String)
 }
 public protocol SecuredCallsVoiceDelegate : AnyObject {
   func didUpdateCallHistory()
@@ -291,6 +292,7 @@ public protocol SecuredCallsVoiceDelegate : AnyObject {
   #endif
   public static func callEnded()
   public static func callStarted()
+  public static func callFailed(reason: Swift.String)
   public static func processNotification()
   public static func callBackFromMissedCallNotification(_ response: UserNotifications.UNNotificationResponse) async throws
   public static func requestNotificationPermissionAsync() async

@@ -18,23 +18,23 @@
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		GHgOmiH0652ZJMRAuMsBN8YuQTY=
+		OAmvcquLz1fNT6yAjuRke4fHlrA=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		+6EYWCrYU6Yr19LEReMhyqlRdug=
+		CsvvkK6/RnMlonrEdq80kcFmQcs=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		wVQCL/MJ5fVHYmLax58+G9T5DXI=
+		bgPCyny5GcwI6AvHMAjOIWMPtW8=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		+6EYWCrYU6Yr19LEReMhyqlRdug=
+		CsvvkK6/RnMlonrEdq80kcFmQcs=
 		</data>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		l1VThz3z0Z3caa21yzjkjIhZQYE=
+		xfLXEJ5pJE7dkALFHUDkE1ooLEM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,35 +69,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vlsq70osFH/retQ7DxBGMpUfBEottfcCC0TLXI0dMPE=
+			XpLML7UJbREPviCrLCZGAHriEr2G2+PtUicxbrTvWV8=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zpt5mUSxOh3jP/RCAvsYakk/L4/DP9K5+jcKFe0QbeI=
+			//fU9JeJwhWgm/PukU4eFgs0a1ZIkHMTICGinpdBqO0=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			67XHa9g52RPH2nz+TtyxvsKu5WGxRO1Mt00+lPr8QSA=
+			t1s1WfNhj3hLJKw+TeHzLiSTfLPdTBuUDxHr1mmmsvE=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zpt5mUSxOh3jP/RCAvsYakk/L4/DP9K5+jcKFe0QbeI=
+			//fU9JeJwhWgm/PukU4eFgs0a1ZIkHMTICGinpdBqO0=
 			</data>
 		</dict>
 		<key>Modules/SecuredCallsVoiceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3s828cSd802DvNduz96t8ij3NWWy9DIbXmZnMxcoYUI=
+			vYRameZ1MEwayX+MA+oWRYSijiOqq9Xo0eV8y+1MZTw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
