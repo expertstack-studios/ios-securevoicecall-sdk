@@ -2681,6 +2681,20 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "SecuredCallsVoiceSDK"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -19148,6 +19162,27 @@
       "value": "\"BiometricUnavailable\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Enums\/BiometricAuthResult.swift",
+      "kind": "StringLiteral",
+      "offset": 888,
+      "length": 27,
+      "value": "\"BiometricRequestCancelled\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/BiometricAuthService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 788,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/BiometricAuthService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1465,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Helpers\/DateWrapper.swift",
       "kind": "StringLiteral",
       "offset": 662,
@@ -19185,14 +19220,14 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/BiometricWebSocketService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1119,
+      "offset": 1157,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/SecuredCalls\/Services\/BiometricWebSocketService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1171,
+      "offset": 1209,
       "length": 5,
       "value": "false"
     },
@@ -19318,7 +19353,7 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/SecuredCallsVoiceSDK\/UserInterface\/View\/PIP View\/PipViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 6743,
+      "offset": 6735,
       "length": 2,
       "value": "30"
     },
