@@ -20,7 +20,7 @@ Ensure you have the following for using the SecuredCalls Voice SDK for iOS:
 2. Go to **File** > **Swift Packages** > **Add Package Dependency...**.
 3. Enter the repository URL:  
    `https://github.com/expertstack-studios/ios-securevoicecall-sdk`
-4. When prompted for the version, select **Exact** and enter **1.0.24**, then click **Next**.
+4. When prompted for the version, select **Exact** and enter **1.0.25**, then click **Next**.
 5. Choose the packages required and click **Finish**.
 
 ## Configuring `Info.plist`
@@ -47,12 +47,18 @@ Add the following keys to your `Info.plist` file:
     <string>Explain why access to contacts is needed.</string>
     ```
 
-- **Location Usage Description**  
+- **Location Usage Description**
     ```xml
     <key>Privacy - Location When In Use Usage Description</key>
     <string>Explain why access to location is needed.</string>
     <key>Privacy - Location Always and When In Use Usage Description</key>
     <string>Explain why access to location is needed.</string>
+    ```
+
+- **Face ID Usage Description**
+    ```xml
+    <key>NSFaceIDUsageDescription</key>
+    <string>Explain why biometric authentication is needed.</string>
     ```
 
 ## Enabling Capabilities in Xcode
@@ -77,6 +83,24 @@ Add the following keys to your `Info.plist` file:
 
   1. In the **"Signing & Capabilities"** tab, click **"+"**.
   2. Add **"App Groups"** and configure the identifier **group.com.your.app**.
+
+## Keychain Sharing (Optional)
+
+If you want the SDK's keychain items to be reachable from both your main app and its
+notification extension, enable Keychain Sharing and pass the group name to the SDK.
+
+  1. In the **"Signing & Capabilities"** tab, click **"+"**.
+  2. Add **"Keychain Sharing"** and add a group, e.g. **com.your.app.shared**.
+  3. Repeat the same step for the **Notification Service Extension** target, using the
+     **same** group name.
+  4. Pass that group as `sharedKeychainGroup` to both `SecuredCallsVoice.initialize(...)`
+     and `SecuredCallsVoice.processNotificationAsync(...)`.
+
+⚠️ Pass the group **without** the team-identifier prefix (`com.your.app.shared`, not
+`ABCDE12345.com.your.app.shared`). The SDK resolves and prepends the team ID itself.
+
+If you omit `sharedKeychainGroup`, the SDK does not set a keychain access group and
+its items live in the app's default group. No extra capability is required.
 
 ## Creating a Notification Service Extension in Xcode
 
@@ -123,6 +147,13 @@ Add the following keys to your `Info.plist` file:
                     // the Main App and the Notification Extension.
                     // ⚠️ IMPORTANT: This MUST be the SAME App Group ID
                     // that was passed during `SecuredCallsVoice.initialize(...)`.
+                    
+                    sharedKeychainGroup: "com.your.app.shared",
+                    // Optional — pass only if you enabled Keychain Sharing.
+                    // ⚠️ IMPORTANT: This MUST be the SAME value that was passed
+                    // during `SecuredCallsVoice.initialize(...)`, and the group
+                    // must be enabled on BOTH the app and the extension target.
+                    // Omit (or pass nil) to use the default keychain group.
                     
                     withContentHandler: contentHandler
                     // ✅ Completion handler used to return the modified
@@ -246,9 +277,22 @@ Add the following keys to your `Info.plist` file:
 				// Optional
 				// Used for: Display name shown in Picture-in-Picture (PiP) mode
 				
-				keypadButtonTitle: UIFont(name: "AvenirNext-DemiBold", size: 24)
+				keypadButtonTitle: UIFont(name: "AvenirNext-DemiBold", size: 24),
 				// Optional
 				// Used for: Dial pad / keypad button text
+				
+				sheetTitle: UIFont(name: "AvenirNext-DemiBold", size: 20),
+				// Optional
+				// Used for: Title of SDK-presented bottom sheets
+				// (e.g. the permission prompt sheet)
+				
+				sheetBody: UIFont(name: "AvenirNext-Regular", size: 18),
+				// Optional
+				// Used for: Body text of SDK-presented bottom sheets
+				
+				sheetButtonTitle: UIFont(name: "AvenirNext-DemiBold", size: 18)
+				// Optional
+				// Used for: Button titles inside SDK-presented bottom sheets
 			)
             // initialize SDK
 			try SecuredCallsVoice.initialize(
@@ -267,36 +311,92 @@ Add the following keys to your `Info.plist` file:
                         // ✅ When true, enables Picture-in-Picture (PiP) mode,
                         // allowing the user to continue using the app during an ongoing call.
                         
-                        logLevel: .Debug,
+                        logLevel: .debug,
                         // ✅ Controls SDK logging level:
-                        // case Error = 0
-                        // case Warning = 1
-                        // case Debug = 2
-                        // case Information = 3
-                        // case Off = -1 (Default)
+                        // case error       = 0
+                        // case warning     = 1
+                        // case debug       = 2
+                        // case information = 3
+                        // case off         = -1 (Default)
+                        // Capitalised aliases (.Debug, .Off, …) still work.
                         
                         scCallKitIconName: "AppIcon-Mono",
                         // ✅ Mono-color image name used on the CallKit screen.
                         // ⚠️ The image MUST be a monochrome asset for proper display.
                         
-                        typography: typography
+                        typography: typography,
 						// Optional
 						// If not provided, SDK uses default typography
+                        
+                        sessionReadyTimeoutSeconds: 3.0,
+                        // Optional — Default: 3.0
+                        // Maximum seconds the SDK waits for its session to become ready
+                        // before placing a call back from a missed-call notification.
+                        // Increase on slow-network environments.
+                        
+                        showDataChannelConnectionStatus: false,
+                        // Optional — Default: false
+                        // When true, the call screen shows a connection status
+                        // indicator. Only appears when the data channel is enabled
+                        // for the call.
+                        
+                        showDataChannelConnectionDetails: false
+                        // Optional — Default: false
+                        // When true, the status indicator becomes tappable and
+                        // expands into a panel with connection details.
+                        // Has no effect unless showDataChannelConnectionStatus
+                        // is also true.
                     ),
                     
-                    appGroupID: "group.com.your.app"
+                    appGroupID: "group.com.your.app",
                     // ✅ App Group Identifier used for data sharing between
                     // the Main App and the Notification Extension.
                     // ⚠️ IMPORTANT: The SAME App Group ID must be used in BOTH
                     // the main app and the notification extension.
+                    
+                    sharedKeychainGroup: "com.your.app.shared",
+                    // Optional — Default: nil (use the app's default keychain group)
+                    // Requires the "Keychain Sharing" capability on the app AND
+                    // the notification extension, using the same group name.
+                    // ⚠️ Must match the value passed to processNotificationAsync(...).
+                    
+                    biometricMetadata: biometricMetadata
+                    // Optional — Default: nil
+                    // See "Biometric Verification Metadata" below.
                 )
-            )
        } catch {
            print("Failed to initialize SecuredCallsVoice SDK: \(error.localizedDescription)")
        }
        return true
    }
    ```
+
+   ## Biometric Verification Metadata
+
+   `biometricMetadata` is an optional `[String: Any]` dictionary of your own
+   application context. When a biometric verification succeeds during a call, the SDK
+   sends this dictionary along with the verification result.
+
+   ```swift
+   let biometricMetadata: [String: Any] = [
+       "CustomerId": userIdentifier,
+       "accountId": accountId,
+       "verificationContext": "ACCOUNT_ACCESS",
+       "location": ["latitude": 37.7749, "longitude": -122.4194],
+       "appInfo": [
+           "deviceModel": "iPhone 16 Pro",
+           "osVersion": "18.3.1",
+           "appVersion": "4.2.1"
+       ]
+   ]
+   ```
+
+   Notes:
+
+   - Supported value types are `String`, `Int`, `Double`, `Bool`, `nil`, and arrays or
+     dictionaries of those. Anything else (e.g. `Date`, `Float`, a custom type) makes
+     `initialize(...)` throw `SecuredCallError.invalidBiometricMetadata`.
+   - Passing `nil`, or omitting the parameter, clears any previously stored metadata.
 
    ## Requesting Permissions
    ### Request Contact Access and Notification Permission
@@ -322,6 +422,8 @@ Add the following keys to your `Info.plist` file:
                await SecuredCallsVoice.requestNotificationPermissionAsync()
                await SecuredCallsVoice.requestContactAccessAsync()
                await SecuredCallsVoice.requestLocationPermissionAsync()
+               await SecuredCallsVoice.requestMicrophonePermissionAsync()
+               await SecuredCallsVoice.requestBiometricPermissionAsync()
            }
        } catch {
            print("\(error.localizedDescription)")
@@ -387,6 +489,8 @@ Add the following keys to your `Info.plist` file:
                await SecuredCallsVoice.requestNotificationPermissionAsync()
                await SecuredCallsVoice.requestContactAccessAsync()
                await SecuredCallsVoice.requestLocationPermissionAsync()
+               await SecuredCallsVoice.requestMicrophonePermissionAsync()
+               await SecuredCallsVoice.requestBiometricPermissionAsync()
                // Request permissions and login asynchronously
                let loginResult = await SecuredCallsVoice.loginAsync(identifier: userIdentifier)
                switch loginResult {
@@ -408,6 +512,30 @@ Add the following keys to your `Info.plist` file:
 	voipRegistry.desiredPushTypes = [.voIP]
    }
    ```
+
+   - ### Handing the Login Task to the SDK (Recommended)
+
+   When a user taps a missed-call notification while the app is not running, iOS
+   cold-launches the app and may deliver the tap **before** your login has finished.
+   Assign your login `Task` to `SecuredCallsVoice.pendingLoginTask` and the SDK will
+   await it before attempting the call back, instead of guessing with a timeout.
+
+   ```swift
+   let loginTask = Task<Result<Bool, Error>, Never> {
+       let result = await SecuredCallsVoice.loginAsync(identifier: userIdentifier)
+       switch result {
+       case .success:
+           logger.info("SecuredCallsVoice login status = success")
+       case .failure(let error):
+           logger.info("SecuredCallsVoice login status = failure : \(error.localizedDescription)")
+       }
+       return result
+   }
+   SecuredCallsVoice.pendingLoginTask = loginTask
+   ```
+
+   If you do not set `pendingLoginTask`, the SDK falls back to waiting up to
+   `sessionReadyTimeoutSeconds` (default `3.0`) for a login already in progress.
 
 ## APNS and VOIP Token Management
 
@@ -473,12 +601,32 @@ Add the following keys to your `Info.plist` file:
    ```swift
    Task {
 		do {
-			try await SecuredCallsVoice.startCallAsync(number: "61450000001", callType: .inApp)
+			try await SecuredCallsVoice.startCallAsync(
+				number: "61450000001",
+				// Optional — if nil, the contact centre number from your config is used.
+				
+				callType: .inApp,
+				// .inApp places the call through the SDK.
+				// .pstn hands off to the native dialer.
+				
+				callIntent: "Card dispute follow-up",
+				// Optional — Default: ""
+				// Short reason for the call, surfaced on the call screen.
+				
+				customData: ["ticketId": "T-1029"]
+				// Optional — Default: [:]
+				// Arbitrary key/value context passed along with the call.
+			)
 		} catch {
 			print("Error: \(error)")
 		}
 	}
   ```
+
+   `startCallAsync` throws `SecuredCallError.onGoingCall` if a call is already active,
+   and `SecuredCallError.invalidNumber` if no number is available. `customData` is also
+   accepted by `callBackFromCallHistory(...)`, which derives the call intent itself.
+
 ### Logout User Session
 
 ```swift
@@ -563,6 +711,7 @@ struct AppName_SwiftUIApp: App {
         }
     }
 }
+```
 
 ## Handling Missed Call Notification Callback
 
@@ -580,19 +729,153 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         withCompletionHandler completionHandler: @escaping () -> Void
     ) {
         Task {
-            try await SecuredCallsVoice.callBackFromMissedCallNotification(response)
-            completionHandler()
+            defer { completionHandler() }
+            do {
+                try await SecuredCallsVoice.callBackFromMissedCallNotification(response)
+            } catch {
+                print("callBackFromMissedCallNotification failed: \(error.localizedDescription)")
+            }
         }
     }
 }
 ```
+
+`callBackFromMissedCallNotification` only acts on notifications whose
+`categoryIdentifier` is `MISSED_CALL`, and returns without doing anything for any
+other category. It is therefore safe to forward every notification response to it —
+though you may still want to check the category yourself if your app has its own
+handling for other categories.
+
+### Refreshing Branding History on Foreground Notifications
+
+If you present notifications while the app is in the foreground, call
+`SecuredCallsVoice.processNotification()` so the SDK can notify your
+`SecuredCallsVoiceDelegate` that branding history changed:
+
+```swift
+func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+) {
+    completionHandler([.banner, .sound])
+    SecuredCallsVoice.processNotification()
+}
+```
+
 ### Notification Appearance
 
 The missed call notification displays:
 
 - **Title**: Call intent (if available), otherwise the app/brand name
-- **Body**: ☎️ Missed voice call
+- **Body**: 📞 Missed voice call
 - **Action**: Tap to call back instantly
+
+## Observing Call Status
+
+Conform to `ICallStatusDelegate` to be notified when a call starts, ends, or fails to
+connect. Register the delegate once — for example in your view model's initializer.
+
+```swift
+import SecuredCallsVoiceSDK
+
+final class CallViewModel: ICallStatusDelegate {
+
+    init() {
+        SecuredCallsVoice.setCallStatusDelegate(self)
+    }
+
+    func callStarted() {
+        // A call is now connected.
+    }
+
+    func callEnded() {
+        // The call finished.
+    }
+
+    func callFailed(reason: String) {
+        // An outgoing call failed before connecting (e.g. poor network).
+    }
+}
+```
+
+Pass `nil` to `setCallStatusDelegate(_:)` to unregister. The delegate is held weakly,
+so keep a strong reference to the object that conforms to it.
+
+## Call History and Branding History
+
+The SDK keeps two separate histories: **call history** (actual voice calls) and
+**branding history** (branded caller entries delivered by push).
+
+### Reading History
+
+Both methods return `[CallInfoModel]`, which exposes `callId`, `intent`, `note`,
+`contactNumber`, `businessName`, `brandImage`, `callType`, `callTime`,
+`isIncomingCall`, `callDuration`, `historyType`, and branding colours.
+
+```swift
+Task {
+    switch await SecuredCallsVoice.getCallHistoryAsync() {
+    case .success(let calls):
+        print("\(calls.count) calls")
+    case .failure(let error):
+        print("Failed: \(error.localizedDescription)")
+    }
+
+    switch await SecuredCallsVoice.getBrandingHistoryAsync() {
+    case .success(let branding):
+        print("\(branding.count) branding entries")
+    case .failure(let error):
+        print("Failed: \(error.localizedDescription)")
+    }
+}
+```
+
+### Clearing History
+
+```swift
+Task {
+    await SecuredCallsVoice.clearCallHistoryAsync()      // calls only
+    await SecuredCallsVoice.clearBrandingHistoryAsync()  // branding only
+    await SecuredCallsVoice.clearAllCallHistoryAsync()   // both
+}
+```
+
+### Reacting to History Updates
+
+Conform to `SecuredCallsVoiceDelegate` to refresh your UI when the SDK writes new
+history. `didUpdateBrandingHistory()` has a default empty implementation, so
+implement only what you need.
+
+```swift
+final class HistoryViewModel: SecuredCallsVoiceDelegate {
+
+    init() {
+        SecuredCallsVoice.setHistoryDelegate(self)
+    }
+
+    func didUpdateCallHistory() {
+        // Reload call history.
+    }
+
+    func didUpdateBrandingHistory() {
+        // Reload branding history.
+    }
+}
+```
+
+Like the call status delegate, this delegate is held weakly.
+
+## SDK Logs
+
+`getLogs()` returns the SDK's recorded log lines, and `clearLogs()` removes them.
+
+```swift
+Task {
+    let lines: [String] = await SecuredCallsVoice.getLogs()
+    await SecuredCallsVoice.clearLogs()
+}
+```
 
 ## Handling Callback from phone history (Appdelegate) * documentation in progress
 
