@@ -1,0 +1,15 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: none
+
+pool:
+  vmImage: macos-latest
+
+steps:
+- script: |
+    echo "GitHub integration is working"
+    git remote -v
+  displayName: Verify GitHub connection
