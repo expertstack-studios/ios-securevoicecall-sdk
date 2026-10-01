@@ -21,8 +21,8 @@ let package = Package(
 	targets: [
 		.binaryTarget(
 		    name: "SecuredCallsVoiceSDKBinary",
-		    url: "https://github.com/expertstack-studios/ios-securevoicecall-sdk/releases/download/1.0.27/SecuredCallsVoiceSDK.xcframework.zip",
-		    checksum: "d8d1423527b22c681f2b8b1f3b3b3d9f18dcc8257bb85678a9218addfacfa784"
+		    url: "https://github.com/expertstack-studios/ios-securevoicecall-sdk/releases/download/1.0.28-rc.1/SecuredCallsVoiceSDK.xcframework.zip",
+		    checksum: "9e5c4458c1359efa3bfe68d3ee1047970722f3ce8cfa4af79c1373d1148cea30"
 		),
 		.target(
 			name: "SecuredCallsVoiceSDKWrapper",
