@@ -10,7 +10,9 @@ Ensure you have the following for using the SecuredCalls Voice SDK for iOS:
 - Xcode 11.0 or above
 - At least one physical iOS device running iOS 16 or later
 - Swift 5.0 or later
--    **Register on SecuredCalls.com** and obtain the `config.dat` file and secret
+-    **Register on SecuredCalls.com** and obtain the `config.dat` file. Its `authMode`
+     (`CUSTOMER_IDP` or `BFF`) decides how your app supplies credentials — see
+     [Authentication](#authentication). The SDK no longer accepts a client secret.
 
 ## Adding the SDK to Your Project
 
@@ -84,10 +86,13 @@ Add the following keys to your `Info.plist` file:
   1. In the **"Signing & Capabilities"** tab, click **"+"**.
   2. Add **"App Groups"** and configure the identifier **group.com.your.app**.
 
-## Keychain Sharing (Optional)
+## Keychain Sharing (Required)
 
-If you want the SDK's keychain items to be reachable from both your main app and its
-notification extension, enable Keychain Sharing and pass the group name to the SDK.
+The SDK's storage is Keychain-only — it keeps no state in `UserDefaults` (aside from
+a few internal flags — install detection and registration state — kept in the App
+Group's `UserDefaults` so they reset on uninstall). Because your main app and its Notification Service Extension are separate
+processes, they need a shared Keychain access group to see the same items — without
+it, the extension cannot read config, logs, or the signed-in identity the app wrote.
 
   1. In the **"Signing & Capabilities"** tab, click **"+"**.
   2. Add **"Keychain Sharing"** and add a group, e.g. **com.your.app.shared**.
@@ -99,8 +104,18 @@ notification extension, enable Keychain Sharing and pass the group name to the S
 ⚠️ Pass the group **without** the team-identifier prefix (`com.your.app.shared`, not
 `ABCDE12345.com.your.app.shared`). The SDK resolves and prepends the team ID itself.
 
-If you omit `sharedKeychainGroup`, the SDK does not set a keychain access group and
-its items live in the app's default group. No extra capability is required.
+`sharedKeychainGroup` is a mandatory parameter on both methods — there is no default.
+
+### Session and Storage Behaviour
+
+- The signed-in identity, config and logs are stored in the Keychain and shared between the
+  app and the extension through `sharedKeychainGroup`.
+- Keychain items survive app uninstall. To avoid a reinstalled app picking up a previous
+  identity, the first `initialize(...)` call on a fresh install clears any stored
+  `userIdentifier` and `biometricMetadata`. Call `loginAsync(...)` to sign the user in.
+- Keep your own copy of the user identifier if you want to sign the user in automatically on
+  launch (the demo apps do this in `AppDelegate`).
+- `logoutAsync(identifier:)` clears the SDK's stored state when the logout succeeds.
 
 ## Creating a Notification Service Extension in Xcode
 
@@ -149,11 +164,15 @@ its items live in the app's default group. No extra capability is required.
                     // that was passed during `SecuredCallsVoice.initialize(...)`.
                     
                     sharedKeychainGroup: "com.your.app.shared",
-                    // Optional — pass only if you enabled Keychain Sharing.
+                    // ✅ Mandatory — see "Keychain Sharing (Required)" above.
                     // ⚠️ IMPORTANT: This MUST be the SAME value that was passed
                     // during `SecuredCallsVoice.initialize(...)`, and the group
                     // must be enabled on BOTH the app and the extension target.
-                    // Omit (or pass nil) to use the default keychain group.
+                    
+                    authProvider: MyExtensionAuthProvider(),
+                    // ✅ Mandatory — see "Authentication" below. The extension reuses
+                    // the session the app cached in the shared Keychain and only
+                    // calls this provider when that session has expired.
                     
                     withContentHandler: contentHandler
                     // ✅ Completion handler used to return the modified
@@ -296,11 +315,13 @@ its items live in the app's default group. No extra capability is required.
 			)
             // initialize SDK
 			try SecuredCallsVoice.initialize(
-                    "xxxxxxxSECRETxxxxxxx", 
-                    // ✅ SecuredCalls client secret provided by the SecuredCalls team
-                    
                     configFileName: "ConfigFileName", 
-                    // ✅ Name of the configuration file (without extension) used by the SDK
+                    // ✅ Name of the configuration file (without extension) used by the SDK.
+                    // Must contain an authMode of CUSTOMER_IDP or BFF.
+                    
+                    authProvider: MyAuthProvider.shared,
+                    // ✅ Supplies your IDP token (CUSTOMER_IDP) or backend session (BFF).
+                    // See "Authentication" below.
                     
                     settings: ScSDKSettingsModel(
                         handlePermission: true,
@@ -355,7 +376,7 @@ its items live in the app's default group. No extra capability is required.
                     // the main app and the notification extension.
                     
                     sharedKeychainGroup: "com.your.app.shared",
-                    // Optional — Default: nil (use the app's default keychain group)
+                    // ✅ Mandatory — see "Keychain Sharing (Required)" above.
                     // Requires the "Keychain Sharing" capability on the app AND
                     // the notification extension, using the same group name.
                     // ⚠️ Must match the value passed to processNotificationAsync(...).
@@ -370,6 +391,71 @@ its items live in the app's default group. No extra capability is required.
        return true
    }
    ```
+
+   ## Authentication
+
+   The SDK obtains its Secured Calls access token through a `SecuredCallsAuthProvider`
+   that your app implements. **No client secret is shipped in, or passed to, the SDK.**
+   The tenant's mode comes from the mandatory `authMode` field of your `config.dat`;
+   `initialize(...)` throws `SecuredCallError.authModeMissing` if it is absent and
+   `SecuredCallError.unsupportedAuthMode` for any other value (including the retired
+   `SHARED_SECRET`). Read it at runtime with `SecuredCallsVoice.authMode`.
+
+   | `authMode` | Implement | What the SDK does |
+   |------------|-----------|-------------------|
+   | `CUSTOMER_IDP` | `identityProviderToken()` — return a valid JWT from your own IDP | Exchanges it at `/branding/device/auth-token/idp`. On `TOKEN_EXPIRED` it asks you once more for a refreshed JWT. |
+   | `BFF` | `backendSession(deviceId:)` — your backend calls `/device/auth-token/bff` and returns `token`, `payloadKey` and `expiresAt` | Uses the session as-is. Never calls an auth-token endpoint itself. |
+
+   ```swift
+   final class MyAuthProvider: SecuredCallsAuthProvider {
+       static let shared = MyAuthProvider()
+
+       // CUSTOMER_IDP
+       func identityProviderToken() async throws -> String {
+           try await MyIdentityProvider.currentUser.freshIdToken()
+       }
+
+       // BFF — forward BOTH token and payloadKey from your backend unchanged.
+       // Dropping payloadKey doesn't fail immediately, it breaks every later request.
+       func backendSession(deviceId: String) async throws -> SecuredCallsAuthSession {
+           let response = try await MyBackend.securedCallsSession(deviceId: deviceId)
+           return SecuredCallsAuthSession(
+               token: response.token,
+               payloadKey: response.payloadKey,
+               expiresAtEpochMilliseconds: response.expiresAt
+           )
+       }
+   }
+   ```
+
+   Notes:
+
+   - Implement only the method for your mode; the other has a default that throws.
+   - The SDK calls the provider whenever it has no valid token: during `initialize(...)`
+     (it fetches remote app config), when the cached token is close to expiry, after a
+     401, and from the Notification Service Extension. It can run in the background (e.g.
+     on a VoIP push), so it must refresh without UI. If the user isn't signed in yet,
+     throw — the SDK asks again on the next authenticated call.
+   - In `BFF` mode your backend's assertion must use `SecuredCallsVoice.deviceId` as its
+     `deviceId` claim (also passed to `backendSession(deviceId:)`).
+   - The session (token plus keys derived from `payloadKey`) is cached in the shared
+     Keychain group, so the extension can reuse what the app obtained.
+   - `logoutAsync(identifier:)` discards the cached session.
+   - Each provider call must return within 30 seconds, or the request fails with
+     `SecuredCallsAuthError.providerTimedOut`.
+   - In `BFF` mode, a session whose `expiresAt` has already passed is rejected
+     (`invalidProviderSession`). Issue tokens that live well beyond 2 minutes: the SDK refreshes
+     2 minutes before expiry, so a shorter lifetime makes every request call your backend again.
+   - Provider errors surface as `SecuredCallsAuthError`.
+
+   ### Migrating from the client-secret API
+
+   1. Remove the client secret from your app (Info.plist, xcconfig, CI secrets, source).
+   2. Get a regenerated `config.dat` containing `authMode`.
+   3. Replace `initialize("SECRET", configFileName: …)` with
+      `initialize(configFileName: …, authProvider: …)`. The old signature is marked
+      unavailable, with a compiler message pointing to the new one.
+   4. Pass an `authProvider:` to `processNotificationAsync(...)` in your extension.
 
    ## Biometric Verification Metadata
 
@@ -406,15 +492,16 @@ its items live in the app's default group. No extra capability is required.
        do {
            UNUserNotificationCenter.current().delegate = self
 			try SecuredCallsVoice.initialize(
-				"xxxxxxxSECRETxxxxxxx",
 				configFileName: "ConfigFileName",
+				authProvider: MyAuthProvider.shared,
 				settings: ScSDKSettingsModel(
 					handlePermission: true,
 					showPipView: true,
 					logLevel: .Debug,
 					scCallKitIconName: "AppIcon-Mono"
 				),
-                appGroupID: "group.com.your.app"
+                appGroupID: "group.com.your.app",
+                sharedKeychainGroup: "com.your.app.shared"
             )
         
            // Request permissions and login asynchronously
@@ -474,15 +561,16 @@ its items live in the app's default group. No extra capability is required.
 			UNUserNotificationCenter.current().delegate = self
 			registerForVoIPPushes()
 			try SecuredCallsVoice.initialize(
-				"xxxxxxxSECRETxxxxxxx",
 				configFileName: "ConfigFileName",
+				authProvider: MyAuthProvider.shared,
 				settings: ScSDKSettingsModel(
 					handlePermission: true,
 					showPipView: true,
 					logLevel: .Debug,
 					scCallKitIconName: "AppIcon-Mono"
 				),
-                appGroupID: "group.com.your.app"
+                appGroupID: "group.com.your.app",
+                sharedKeychainGroup: "com.your.app.shared"
             )
         
            Task {
@@ -513,6 +601,17 @@ its items live in the app's default group. No extra capability is required.
    }
    ```
 
+   - ### Login Result and Concurrent Logins
+
+   `loginAsync(identifier:isForceLogin:)` returns `Result<Bool, Error>`. Only one login runs at
+   a time: a second call while one is in progress returns
+   `.failure(SDKError.loginAlreadyInProgress)`. Pass `isForceLogin: true` to start a new login
+   anyway.
+
+   ```swift
+   let result = await SecuredCallsVoice.loginAsync(identifier: userIdentifier, isForceLogin: true)
+   ```
+
    - ### Handing the Login Task to the SDK (Recommended)
 
    When a user taps a missed-call notification while the app is not running, iOS
@@ -541,15 +640,35 @@ its items live in the app's default group. No extra capability is required.
 
    ### Register Device APNS Token
 
+   `isProduction` can be provided in two ways:
+
+   - **Manual** — you determine and pass the flag yourself (e.g. from a build config or UserDefaults).
+   - **Auto-detected** — omit `isProduction` and the SDK detects it for you from the app's embedded
+     provisioning profile's `aps-environment` entitlement (falls back to `production` for App Store
+     builds, which have no embedded profile, and to `sandbox` on the simulator).
+
+   **Manual:**
+
    ```swift
    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
        let token = deviceToken.hexString
        Task {
-               // Retrieve the 'isProduction' flag from UserDefaults to determine the environment
-               // 'true' indicates a production environment, while 'false' indicates a sandbox environment
-               // This flag should be set by the client based on the current deployment stage
+               // 'true' indicates a production environment, while 'false' indicates a sandbox
+               // environment. This flag should be set by the client based on the current
+               // deployment stage.
                let isProduction = false
                await SecuredCallsVoice.registerDeviceAsync(customerId: userIdentifier, token: token, isProduction: isProduction)
+       }
+   }
+   ```
+
+   **OR — Auto-detected** (the SDK determines `isProduction` for you):
+
+   ```swift
+   func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+       let token = deviceToken.hexString
+       Task {
+               await SecuredCallsVoice.registerDeviceAsync(customerId: userIdentifier, token: token)
        }
    }
    ```
@@ -563,7 +682,19 @@ its items live in the app's default group. No extra capability is required.
 ```
 
 
+   > **Token reuse on login.** The SDK keeps the APNs token passed to `registerDeviceAsync`
+   > for the life of the process and sends it again on each `loginAsync(...)`, so push
+   > notifications are tied to the account that just signed in. Keep calling
+   > `registerDeviceAsync` from `didRegisterForRemoteNotificationsWithDeviceToken` so the
+   > token stays current.
+
+
    ### Register Device VOIP Token And Report Incoming VOIP Push
+
+   Like `registerDeviceAsync`, `isProduction` can be passed manually or omitted so the SDK
+   auto-detects it from the app's provisioning profile:
+
+   **Manual:**
 
    ```swift
    extension AppDelegate: PKPushRegistryDelegate {
@@ -579,6 +710,24 @@ its items live in the app's default group. No extra capability is required.
 					token: pushCredentials.token,
 					isProduction: isProduction
 				)
+			}
+		}
+	}
+   }
+   ```
+
+   **OR — Auto-detected** (the SDK determines `isProduction` for you):
+
+   ```swift
+   extension AppDelegate: PKPushRegistryDelegate {
+	func pushRegistry(
+		_ registry: PKPushRegistry,
+		didUpdate pushCredentials: PKPushCredentials,
+		for type: PKPushType
+	) {
+		if type == PKPushType.voIP {
+			Task {
+				await SecuredCallsVoice.registerVoipTokenAsync(token: pushCredentials.token)
 			}
 		}
 	}
@@ -629,17 +778,21 @@ its items live in the app's default group. No extra capability is required.
 
 ### Logout User Session
 
+`logoutAsync(identifier:)` ends the session, deregisters the user on the backend and, when
+that succeeds, clears the SDK's stored state. It returns `Result<Bool, Error>` and does not
+throw. On failure the stored state is kept, so you can retry.
+
 ```swift
-	Task {
-		if let userIdentifier = UserDefaults.standard.string(forKey: "userIdentifier") {
-			do {
-				try await SecuredCallsVoice.logoutAsync(identifier: userIdentifier)
-			} catch {
-				print("Logout failed: \(error)")
-			}
-		}
-	}
-  ```
+Task {
+    switch await SecuredCallsVoice.logoutAsync(identifier: userIdentifier) {
+    case .success:
+        // Clear your own copy of the identifier.
+        break
+    case .failure(let error):
+        print("Logout failed: \(error.localizedDescription)")
+    }
+}
+```
 
 ## Handling Callback from phone history (SwiftUI)
 
@@ -866,6 +1019,9 @@ final class HistoryViewModel: SecuredCallsVoiceDelegate {
 
 Like the call status delegate, this delegate is held weakly.
 
+To trigger `didUpdateCallHistory()` yourself, for example after your app records a call, call
+`SecuredCallsVoice.notifyCallHistoryUpdated()`.
+
 ## SDK Logs
 
 `getLogs()` returns the SDK's recorded log lines, and `clearLogs()` removes them.
@@ -883,7 +1039,8 @@ Task {
 
 ## Notes
 
--   **API Key**: Replace `"xxxxxxxSECRETxxxxxxx"` with your actual API key.
+-   **Credentials**: Never embed a Secured Calls secret in your app. Implement
+    `SecuredCallsAuthProvider` for your tenant's `authMode` (see [Authentication](#authentication)).
 
 By following these steps, you’ll integrate the SecuredCalls Voice SDK effectively, meeting user privacy expectations and handling notifications efficiently.
 
